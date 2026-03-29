@@ -6,9 +6,6 @@ import SEOHead from '@/components/SEOHead';
 import FAQ from '@/components/FAQ';
 import { FAQSchema, ArticleSchema } from '@/components/SchemaMarkup';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
 interface PlannedCourse {
   id: number;
   credits: number;

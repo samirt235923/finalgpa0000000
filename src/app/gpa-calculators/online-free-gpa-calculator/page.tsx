@@ -43,22 +43,6 @@ const relatedCalculators = [
   { href: '/gpa-calculators/weighted-gpa-calculator', name: 'Weighted GPA Calculator' },
 ];
 
-const gradeScale = [
-  { letter: 'A+', value: 4.0 },
-  { letter: 'A', value: 4.0 },
-  { letter: 'A-', value: 3.7 },
-  { letter: 'B+', value: 3.3 },
-  { letter: 'B', value: 3.0 },
-  { letter: 'B-', value: 2.7 },
-  { letter: 'C+', value: 2.3 },
-  { letter: 'C', value: 2.0 },
-  { letter: 'C-', value: 1.7 },
-  { letter: 'D+', value: 1.3 },
-  { letter: 'D', value: 1.0 },
-  { letter: 'D-', value: 0.7 },
-  { letter: 'F', value: 0.0 },
-];
-
 export default function OnlineFreeGPACalculatorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50 text-slate-900">
