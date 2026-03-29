@@ -583,6 +583,17 @@ export const calculatorData = [
     targetAudience: 'All Students',
     relatedCalculators: ['simple-gpa-calculator', 'advanced-gpa-calculator', 'online-gpa-calculator', 'college-gpa-calculator', 'student-gpa-calculator'],
   },
+  {
+    id: 'online-free-gpa-calculator',
+    name: 'Online Free GPA Calculator',
+    title: 'Free Online GPA Calculator – Calculate Your GPA Instantly (No Sign-up)',
+    metaDescription: 'Use our completely free online GPA calculator to calculate your GPA instantly. No registration required. Add unlimited courses, enter grades and credits, and get accurate results.',
+    h1: 'Free Online GPA Calculator',
+    h2: '100% Free Online GPA Calculator',
+    description: 'A completely free online GPA calculator with no registration required. Add unlimited courses, get instant results, and track your academic performance on any device.',
+    targetAudience: 'All Students',
+    relatedCalculators: ['college-gpa-calculator', 'high-school-gpa-calculator', 'semester-gpa-calculator', 'cumulative-gpa-calculator', 'weighted-gpa-calculator'],
+  },
 
 ];
 
