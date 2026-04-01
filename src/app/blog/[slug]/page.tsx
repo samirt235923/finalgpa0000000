@@ -216,8 +216,8 @@ export default async function BlogPostPage({ params }: Props) {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/gpa-calculators/gpa-improvement-calculator" className="text-blue-600 hover:underline">
-                      GPA Improvement
+                    <Link href="/gpa-calculators/target-gpa-calculator" className="text-blue-600 hover:underline">
+                      Target GPA Calculator
                     </Link>
                   </li>
                 </ul>

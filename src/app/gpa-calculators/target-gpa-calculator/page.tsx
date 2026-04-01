@@ -62,8 +62,8 @@ export const metadata: Metadata = {
 const relatedCalculators = [
   { href: '/gpa-calculators/cumulative-gpa-calculator', name: 'Cumulative GPA Calculator' },
   { href: '/gpa-calculators/semester-gpa-calculator', name: 'Semester GPA Calculator' },
-  { href: '/gpa-calculators/gpa-improvement-calculator', name: 'GPA Improvement Calculator' },
-  { href: '/gpa-calculators/gpa-projection-calculator', name: 'GPA Projection Calculator' },
+  { href: '/gpa-calculators/cumulative-gpa-calculator', name: 'Cumulative GPA Calculator' },
+  { href: '/gpa-calculators/gpa-goal-calculator', name: 'GPA Goal Calculator' },
   { href: '/gpa-calculators/weighted-gpa-calculator', name: 'Weighted GPA Calculator' },
 ];
 

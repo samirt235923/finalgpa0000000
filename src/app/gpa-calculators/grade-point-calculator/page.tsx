@@ -120,7 +120,7 @@ export default function GradePointCalculatorPage() {
               <li><Link href="/gpa-calculators/weighted-gpa-calculator" className="text-blue-600 hover:underline">Weighted GPA Calculator</Link></li>
               <li><Link href="/gpa-calculators/semester-gpa-calculator" className="text-blue-600 hover:underline">Semester GPA Calculator</Link></li>
               <li><Link href="/gpa-calculators/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</Link></li>
-              <li><Link href="/gpa-calculators/gpa-improvement-calculator" className="text-blue-600 hover:underline">GPA Improvement Calculator</Link></li>
+              <li><Link href="/gpa-calculators/target-gpa-calculator" className="text-blue-600 hover:underline">Target GPA Calculator</Link></li>
             </ul>
           </section>
 

@@ -128,8 +128,7 @@ export default function GpaGoalCalculatorPage() {
             <ul>
               <li><Link href="/gpa-calculators/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</Link></li>
               <li><Link href="/gpa-calculators/semester-gpa-calculator" className="text-blue-600 hover:underline">Semester GPA Calculator</Link></li>
-              <li><Link href="/gpa-calculators/gpa-projection-calculator" className="text-blue-600 hover:underline">GPA Projection Calculator</Link></li>
-              <li><Link href="/gpa-calculators/gpa-improvement-calculator" className="text-blue-600 hover:underline">GPA Improvement Calculator</Link></li>
+              <li><Link href="/gpa-calculators/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</Link></li>
               <li><Link href="/gpa-calculators/weighted-gpa-calculator" className="text-blue-600 hover:underline">Weighted GPA Calculator</Link></li>
             </ul>
           </section>

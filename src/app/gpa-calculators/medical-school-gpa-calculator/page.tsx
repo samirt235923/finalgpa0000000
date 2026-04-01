@@ -470,17 +470,13 @@ export default function MedicalSchoolGPACalculatorPage() {
                   <h3 className="font-bold text-gray-900 mb-2">College GPA Calculator</h3>
                   <p className="text-gray-600 text-sm">Calculate your college GPA with our easy-to-use tool.</p>
                 </Link>
-                <Link href="/gpa-calculators/term-gpa-calculator" className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="font-bold text-gray-900 mb-2">Term GPA Calculator</h3>
-                  <p className="text-gray-600 text-sm">Track GPA for a single semester or term.</p>
+                <Link href="/gpa-calculators/semester-gpa-calculator" className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-gray-900 mb-2">Semester GPA Calculator</h3>
+                  <p className="text-gray-600 text-sm">Track GPA for a single semester.</p>
                 </Link>
-                <Link href="/gpa-calculators/gpa-projection-calculator" className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="font-bold text-gray-900 mb-2">GPA Projection Calculator</h3>
+                <Link href="/gpa-calculators/target-gpa-calculator" className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-gray-900 mb-2">Target GPA Calculator</h3>
                   <p className="text-gray-600 text-sm">See how future grades can impact your GPA.</p>
-                </Link>
-                <Link href="/gpa-calculators/gpa-improvement-calculator" className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="font-bold text-gray-900 mb-2">GPA Improvement Calculator</h3>
-                  <p className="text-gray-600 text-sm">Plan the grades needed to hit your GPA goals.</p>
                 </Link>
                 <Link href="/gpa-calculators/weighted-gpa-calculator" className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-bold text-gray-900 mb-2">Weighted GPA Calculator</h3>

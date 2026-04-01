@@ -48,7 +48,7 @@ const faqItems = [
 const relatedCalculators = [
   { href: '/college-gpa-calculator', label: 'College GPA Calculator' },
   { href: '/semester-gpa-calculator', label: 'Semester GPA Calculator' },
-  { href: '/term-gpa-calculator', label: 'Term GPA Calculator' },
+  { href: '/gpa-calculators/cumulative-gpa-calculator', label: 'Cumulative GPA Calculator' },
   { href: '/weighted-gpa-calculator', label: 'Weighted GPA Calculator' },
   { href: '/gpa-average-calculator', label: 'GPA Average Calculator' },
 ];

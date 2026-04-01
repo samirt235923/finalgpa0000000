@@ -577,14 +577,14 @@ export default function SemesterGPACalculatorPage() {
                 <Link href="/college-gpa-calculator" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50">
                   College GPA Calculator
                 </Link>
-                <Link href="/term-gpa-calculator" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50">
-                  Term GPA Calculator
+                <Link href="/gpa-calculators/cumulative-gpa-calculator" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50">
+                  Cumulative GPA Calculator
                 </Link>
-                <Link href="/gpa-projection-calculator" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50">
-                  GPA Projection Calculator
+                <Link href="/gpa-calculators/target-gpa-calculator" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50">
+                  Target GPA Calculator
                 </Link>
-                <Link href="/gpa-improvement-calculator" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50">
-                  GPA Improvement Calculator
+                <Link href="/gpa-calculators/weighted-gpa-calculator" className="rounded-xl border border-slate-200 p-4 hover:bg-slate-50">
+                  Weighted GPA Calculator
                 </Link>
               </div>
             </section>

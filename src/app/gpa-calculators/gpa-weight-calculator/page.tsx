@@ -49,8 +49,8 @@ const relatedCalculators = [
   { href: '/weighted-gpa-calculator', label: 'Weighted GPA Calculator' },
   { href: '/college-gpa-calculator', label: 'College GPA Calculator' },
   { href: '/high-school-gpa-calculator', label: 'High School GPA Calculator' },
-  { href: '/term-gpa-calculator', label: 'Term GPA Calculator' },
-  { href: '/gpa-projection-calculator', label: 'GPA Projection Calculator' },
+  { href: '/gpa-calculators/semester-gpa-calculator', label: 'Semester GPA Calculator' },
+  { href: '/gpa-calculators/gpa-goal-calculator', label: 'GPA Goal Calculator' },
 ];
 
 export default function Page() {

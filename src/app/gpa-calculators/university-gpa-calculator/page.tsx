@@ -152,8 +152,8 @@ export default function UniversityGPACalculatorPage() {
             <li><Link href="/gpa-calculators/college-gpa-calculator" className="text-blue-600 hover:underline">College GPA Calculator</Link></li>
             <li><Link href="/gpa-calculators/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</Link></li>
             <li><Link href="/gpa-calculators/semester-gpa-calculator" className="text-blue-600 hover:underline">Semester GPA Calculator</Link></li>
-            <li><Link href="/gpa-calculators/gpa-projection-calculator" className="text-blue-600 hover:underline">GPA Projection Calculator</Link></li>
-            <li><Link href="/gpa-calculators/gpa-improvement-calculator" className="text-blue-600 hover:underline">GPA Improvement Calculator</Link></li>
+            <li><Link href="/gpa-calculators/target-gpa-calculator" className="text-blue-600 hover:underline">Target GPA Calculator</Link></li>
+            <li><Link href="/gpa-calculators/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</Link></li>
           </ul>
 
           <h2 id="faq">FAQ</h2>

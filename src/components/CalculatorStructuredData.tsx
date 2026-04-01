@@ -25,28 +25,17 @@ const HOW_TO_STEPS = [
 
 const LAYOUT_BREADCRUMB_SLUGS = new Set([
   '5-0-scale-gpa-calculator',
-  'act-to-gpa-calculator',
   'academic-gpa-calculator',
-  'college-admission-gpa-calculator',
-  'course-gpa-calculator',
   'cumulative-gpa-calculator',
-  'final-grade-gpa-calculator',
   'final-semester-gpa-calculator',
   'gpa-average-calculator',
   'gpa-goal-calculator',
-  'gpa-improvement-calculator',
-  'gpa-percentage-calculator',
-  'gpa-projection-calculator',
-  'gpa-to-letter-grade-calculator',
   'grade-point-calculator',
   'high-school-gpa-calculator',
   'online-gpa-calculator',
   'quick-gpa-calculator',
-  'required-gpa-calculator',
-  'sat-to-gpa-calculator',
   'sophomore-gpa-calculator',
   'target-gpa-calculator',
-  'term-gpa-calculator',
 ]);
 
 const buildFeatureList = (source: string) => {

@@ -361,7 +361,7 @@ export default function GPAAverageCalculatorPage() {
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <Link
-                  href="/gpa-calculators/term-gpa-calculator"
+                  href="/gpa-calculators/semester-gpa-calculator"
                   className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-blue-500 hover:shadow-lg transition"
                 >
                   <h3 className="text-lg font-semibold text-gray-900">Term GPA Calculator</h3>
@@ -382,7 +382,7 @@ export default function GPAAverageCalculatorPage() {
                   <p className="mt-2 text-gray-600">Find your college GPA using course grades and credit hours.</p>
                 </Link>
                 <Link
-                  href="/gpa-calculators/gpa-projection-calculator"
+                  href="/gpa-calculators/target-gpa-calculator"
                   className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-blue-500 hover:shadow-lg transition"
                 >
                   <h3 className="text-lg font-semibold text-gray-900">GPA Projection Calculator</h3>

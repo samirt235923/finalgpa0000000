@@ -212,7 +212,7 @@ export default function SimpleGPACalculatorPage() {
               <Link href="/gpa-calculators/advanced-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">Advanced GPA Calculator</Link>
               <Link href="/gpa-calculators/college-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">College GPA Calculator</Link>
               <Link href="/gpa-calculators/quick-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">Quick GPA Calculator</Link>
-              <Link href="/gpa-calculators/term-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">Term GPA Calculator</Link>
+              <Link href="/gpa-calculators/semester-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">Semester GPA Calculator</Link>
               <Link href="/gpa-calculators/gpa-average-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">GPA Average Calculator</Link>
             </div>
           </article>

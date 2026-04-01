@@ -91,8 +91,8 @@ const relatedCalculators = [
   { href: "/gpa-calculators/cumulative-gpa-calculator", name: "Cumulative GPA", icon: "📈", description: "Multi-term average" },
   { href: "/gpa-calculators/semester-gpa-calculator", name: "Semester GPA", icon: "📅", description: "Single term focus" },
   { href: "/gpa-calculators/weighted-gpa-calculator", name: "Weighted GPA", icon: "⚖️", description: "With course difficulty bonus" },
-  { href: "/gpa-calculators/gpa-improvement-calculator", name: "GPA Improvement", icon: "🚀", description: "Plan your path forward" },
   { href: "/gpa-calculators/target-gpa-calculator", name: "Target GPA", icon: "🎯", description: "Set and achieve goals" },
+  { href: "/gpa-calculators/cumulative-gpa-calculator", name: "Cumulative GPA", icon: "📊", description: "Track overall performance" },
   { href: "/gpa-calculators/middle-school-gpa-calculator", name: "Middle School GPA", icon: "📖", description: "Grades 6-8" },
 ];
 
