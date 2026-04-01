@@ -178,12 +178,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topgpacalculator.com/gpa-calculators/target-gpa-calculator</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topgpacalculator.com/gpa-calculators/gpa-projection-calculator</loc>
     <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -244,12 +238,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topgpacalculator.com/gpa-calculators/final-semester-gpa-calculator</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topgpacalculator.com/gpa-calculators/gpa-goal-calculator</loc>
     <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -268,18 +256,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topgpacalculator.com/gpa-calculators/student-gpa-calculator</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topgpacalculator.com/gpa-calculators/freshman-gpa-calculator</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://topgpacalculator.com/gpa-calculators/sophomore-gpa-calculator</loc>
     <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -292,19 +268,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://topgpacalculator.com/gpa-calculators/senior-gpa-calculator</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://topgpacalculator.com/gpa-calculators/simple-gpa-calculator</loc>
-    <lastmod>2026-03-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://topgpacalculator.com/gpa-calculators/advanced-gpa-calculator</loc>
     <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -316,14 +280,16 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://topgpacalculator.com/gpa-calculators/online-gpa-calculator</loc>
-    <lastmod>2026-03-09</lastmod>
-  </url>
-  <url>
     <loc>https://topgpacalculator.com/gpa-calculators/online-free-gpa-calculator</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://topgpacalculator.com/gpa-calculators/target-gpa-calculator</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Blog Posts -->
