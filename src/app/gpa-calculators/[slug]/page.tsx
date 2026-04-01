@@ -263,10 +263,8 @@ export default async function CalculatorPage({ params }: Props) {
 
                 <h2 className="text-3xl font-bold text-gray-800 mb-4" id="related-calculators">Related GPA Calculators</h2>
                 <p className="text-gray-700 mb-4">Explore these tools for comprehensive GPA planning:</p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><a href="/freshman-gpa-calculator" className="text-blue-600 hover:underline">Freshman GPA Calculator</a></li>
+                  <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
                   <li><a href="/junior-gpa-calculator" className="text-blue-600 hover:underline">Junior GPA Calculator</a></li>
-                  <li><a href="/senior-gpa-calculator" className="text-blue-600 hover:underline">Senior GPA Calculator</a></li>
                   <li><a href="/gpa-calculators/gpa-goal-calculator" className="text-blue-600 hover:underline">GPA Goal Calculator</a></li>
                 </ul>
 

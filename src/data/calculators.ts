@@ -53,7 +53,7 @@ export const calculatorData = [
     h2: 'Second Year GPA Tool',
     description: 'A dedicated calculator for sophomore students to calculate and improve second year GPA quickly and accurately.',
     targetAudience: 'College Sophomore Students',
-    relatedCalculators: ['freshman-gpa-calculator', 'junior-gpa-calculator', 'senior-gpa-calculator', 'semester-gpa-calculator'],
+    relatedCalculators: ['junior-gpa-calculator', 'semester-gpa-calculator'],
   },
   {
     id: 'junior-gpa-calculator',
@@ -64,7 +64,7 @@ export const calculatorData = [
     h2: 'Junior Year GPA Tool',
     description: 'A modern junior year GPA calculator designed for high school and college juniors focused on academic growth.',
     targetAudience: 'Junior students',
-    relatedCalculators: ['sophomore-gpa-calculator', 'senior-gpa-calculator', 'high-school-gpa-calculator'],
+    relatedCalculators: ['sophomore-gpa-calculator', 'high-school-gpa-calculator'],
   },
   {
     id: 'simple-gpa-calculator',
@@ -75,7 +75,7 @@ export const calculatorData = [
     h2: 'Quick and Easy GPA Calculator',
     description: 'A minimal and fast GPA calculator with instant results, easy course rows, and accurate 4.0 formula. Optimized for speed and beginner usage.',
     targetAudience: 'Students needing fast GPA estimates',
-    relatedCalculators: ['advanced-gpa-calculator', 'college-gpa-calculator', 'quick-gpa-calculator', 'semester-gpa-calculator', 'gpa-average-calculator'],
+    relatedCalculators: ['college-gpa-calculator', 'quick-gpa-calculator', 'semester-gpa-calculator', 'gpa-average-calculator'],
   },
   {
     id: 'quick-gpa-calculator',
@@ -317,7 +317,7 @@ export const calculatorData = [
     h2: 'Calculate Your Second Year GPA with Confidence',
     description: 'Use a modern, accurate calculator to track your sophomore college GPA with weighted honors and AP support.',
     targetAudience: 'College Sophomore Students',
-    relatedCalculators: ['freshman-gpa-calculator', 'junior-gpa-calculator', 'senior-gpa-calculator', 'semester-gpa-calculator'],
+    relatedCalculators: ['junior-gpa-calculator', 'semester-gpa-calculator'],
   },
   {
     id: 'junior-gpa-calculator',
@@ -328,7 +328,7 @@ export const calculatorData = [
     h2: 'Online Junior GPA Tool',
     description: 'Calculate your GPA for your junior year, a crucial year for college admissions.',
     targetAudience: 'Junior Students',
-    relatedCalculators: ['freshman-gpa-calculator', 'sophomore-gpa-calculator', 'senior-gpa-calculator', 'college-gpa-calculator'],
+    relatedCalculators: ['sophomore-gpa-calculator', 'college-gpa-calculator'],
   },
   {
     id: 'simple-gpa-calculator',
@@ -339,7 +339,7 @@ export const calculatorData = [
     h2: 'Online Simple GPA Tool',
     description: 'The simplest GPA calculator for anyone who just needs a quick, straightforward calculation.',
     targetAudience: 'All Students',
-    relatedCalculators: ['advanced-gpa-calculator', 'quick-gpa-calculator', 'online-free-gpa-calculator', 'college-gpa-calculator', 'unweighted-gpa-calculator'],
+    relatedCalculators: ['quick-gpa-calculator', 'online-free-gpa-calculator', 'college-gpa-calculator', 'unweighted-gpa-calculator'],
   },
   {
     id: 'quick-gpa-calculator',
@@ -350,7 +350,7 @@ export const calculatorData = [
     h2: 'Online Quick GPA Tool',
     description: 'Get your GPA calculated instantly with this fast, no-fuss calculator.',
     targetAudience: 'All Students',
-    relatedCalculators: ['simple-gpa-calculator', 'advanced-gpa-calculator', 'online-free-gpa-calculator', 'college-gpa-calculator', 'student-gpa-calculator'],
+    relatedCalculators: ['simple-gpa-calculator', 'online-free-gpa-calculator', 'college-gpa-calculator'],
   },
   {
     id: 'online-free-gpa-calculator',

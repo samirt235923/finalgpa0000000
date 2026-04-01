@@ -209,7 +209,7 @@ export default function SimpleGPACalculatorPage() {
               If you need even more features, check these related tools: about course-level forecasts, weighted AP/honors support, and long-term GPA projection.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/gpa-calculators/advanced-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">Advanced GPA Calculator</Link>
+
               <Link href="/gpa-calculators/college-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">College GPA Calculator</Link>
               <Link href="/gpa-calculators/quick-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">Quick GPA Calculator</Link>
               <Link href="/gpa-calculators/semester-gpa-calculator" className="inline-block rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300">Semester GPA Calculator</Link>

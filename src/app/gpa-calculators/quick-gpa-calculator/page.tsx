@@ -154,7 +154,7 @@ GPA = 14 ÷ 4 = 3.5
 
           <h2 id="related">Related GPA Calculators</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/online-gpa-calculator" className="block rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm hover:shadow-md transition">Online GPA Calculator</Link>
+
             <Link href="/college-gpa-calculator" className="block rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm hover:shadow-md transition">College GPA Calculator</Link>
             <Link href="/gpa-calculators/semester-gpa-calculator" className="block rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm hover:shadow-md transition">Semester GPA Calculator</Link>
             <Link href="/gpa-average-calculator" className="block rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm hover:shadow-md transition">GPA Average Calculator</Link>

@@ -32,7 +32,6 @@ const LAYOUT_BREADCRUMB_SLUGS = new Set([
   'gpa-goal-calculator',
   'grade-point-calculator',
   'high-school-gpa-calculator',
-  'online-gpa-calculator',
   'quick-gpa-calculator',
   'sophomore-gpa-calculator',
   'target-gpa-calculator',
