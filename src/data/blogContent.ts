@@ -75,7 +75,7 @@ export const blogContent: Record<string, string> = {
       <li>Multiply points by credits and add them up.</li>
       <li>Divide by total credits.</li>
     </ol>
-    <p>Want a fast answer? Use our <a href="/gpa-calculators/weighted-gpa-calculator">Weighted GPA Calculator</a> or the <a href="/gpa-calculators/gpa-improvement-calculator">GPA Improvement Calculator</a>.</p>
+    <p>Want a fast answer? Use our <a href="/gpa-calculators/weighted-gpa-calculator">Weighted GPA Calculator</a> or the <a href="/gpa-calculators/target-gpa-calculator">GPA Improvement Calculator</a>.</p>
 
     <h2>Common GPA Mistakes to Avoid</h2>
     <ul>
@@ -163,7 +163,7 @@ export const blogContent: Record<string, string> = {
         <tr><td>3.2</td><td>3.4</td><td>1 term</td></tr>
       </tbody>
     </table>
-    <p>For a precise plan, try the <a href="/gpa-calculators/gpa-improvement-calculator">GPA Improvement Calculator</a>.</p>
+    <p>For a precise plan, try the <a href="/gpa-calculators/target-gpa-calculator">GPA Improvement Calculator</a>.</p>
 
     <h2>10 Proven Strategies to Improve GPA</h2>
     <ol>
@@ -272,7 +272,7 @@ export const blogContent: Record<string, string> = {
 
     <h2>If Your GPA Is Not Perfect</h2>
     <p>You still have options. Strong essays, a clear upward trend, and exceptional activities can help. Focus on raising your GPA now and showing improvement.</p>
-    <p>Start with our <a href="/blog/how-to-improve-gpa">GPA improvement guide</a> and calculate your options using the <a href="/gpa-calculators/gpa-improvement-calculator">GPA Improvement Calculator</a>.</p>
+    <p>Start with our <a href="/blog/how-to-improve-gpa">GPA improvement guide</a> and calculate your options using the <a href="/gpa-calculators/target-gpa-calculator">GPA Improvement Calculator</a>.</p>
 
     <h2>Ivy League Planning Checklist</h2>
     <ul>
@@ -335,7 +335,7 @@ export const blogContent: Record<string, string> = {
     <p>A higher GPA opens more doors, but you can also improve your chances through leadership, service, and strong essays.</p>
     <ul>
       <li>Raise your GPA with a focused plan from the <a href="/blog/how-to-improve-gpa">GPA improvement guide</a>.</li>
-      <li>Track your GPA with the <a href="/gpa-calculators/gpa-improvement-calculator">GPA Improvement Calculator</a>.</li>
+      <li>Track your GPA with the <a href="/gpa-calculators/target-gpa-calculator">GPA Improvement Calculator</a>.</li>
       <li>Build a clear story around your goals and achievements.</li>
     </ul>
 
@@ -399,7 +399,7 @@ export const blogContent: Record<string, string> = {
 
     <h2>What If Your GPA Is Below Your Goal?</h2>
     <p>Do not panic. Focus on a strong upward trend. Show growth through improved grades, stronger study habits, and positive recommendations.</p>
-    <p>Start with the <a href="/blog/how-to-improve-gpa">GPA improvement guide</a>, then calculate realistic targets with the <a href="/gpa-calculators/gpa-improvement-calculator">GPA Improvement Calculator</a>.</p>
+    <p>Start with the <a href="/blog/how-to-improve-gpa">GPA improvement guide</a>, then calculate realistic targets with the <a href="/gpa-calculators/target-gpa-calculator">GPA Improvement Calculator</a>.</p>
 
     <h2>How to Plan Your Next Steps</h2>
     <ol>
@@ -466,7 +466,7 @@ export const blogContent: Record<string, string> = {
     <p>Most colleges accept the <a href="https://www.commonapp.org/" target="_blank" rel="noopener noreferrer">Common App</a>, so reviewing the application early can help you plan.</p>
 
     <h2>What to Do If Your GPA Is Low</h2>
-    <p>Start by improving your grades now. Even small improvements can change the direction of your transcript. Use our <a href="/blog/how-to-improve-gpa">GPA improvement guide</a> and calculate realistic targets with the <a href="/gpa-calculators/gpa-improvement-calculator">GPA Improvement Calculator</a>.</p>
+    <p>Start by improving your grades now. Even small improvements can change the direction of your transcript. Use our <a href="/blog/how-to-improve-gpa">GPA improvement guide</a> and calculate realistic targets with the <a href="/gpa-calculators/target-gpa-calculator">GPA Improvement Calculator</a>.</p>
 
     <h2>FAQ</h2>
     <h3>Is GPA more important than test scores?</h3>

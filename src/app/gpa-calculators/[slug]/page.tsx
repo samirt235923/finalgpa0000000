@@ -174,8 +174,8 @@ export default async function CalculatorPage({ params }: Props) {
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">Table of Contents</h2>
                   <ul className="list-decimal list-inside space-y-2 text-gray-700">
-                    <li><a href="#what-is-online-gpa-calculator" className="text-blue-600 hover:underline">What Is an Online GPA Calculator</a></li>
-                    <li><a href="#how-to-use" className="text-blue-600 hover:underline">How to Use the Online GPA Calculator</a></li>
+                    <li><a href="#what-is-gpa-calculator" className="text-blue-600 hover:underline">What Is a GPA Calculator</a></li>
+                    <li><a href="#how-to-use" className="text-blue-600 hover:underline">How to Use the GPA Calculator</a></li>
                     <li><a href="#gpa-formula" className="text-blue-600 hover:underline">GPA Calculation Formula Explained</a></li>
                     <li><a href="#weighted-vs-unweighted" className="text-blue-600 hover:underline">Weighted vs Unweighted GPA</a></li>
                     <li><a href="#example-calculation" className="text-blue-600 hover:underline">Example Calculation</a></li>
