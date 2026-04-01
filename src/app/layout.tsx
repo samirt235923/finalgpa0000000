@@ -73,6 +73,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://topgpacalculator.com',
   },
+  verification: {
+    google: 'sOKuDeXdAwkrZahqPDQMw4dLHFjmANUvm4cWywafui8',
+  },
 };
 
 export default function RootLayout({
