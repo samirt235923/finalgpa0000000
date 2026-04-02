@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* Calculator Section */}
-      <section id="calculator" className="py-20 bg-white">
+      <section id="calculator" className="defer-paint py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-4">
@@ -188,7 +188,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-secondary-50">
+      <section className="defer-paint py-20 bg-secondary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-4">
@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* Featured Calculators */}
-      <section className="py-20 bg-white">
+      <section className="defer-paint py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-4">
@@ -327,7 +327,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-primary">
+      <section className="defer-paint py-20 bg-gradient-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="text-white">
@@ -351,7 +351,7 @@ export default function Home() {
       </section>
 
       {/* Blog Preview */}
-      <section className="py-20 bg-secondary-50">
+      <section className="defer-paint py-20 bg-secondary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-4">
@@ -442,7 +442,7 @@ export default function Home() {
       </section>
 
       {/* GPA Guide */}
-      <section className="py-20 bg-white">
+      <section className="defer-paint py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 mb-4">
@@ -495,12 +495,12 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <div id="faq" className="bg-white">
+      <div id="faq" className="defer-paint bg-white">
         <HomeFAQ items={faqData} />
       </div>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <section className="defer-paint py-20 bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Calculate Your GPA?

@@ -84,6 +84,14 @@ button:focus {
   outline-offset: 2px;
 }
 
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 /* Input Styles */
 input,
 select,
@@ -108,6 +116,13 @@ section {
 
 section:first-of-type {
   padding-top: 0;
+}
+
+@supports (content-visibility: auto) {
+  .defer-paint {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+  }
 }
 
 /* Table Styles */
