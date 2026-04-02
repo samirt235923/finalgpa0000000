@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --no-lint",
+    "postbuild": "node scripts/inline-critical-css.js",
     "start": "next start",
     "lint": "next lint",
     "generate-sitemap": "node scripts/generate-sitemap.js"
