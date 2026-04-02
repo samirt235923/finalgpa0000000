@@ -53,6 +53,8 @@ const inlineCriticalCss = async () => {
     publicPath: '/_next/',
     preload: 'swap',
     fonts: true,
+    minimumExternalSize: 50000,
+    pruneSource: true,
     reduceInlineStyles: false,
     logLevel: 'silent',
     noscriptFallback: true,

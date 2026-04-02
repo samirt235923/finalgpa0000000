@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import Script from 'next/script';
 import { Inter, Poppins } from 'next/font/google';
+import Analytics from '@/components/Analytics';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
@@ -124,18 +124,7 @@ export default function RootLayout({
         `}} />
       </head>
       <body className="bg-white">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-0068LKZ62B"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-0068LKZ62B');
-          `}
-        </Script>
+        <Analytics />
         <Header />
         <main className="min-h-screen">
           {children}
