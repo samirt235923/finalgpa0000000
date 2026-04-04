@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 interface Course {
   id: string;
@@ -28,19 +28,15 @@ export default function GPACalculator() {
   const [courses, setCourses] = useState<Course[]>([
     { id: '1', name: '', grade: 'A', creditHours: 3, courseType: 'Regular' },
   ]);
-  const [gpa, setGpa] = useState<number | null>(null);
-  const [weightedGPA, setWeightedGPA] = useState<number | null>(null);
 
-  const calculateGPA = () => {
-    if (courses.length === 0) {
-      setGpa(null);
-      setWeightedGPA(null);
-      return;
-    }
-
+  const { gpa, weightedGPA, totalCredits, totalGradePoints, totalWeightedGradePoints, isValid } = useMemo(() => {
     let totalPoints = 0;
     let totalWeightedPoints = 0;
-    let totalCredits = 0;
+    let totalCreds = 0;
+
+    if (courses.length === 0) {
+      return { gpa: 0, weightedGPA: 0, totalCredits: 0, totalGradePoints: 0, totalWeightedGradePoints: 0, isValid: false };
+    }
 
     courses.forEach((course) => {
       const basePoints = gradePoints[course.grade] || 0;
@@ -54,26 +50,35 @@ export default function GPACalculator() {
 
       totalPoints += pts;
       totalWeightedPoints += weightedPts;
-      totalCredits += course.creditHours;
+      totalCreds += course.creditHours;
     });
 
-    const calculatedGPA = totalCredits > 0 ? totalPoints / totalCredits : 0;
-    const calculatedWeightedGPA = totalCredits > 0 ? totalWeightedPoints / totalCredits : 0;
+    const calculatedGPA = totalCreds > 0 ? totalPoints / totalCreds : 0;
+    const calculatedWeightedGPA = totalCreds > 0 ? totalWeightedPoints / totalCreds : 0;
 
-    setGpa(parseFloat(calculatedGPA.toFixed(2)));
-    setWeightedGPA(parseFloat(calculatedWeightedGPA.toFixed(2)));
-  };
+    return {
+      gpa: parseFloat(calculatedGPA.toFixed(2)),
+      weightedGPA: parseFloat(calculatedWeightedGPA.toFixed(2)),
+      totalCredits: totalCreds,
+      totalGradePoints: parseFloat(totalPoints.toFixed(2)),
+      totalWeightedGradePoints: parseFloat(totalWeightedPoints.toFixed(2)),
+      isValid: totalCreds > 0
+    };
+  }, [courses]);
 
   const addCourse = () => {
+    if (courses.length >= 25) return;
     const newId = Math.random().toString(36).substr(2, 9);
     setCourses([...courses, { id: newId, name: '', grade: 'A', creditHours: 3, courseType: 'Regular' }]);
   };
 
   const removeCourse = (id: string) => {
-    setCourses(courses.filter((course) => course.id !== id));
+    if (courses.length > 1) {
+      setCourses(courses.filter((course) => course.id !== id));
+    }
   };
 
-  const updateCourse = (id: string, field: string, value: any) => {
+  const updateCourse = (id: string, field: keyof Course, value: string | number) => {
     setCourses(
       courses.map((course) =>
         course.id === id ? { ...course, [field]: value } : course
@@ -83,34 +88,19 @@ export default function GPACalculator() {
 
   const resetCalculator = () => {
     setCourses([{ id: '1', name: '', grade: 'A', creditHours: 3, courseType: 'Regular' }]);
-    setGpa(null);
-    setWeightedGPA(null);
   };
 
-  const totals = courses.reduce(
-    (acc, course) => {
-      const basePoints = gradePoints[course.grade] || 0;
-      const weightBoost = course.courseType === 'Honors' ? 0.5 : course.courseType === 'AP' ? 1.0 : 0;
-      const weightedPoints = Math.min(basePoints + weightBoost, 5.0);
-      return {
-        totalCredits: acc.totalCredits + course.creditHours,
-        totalGradePoints: acc.totalGradePoints + basePoints * course.creditHours,
-        totalWeightedGradePoints: acc.totalWeightedGradePoints + weightedPoints * course.creditHours,
-      };
-    },
-    { totalCredits: 0, totalGradePoints: 0, totalWeightedGradePoints: 0 }
-  );
+  const getGPAMessage = (gpaVal: number) => {
+    if (gpaVal >= 3.8) return { message: 'Excellent', classification: 'Excellent' };
+    if (gpaVal >= 3.5) return { message: 'Very Good', classification: 'Very Good' };
+    if (gpaVal >= 3.0) return { message: 'Good', classification: 'Good' };
+    if (gpaVal >= 2.5) return { message: 'Average', classification: 'Average' };
+    return { message: 'Below Average', classification: 'Below Average' };
+  };
 
-  const totalCredits = totals.totalCredits;
-  const totalGradePoints = parseFloat(totals.totalGradePoints.toFixed(2));
-  const totalWeightedGradePoints = parseFloat(totals.totalWeightedGradePoints.toFixed(2));
-
-  const getGPAMessage = (gpa: number) => {
-    if (gpa >= 3.8) return { message: 'Excellent Performance!', color: 'success' };
-    if (gpa >= 3.5) return { message: 'Very Good Performance!', color: 'primary' };
-    if (gpa >= 3.0) return { message: 'Good Performance!', color: 'accent' };
-    if (gpa >= 2.5) return { message: 'Satisfactory Performance', color: 'warning' };
-    return { message: 'Room for Improvement', color: 'secondary' };
+  const handleCreditChange = (id: string, value: string) => {
+    const numValue = parseInt(value) || 0;
+    updateCourse(id, 'creditHours', numValue);
   };
 
   return (
@@ -226,9 +216,7 @@ export default function GPACalculator() {
                     max="12"
                     placeholder="3"
                     value={course.creditHours}
-                    onChange={(e) =>
-                      updateCourse(course.id, 'creditHours', parseInt(e.target.value) || 0)
-                    }
+                    onChange={(e) => handleCreditChange(course.id, e.target.value)}
                     className="w-full px-4 py-3 bg-white border border-secondary-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200 text-secondary-900 placeholder-secondary-400"
                   />
                 </div>
@@ -258,30 +246,19 @@ export default function GPACalculator() {
             onClick={resetCalculator}
             className="flex-1 btn-outline text-center px-6 py-4 text-lg font-semibold"
           >
-            Reset Calculator
+            Reset
           </button>
 
           <button
             onClick={addCourse}
-            className="flex-1 btn-secondary text-center px-6 py-4 text-lg font-semibold"
+            disabled={courses.length >= 25}
+            className="flex-1 btn-secondary text-center px-6 py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span className="flex items-center justify-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
-              Add Another Course
-            </span>
-          </button>
-
-          <button
-            onClick={calculateGPA}
-            className="flex-1 btn-primary text-center px-6 py-4 text-lg font-semibold"
-          >
-            <span className="flex items-center justify-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-              Calculate GPA
+              Add Course
             </span>
           </button>
         </div>
@@ -303,27 +280,27 @@ export default function GPACalculator() {
         </div>
 
         {/* GPA Result */}
-        {gpa !== null && (
+        {isValid && (
           <div className="bg-gradient-primary rounded-3xl p-8 lg:p-12 text-center text-white shadow-large">
             <div className="mb-6">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                GPA Calculated Successfully
+                Real-Time GPA Results
               </div>
 
               <div className="mb-4">
-                <div className="text-primary-100 text-lg mb-2">Your GPA</div>
+                <div className="text-primary-100 text-lg mb-2">Current GPA</div>
                 <div className="text-6xl lg:text-7xl font-bold mb-2">{gpa}</div>
                 <div className="text-xl font-semibold">
                   {getGPAMessage(gpa).message}
                 </div>
               </div>
               <div className="bg-white/15 rounded-xl p-4">
-                <div className="text-primary-100 font-semibold mb-2">Weighted GPA (Honors/AP)</div>
-                <div className="text-4xl font-bold">{weightedGPA !== null ? weightedGPA : '--'}</div>
-                <div className="text-sm text-primary-100/80 mt-1">Results include Honors (+0.5) and AP (+1.0) adjustments.</div>
+                <div className="text-primary-100 font-semibold mb-2">Weighted GPA (with Honors/AP)</div>
+                <div className="text-4xl font-bold">{weightedGPA}</div>
+                <div className="text-sm text-primary-100/80 mt-1">Includes Honors (+0.5) and AP (+1.0) adjustments.</div>
               </div>
 
               {/* GPA Scale Indicator */}
@@ -334,8 +311,8 @@ export default function GPACalculator() {
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-3">
                   <div
-                    className="bg-white h-3 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${(gpa / 4) * 100}%` }}
+                    className="bg-white h-3 rounded-full transition-all duration-500 ease-out"
+                    style={{ width: `${Math.min((gpa / 4) * 100, 100)}%` }}
                   ></div>
                 </div>
                 <div className="text-xs text-primary-200 mt-2">

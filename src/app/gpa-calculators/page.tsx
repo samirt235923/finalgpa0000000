@@ -5,6 +5,15 @@ import { useMemo, useState } from 'react';
 import { calculatorData } from '@/data/calculators';
 import { jsonLdStringify } from '@/lib/jsonLd';
 
+const FEATURED_CALCULATOR_IDS = [
+  'college-gpa-calculator',
+  'high-school-gpa-calculator',
+  'middle-school-gpa-calculator',
+  'weighted-gpa-calculator',
+  'unweighted-gpa-calculator',
+  'semester-gpa-calculator',
+];
+
 export default function GPACalculatorsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -27,7 +36,18 @@ export default function GPACalculatorsPage() {
     });
   }, [normalizedQuery, uniqueCalculators]);
 
-  const featuredCalculators = useMemo(() => filteredCalculators.slice(0, 6), [filteredCalculators]);
+  const featuredCalculators = useMemo(() => {
+    const calculatorsById = new Map(filteredCalculators.map((calc) => [calc.id, calc]));
+    return FEATURED_CALCULATOR_IDS
+      .map((id) => calculatorsById.get(id))
+      .filter((calc): calc is (typeof filteredCalculators)[number] => Boolean(calc));
+  }, [filteredCalculators]);
+
+  const allCalculators = useMemo(() => {
+    if (normalizedQuery) return filteredCalculators;
+    const featuredIds = new Set(featuredCalculators.map((calc) => calc.id));
+    return filteredCalculators.filter((calc) => !featuredIds.has(calc.id));
+  }, [featuredCalculators, filteredCalculators, normalizedQuery]);
 
   const collectionSchema = {
     "@context": "https://schema.org",
@@ -136,11 +156,11 @@ export default function GPACalculatorsPage() {
           {/* All Calculators */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">All Calculators</h2>
-            {filteredCalculators.length === 0 ? (
+            {allCalculators.length === 0 ? (
               <p className="text-gray-600">No calculators matched your search. Try a different keyword.</p>
             ) : (
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {filteredCalculators.map((calc) => (
+                {allCalculators.map((calc) => (
                   <Link
                     key={calc.id}
                     href={`/gpa-calculators/${calc.id}`}

@@ -145,8 +145,6 @@ const nextConfig = {
       { source: '/college-gpa-calculator', destination: '/gpa-calculators/college-gpa-calculator', permanent: true },
       { source: '/cumulative-gpa-calculator', destination: '/gpa-calculators/cumulative-gpa-calculator', permanent: true },
       { source: '/nursing-gpa-calculator', destination: '/gpa-calculators/nursing-gpa-calculator', permanent: true },
-      { source: '/gpa-calculators/middle-school-gpa-calculator', destination: '/gpa-calculators/academic-gpa-calculator', permanent: true },
-      { source: '/gpa-calculators/unweighted-gpa-calculator', destination: '/gpa-calculators/4-0-scale-gpa-calculator', permanent: true },
       { source: '/gpa-calculators/gpa-to-percentage-calculator', destination: '/gpa-calculators/percentage-to-gpa-calculator', permanent: true },
       { source: '/gpa-calculators/gpa-calculator', destination: '/gpa-calculators/online-free-gpa-calculator', permanent: true },
     ];

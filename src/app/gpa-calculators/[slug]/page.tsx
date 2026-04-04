@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import GPACalculator from '@/components/GPACalculator';
+import MiddleSchoolGPACalculator from '@/components/MiddleSchoolGPACalculator';
+import UnweightedGPACalculator from '@/components/UnweightedGPACalculator';
 import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
@@ -14,10 +16,51 @@ interface Props {
   }>;
 }
 
+const dedicatedPages = new Set([
+  'simple-gpa-calculator',
+  'quick-gpa-calculator',
+  'sophomore-gpa-calculator',
+  'junior-gpa-calculator',
+  'semester-gpa-calculator',
+  'target-gpa-calculator',
+  'academic-gpa-calculator',
+  'university-gpa-calculator',
+  'gpa-average-calculator',
+  'medical-school-gpa-calculator',
+  'gpa-weight-calculator',
+  'grade-point-calculator',
+  'credit-hour-gpa-calculator',
+  'gpa-goal-calculator',
+  'online-free-gpa-calculator',
+  'weighted-gpa-calculator',
+  'transfer-gpa-calculator',
+  'nursing-gpa-calculator',
+  'law-school-gpa-calculator',
+  'engineering-gpa-calculator',
+  '5-0-scale-gpa-calculator',
+  'percentage-to-gpa-calculator',
+  'high-school-gpa-calculator',
+  'cumulative-gpa-calculator',
+  'community-college-gpa-calculator',
+  'college-gpa-calculator',
+  '4-0-scale-gpa-calculator',
+]);
+
 export async function generateStaticParams() {
-  return calculatorData.map((calc) => ({
-    slug: calc.id,
-  }));
+  const seen = new Set<string>();
+
+  return calculatorData
+    .filter((calc) => {
+      if (dedicatedPages.has(calc.id) || seen.has(calc.id)) {
+        return false;
+      }
+
+      seen.add(calc.id);
+      return true;
+    })
+    .map((calc) => ({
+      slug: calc.id,
+    }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -166,7 +209,13 @@ export default async function CalculatorPage({ params }: Props) {
             <div className="md:col-span-2">
               {/* Calculator */}
               <div className="mb-12">
-                <GPACalculator />
+                {slug === 'middle-school-gpa-calculator' ? (
+                  <MiddleSchoolGPACalculator />
+                ) : slug === 'unweighted-gpa-calculator' ? (
+                  <UnweightedGPACalculator />
+                ) : (
+                  <GPACalculator />
+                )}
               </div>
 
               {/* Content */}
