@@ -394,7 +394,7 @@ export const calculatorData = [
     h2: 'Middle School GPA Tool',
     description: 'Our Middle School GPA Calculator is designed specifically for students in grades 6-8. Calculate your GPA without credits, with weighted options for honors and advanced courses, or using percentage grades. Perfect for tracking academic performance early in your educational journey.',
     targetAudience: 'Middle School Students (Grades 6-8)',
-    relatedCalculators: ['simple-gpa-calculator', 'weighted-gpa-calculator', 'high-school-gpa-calculator', 'gpa-average-calculator', 'gpa-calculator'],
+    relatedCalculators: ['simple-gpa-calculator', 'weighted-gpa-calculator', 'high-school-gpa-calculator', 'gpa-average-calculator', 'online-free-gpa-calculator'],
   },
   {
     id: 'unweighted-gpa-calculator',
@@ -405,7 +405,7 @@ export const calculatorData = [
     h2: 'Unweighted GPA Tool',
     description: 'Our Unweighted GPA Calculator computes your GPA on the standard 4.0 scale without weighted bonuses. Includes a powerful weighted to unweighted GPA converter to help you understand how your grades compare when colleges remove the AP/Honors bonus points.',
     targetAudience: 'High School & College Students',
-    relatedCalculators: ['weighted-gpa-calculator', 'gpa-calculator', 'cumulative-gpa-calculator', 'gpa-converter', 'gpa-improvement-calculator'],
+    relatedCalculators: ['weighted-gpa-calculator', 'online-free-gpa-calculator', 'cumulative-gpa-calculator', 'percentage-to-gpa-calculator', 'target-gpa-calculator'],
   },
 
 ];

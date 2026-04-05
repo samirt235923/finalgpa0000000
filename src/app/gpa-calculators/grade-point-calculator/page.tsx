@@ -116,7 +116,7 @@ export default function GradePointCalculatorPage() {
           <section id="related">
             <h2>Related Calculators</h2>
             <ul>
-              <li><Link href="/gpa-calculators/gpa-calculator" className="text-blue-600 hover:underline">GPA Calculator</Link></li>
+              <li><Link href="/gpa-calculators/online-free-gpa-calculator" className="text-blue-600 hover:underline">GPA Calculator</Link></li>
               <li><Link href="/gpa-calculators/weighted-gpa-calculator" className="text-blue-600 hover:underline">Weighted GPA Calculator</Link></li>
               <li><Link href="/gpa-calculators/semester-gpa-calculator" className="text-blue-600 hover:underline">Semester GPA Calculator</Link></li>
               <li><Link href="/gpa-calculators/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</Link></li>

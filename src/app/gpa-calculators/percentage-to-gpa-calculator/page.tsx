@@ -173,7 +173,7 @@ export default function PercentageToGPACalculatorPage() {
           <h2 className="text-3xl font-bold mb-4">Related GPA Tools</h2>
           <p className="text-slate-700 mb-4">Explore related calculators for full academic planning support.</p>
           <ul className="list-disc pl-5 space-y-2 text-blue-600">
-            <li><Link href="/gpa-calculators/gpa-calculator" className="hover:underline">GPA Calculator</Link></li>
+            <li><Link href="/gpa-calculators/online-free-gpa-calculator" className="hover:underline">GPA Calculator</Link></li>
             <li><Link href="/gpa-calculators/gpa-to-percentage-calculator" className="hover:underline">GPA to Percentage Calculator</Link></li>
             <li><Link href="/gpa-calculators/weighted-gpa-calculator" className="hover:underline">Weighted GPA Calculator</Link></li>
             <li><Link href="/gpa-calculators/cumulative-gpa-calculator" className="hover:underline">Cumulative GPA Calculator</Link></li>

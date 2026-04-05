@@ -304,11 +304,11 @@ export default function MiddleSchoolGPACalculatorPage() {
                 <h2 className="text-3xl font-bold text-gray-800 mb-4" id="related-calculators">Related GPA Calculators</h2>
                 <p className="text-gray-700 mb-4">Explore these tools for comprehensive GPA planning:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><a href="/gpa-calculator" className="text-blue-600 hover:underline">GPA Calculator</a></li>
-                  <li><a href="/simple-gpa-calculator" className="text-blue-600 hover:underline">Simple GPA Calculator</a></li>
-                  <li><a href="/weighted-gpa-calculator" className="text-blue-600 hover:underline">Weighted GPA Calculator</a></li>
-                  <li><a href="/gpa-average-calculator" className="text-blue-600 hover:underline">GPA Average Calculator</a></li>
-                  <li><a href="/high-school-gpa-calculator" className="text-blue-600 hover:underline">High School GPA Calculator</a></li>
+                  <li><a href="/gpa-calculators/online-free-gpa-calculator" className="text-blue-600 hover:underline">GPA Calculator</a></li>
+                  <li><a href="/gpa-calculators/simple-gpa-calculator" className="text-blue-600 hover:underline">Simple GPA Calculator</a></li>
+                  <li><a href="/gpa-calculators/weighted-gpa-calculator" className="text-blue-600 hover:underline">Weighted GPA Calculator</a></li>
+                  <li><a href="/gpa-calculators/gpa-average-calculator" className="text-blue-600 hover:underline">GPA Average Calculator</a></li>
+                  <li><a href="/gpa-calculators/high-school-gpa-calculator" className="text-blue-600 hover:underline">High School GPA Calculator</a></li>
                 </ul>
 
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted Learning Resources</h2>

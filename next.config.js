@@ -142,9 +142,13 @@ const nextConfig = {
       { source: '/weighted-gpa-calculator', destination: '/gpa-calculators/weighted-gpa-calculator', permanent: true },
       { source: '/gpa-average-calculator', destination: '/gpa-calculators/gpa-average-calculator', permanent: true },
       { source: '/online-gpa-calculator', destination: '/gpa-calculators/online-free-gpa-calculator', permanent: true },
+      { source: '/gpa-calculator', destination: '/gpa-calculators/online-free-gpa-calculator', permanent: true },
       { source: '/college-gpa-calculator', destination: '/gpa-calculators/college-gpa-calculator', permanent: true },
       { source: '/cumulative-gpa-calculator', destination: '/gpa-calculators/cumulative-gpa-calculator', permanent: true },
       { source: '/nursing-gpa-calculator', destination: '/gpa-calculators/nursing-gpa-calculator', permanent: true },
+      { source: '/simple-gpa-calculator', destination: '/gpa-calculators/simple-gpa-calculator', permanent: true },
+      { source: '/gpa-improvement-calculator', destination: '/gpa-calculators/target-gpa-calculator', permanent: true },
+      { source: '/gpa-converter', destination: '/gpa-calculators/percentage-to-gpa-calculator', permanent: true },
       { source: '/gpa-calculators/gpa-to-percentage-calculator', destination: '/gpa-calculators/percentage-to-gpa-calculator', permanent: true },
       { source: '/gpa-calculators/gpa-calculator', destination: '/gpa-calculators/online-free-gpa-calculator', permanent: true },
     ];

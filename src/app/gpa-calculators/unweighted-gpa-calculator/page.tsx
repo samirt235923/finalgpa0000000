@@ -245,11 +245,11 @@ export default function UnweightedGPACalculatorPage() {
                 <h2 className="text-3xl font-bold text-gray-800 mb-4" id="related-calculators">Related GPA Calculators</h2>
                 <p className="text-gray-700 mb-4">Explore these tools for comprehensive GPA planning:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><a href="/gpa-calculator" className="text-blue-600 hover:underline">GPA Calculator</a></li>
-                  <li><a href="/weighted-gpa-calculator" className="text-blue-600 hover:underline">Weighted GPA Calculator</a></li>
-                  <li><a href="/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</a></li>
-                  <li><a href="/gpa-converter" className="text-blue-600 hover:underline">GPA Converter</a></li>
-                  <li><a href="/gpa-improvement-calculator" className="text-blue-600 hover:underline">GPA Improvement Calculator</a></li>
+                  <li><a href="/gpa-calculators/online-free-gpa-calculator" className="text-blue-600 hover:underline">GPA Calculator</a></li>
+                  <li><a href="/gpa-calculators/weighted-gpa-calculator" className="text-blue-600 hover:underline">Weighted GPA Calculator</a></li>
+                  <li><a href="/gpa-calculators/cumulative-gpa-calculator" className="text-blue-600 hover:underline">Cumulative GPA Calculator</a></li>
+                  <li><a href="/gpa-calculators/percentage-to-gpa-calculator" className="text-blue-600 hover:underline">GPA Converter</a></li>
+                  <li><a href="/gpa-calculators/target-gpa-calculator" className="text-blue-600 hover:underline">GPA Improvement Calculator</a></li>
                 </ul>
 
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted College Planning Resources</h2>
