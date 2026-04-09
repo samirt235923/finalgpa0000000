@@ -296,7 +296,7 @@ export default function MiddleSchoolGPACalculator() {
 
       {/* Grade Scale Reference */}
       <div className="mt-4 p-4 bg-gray-100 rounded-xl">
-        <h4 className="font-semibold text-gray-800 mb-2">Grade Conversion Scale</h4>
+        <p className="font-semibold text-gray-800 mb-2">Grade Conversion Scale</p>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-2 text-xs text-gray-600">
           <div><span className="font-bold">A</span> = 4.0 (90-100%)</div>
           <div><span className="font-bold">B</span> = 3.0 (80-89%)</div>
