@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog';
 import Breadcrumb from '@/components/Breadcrumb';
 import { jsonLdStringify } from '@/lib/jsonLd';
+import CreditHourGPACalculator from '@/components/CreditHourGPACalculator';
 
 interface Props {
   params: Promise<{
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: url,
       type: 'article',
       publishedTime: post.publishedDate,
+      modifiedTime: post.dateModified || post.publishedDate,
       authors: [post.author],
     },
     alternates: {
@@ -59,13 +61,20 @@ export default async function BlogPostPage({ params }: Props) {
   ];
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const postUrl = `https://topgpacalculator.com/blog/${post.slug}`;
   const blogPostingSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
     image: 'https://topgpacalculator.com/logo.svg',
+    url: postUrl,
     datePublished: post.publishedDate,
+    dateModified: post.dateModified || post.publishedDate,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
     author: {
       '@type': 'Person',
       name: post.author,
@@ -130,27 +139,15 @@ export default async function BlogPostPage({ params }: Props) {
                     </p>
                   ))
                 )}
-
-                <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-4">Actionable Recommendations</h2>
-                <ol className="list-decimal list-inside space-y-3 text-gray-700 mb-6">
-                  <li>Create a study schedule and stick to it consistently</li>
-                  <li>Attend all classes and take organized notes</li>
-                  <li>Form or join study groups for peer learning</li>
-                  <li>Seek help from tutors or office hours early</li>
-                  <li>Stay organized with assignments and deadlines</li>
-                  <li>Take care of your mental and physical health</li>
-                  <li>Review material regularly throughout the semester</li>
-                  <li>Use our GPA calculator to track your progress</li>
-                </ol>
-
-                <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-4">Conclusion</h2>
-                <p className="text-gray-700 mb-6">
-                  By implementing these strategies and maintaining focus on your academic goals, you can
-                  significantly improve your GPA and set yourself up for success in your future endeavors.
-                  Remember that improvement takes time and consistency—be patient with yourself and celebrate
-                  small victories along the way.
-                </p>
               </article>
+
+              {post.slug === 'gpa-calculator-101' && (
+                <div className="mt-12 p-6 bg-blue-50 border-2 border-blue-200 rounded-lg">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Use Our GPA Calculator</h2>
+                  <p className="text-gray-700 mb-6">Ready to calculate your GPA? Use our free interactive GPA calculator below to instantly compute your semester or cumulative GPA. Enter your courses, credit hours, and grades to get started.</p>
+                  <CreditHourGPACalculator />
+                </div>
+              )}
 
               {/* AdSense */}
               <div className="mt-12 p-8 bg-gray-100 border-2 border-gray-300 rounded-lg text-center">

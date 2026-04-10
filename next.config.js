@@ -1,9 +1,22 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false,
   experimental: {
     optimizePackageImports: ['react', 'react-dom'],
+  },
+  webpack(config) {
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      'next/dist/client/app-globals$': path.resolve(
+        __dirname,
+        'src/shims/next-app-globals.js'
+      ),
+    };
+
+    return config;
   },
   images: {
     unoptimized: false,

@@ -10,7 +10,8 @@ export const blogPosts = [
     excerpt: 'GPA (Grade Point Average) is a numerical representation of your academic performance. Understanding GPA is crucial for college admissions.',
     content: blogContent['what-is-gpa'],
     author: 'GPA Experts',
-    publishedDate: '2024-01-15',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
     readTime: 8,
   },
   {
@@ -21,7 +22,8 @@ export const blogPosts = [
     excerpt: "If your GPA is lower than you'd like, don't worry. These 10 proven strategies will help you improve.",
     content: blogContent['how-to-improve-gpa'],
     author: 'GPA Experts',
-    publishedDate: '2024-01-16',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
     readTime: 10,
   },
   {
@@ -32,7 +34,8 @@ export const blogPosts = [
     excerpt: 'Ivy League schools have competitive GPA requirements. Discover what it takes to get accepted.',
     content: blogContent['gpa-for-ivy-league'],
     author: 'GPA Experts',
-    publishedDate: '2024-01-17',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
     readTime: 9,
   },
   {
@@ -43,7 +46,8 @@ export const blogPosts = [
     excerpt: 'Many scholarships have GPA requirements. Learn what you need to qualify for financial aid.',
     content: blogContent['gpa-for-scholarships'],
     author: 'GPA Experts',
-    publishedDate: '2024-01-18',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
     readTime: 9,
   },
   {
@@ -54,7 +58,8 @@ export const blogPosts = [
     excerpt: 'Harvard is one of the most selective universities in the world. Discover the GPA needed to apply.',
     content: blogContent['gpa-needed-harvard'],
     author: 'GPA Experts',
-    publishedDate: '2024-01-19',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
     readTime: 9,
   },
   {
@@ -65,7 +70,8 @@ export const blogPosts = [
     excerpt: 'Your GPA is one of the most important factors in college admissions. Understand its impact.',
     content: blogContent['gpa-affects-college-admission'],
     author: 'GPA Experts',
-    publishedDate: '2024-01-20',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
     readTime: 8,
   },
   {
@@ -76,8 +82,21 @@ export const blogPosts = [
     excerpt: 'A beginner-friendly guide to calculating GPA by hand, including weighted vs unweighted.',
     content: blogContent['how-to-calculate-gpa'],
     author: 'GPA Experts',
-    publishedDate: '2026-03-22',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
     readTime: 7,
+  },
+  {
+    id: 'gpa-calculator-101',
+    slug: 'gpa-calculator-101',
+    title: 'GPA Calculator 101: How to Use One and Why It Matters',
+    metaDescription: 'Learn how to use a GPA calculator effectively and understand why it matters for your academic success.',
+    excerpt: 'A comprehensive guide to understanding and using GPA calculators for academic success.',
+    content: blogContent['gpa-calculator-101'],
+    author: 'GPA Experts',
+    publishedDate: '2026-04-10',
+    dateModified: '2026-04-10',
+    readTime: 8,
   },
 ];
 
