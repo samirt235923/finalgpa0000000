@@ -9,7 +9,7 @@ import { jsonLdStringify } from '@/lib/jsonLd';
 
 export const metadata: Metadata = {
   title: 'Unweighted GPA Calculator – Convert Weighted to Unweighted GPA',
-  description: 'Use our Unweighted GPA Calculator and Weighted to Unweighted GPA Converter. Easily calculate GPA on a 4.0 scale with accurate results.',
+  description: 'Two tools in one: calculate your unweighted GPA or convert weighted to unweighted — free, real-time, on a standard 4.0 scale. Perfect for college applications.',
   alternates: {
     canonical: 'https://topgpacalculator.com/gpa-calculators/unweighted-gpa-calculator',
   },

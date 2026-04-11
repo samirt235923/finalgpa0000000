@@ -4,8 +4,8 @@ import NursingGPACalculator from '@/components/NursingGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: 'Nursing GPA Calculator – Free Tool for Nursing School Applicants',
-  description: 'Use our Nursing GPA Calculator to calculate your GPA for nursing school applications. Enter courses, grades, and credit hours to get your accurate nursing GPA instantly.',
+  title: 'Nursing GPA Calculator – Includes Science GPA for ADN & BSN',
+  description: 'Calculate your nursing school GPA instantly with optional Science GPA, credit hours, and course type support. Free, accurate, and built for ADN, BSN & graduate applicants.',
 };
 
 const faqItems = [
