@@ -126,9 +126,9 @@ const contentSchema = jsonLdStringify({
 export default function ColumbiGPACalculatorPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: calculatorJsonLd }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentSchema }} />
+      {breadcrumbJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />}
+      {calculatorJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: calculatorJsonLd }} />}
+      {contentSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentSchema }} />}
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 md:py-12">
         <div className="mx-auto max-w-6xl px-4">
           {/* Breadcrumb */}
