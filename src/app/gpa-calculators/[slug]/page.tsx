@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation';
 import GPACalculator from '@/components/GPACalculator';
 import MiddleSchoolGPACalculator from '@/components/MiddleSchoolGPACalculator';
 import UnweightedGPACalculator from '@/components/UnweightedGPACalculator';
+import HarvardGPACalculator from '@/components/HarvardGPACalculator';
+import StanfordGPACalculator from '@/components/StanfordGPACalculator';
+import ColumbiaGPACalculator from '@/components/ColumbiaGPACalculator';
 import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
@@ -44,6 +47,10 @@ const dedicatedPages = new Set([
   'community-college-gpa-calculator',
   'college-gpa-calculator',
   '4-0-scale-gpa-calculator',
+  'middle-school-gpa-calculator',
+  'unweighted-gpa-calculator',
+  'mit-gpa-calculator',
+  'columbia-gpa-calculator',
 ]);
 
 export async function generateStaticParams() {
@@ -213,6 +220,12 @@ export default async function CalculatorPage({ params }: Props) {
                   <MiddleSchoolGPACalculator />
                 ) : slug === 'unweighted-gpa-calculator' ? (
                   <UnweightedGPACalculator />
+                ) : slug === 'harvard-gpa-calculator' ? (
+                  <HarvardGPACalculator />
+                ) : slug === 'stanford-gpa-calculator' ? (
+                  <StanfordGPACalculator />
+                ) : slug === 'columbia-gpa-calculator' ? (
+                  <ColumbiaGPACalculator />
                 ) : (
                   <GPACalculator />
                 )}

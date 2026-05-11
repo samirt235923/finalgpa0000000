@@ -28,8 +28,8 @@ const semesters = ['Fall', 'Spring', 'Summer'] as const;
 
 const courseTypes = ['Regular', 'Honors', 'Advanced'] as const;
 
-const createCourse = (): Course => ({
-  id: `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+const createCourse = (id: string): Course => ({
+  id,
   name: '',
   semester: 'Fall',
   grade: 'A',
@@ -37,8 +37,10 @@ const createCourse = (): Course => ({
   courseType: 'Regular',
 });
 
+const INITIAL_COURSE: Course = createCourse('course-1');
+
 export default function UniversityGPACalculator() {
-  const [courses, setCourses] = useState<Course[]>([createCourse()]);
+  const [courses, setCourses] = useState<Course[]>([INITIAL_COURSE]);
   const [prevCredits, setPrevCredits] = useState(0);
   const [prevGpa, setPrevGpa] = useState(0);
 
@@ -112,10 +114,11 @@ export default function UniversityGPACalculator() {
     };
   }, [courses, prevCredits, prevGpa]);
 
-  const addCourse = () => setCourses((prev) => [...prev, createCourse()]);
+  const addCourse = () =>
+    setCourses((prev) => [...prev, createCourse(`course-${prev.length + 1}-${Date.now()}`)]);
   const removeCourse = (id: string) => setCourses((prev) => (prev.length > 1 ? prev.filter((course) => course.id !== id) : prev));
   const resetCalculator = () => {
-    setCourses([createCourse()]);
+    setCourses([INITIAL_COURSE]);
     setPrevCredits(0);
     setPrevGpa(0);
   };

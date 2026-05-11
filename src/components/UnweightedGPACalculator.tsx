@@ -23,19 +23,21 @@ const gradePoints: Record<string, number> = {
   'F': 0.0,
 };
 
-const emptyCourse = (): Course => ({
-  id: `${Date.now()}-${Math.random()}`,
+const emptyCourse = (id: string): Course => ({
+  id,
   name: '',
   grade: 'A',
   credits: 1,
 });
+
+const INITIAL_COURSE: Course = emptyCourse('course-1');
 
 export default function UnweightedGPACalculator() {
   const [mode, setMode] = useState<CalculationMode>('unweighted');
   const [useCredits, setUseCredits] = useState(false);
   
   // Unweighted calculator state
-  const [courses, setCourses] = useState<Course[]>([emptyCourse()]);
+  const [courses, setCourses] = useState<Course[]>([INITIAL_COURSE]);
   
   // Converter state
   const [weightedGPA, setWeightedGPA] = useState('');
@@ -101,8 +103,10 @@ export default function UnweightedGPACalculator() {
 
   // Unweighted calculator functions
   const addCourse = () => {
-    if (courses.length >= 20) return;
-    setCourses([...courses, emptyCourse()]);
+    setCourses((currentCourses) => {
+      if (currentCourses.length >= 20) return currentCourses;
+      return [...currentCourses, emptyCourse(`course-${currentCourses.length + 1}-${Date.now()}`)];
+    });
   };
 
   const removeCourse = (id: string) => {
@@ -114,7 +118,7 @@ export default function UnweightedGPACalculator() {
     setCourses(courses.map((c) => (c.id === id ? { ...c, [field]: value } : c)));
   };
 
-  const resetCourses = () => setCourses([emptyCourse()]);
+  const resetCourses = () => setCourses([INITIAL_COURSE]);
 
   const resetConverter = () => {
     setWeightedGPA('');

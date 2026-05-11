@@ -5,7 +5,7 @@ const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false,
   experimental: {
-    optimizePackageImports: ['react', 'react-dom'],
+    // optimizePackageImports: ['react', 'react-dom'],
   },
   webpack(config) {
     config.resolve.alias = {

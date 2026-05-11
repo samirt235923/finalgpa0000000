@@ -12,20 +12,23 @@ const FEATURED_CALCULATOR_IDS = [
   'weighted-gpa-calculator',
   'unweighted-gpa-calculator',
   'semester-gpa-calculator',
+  'harvard-gpa-calculator',
+  'mit-gpa-calculator',
+  'advanced-gpa-calculator',
 ];
 
 export default function GPACalculatorsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const normalizedQuery = searchQuery.trim().toLowerCase();
 
-  const uniqueCalculators = useMemo(() => {
+  const uniqueCalculators = (() => {
     const seen = new Set<string>();
     return calculatorData.filter((calc) => {
       if (seen.has(calc.id)) return false;
       seen.add(calc.id);
       return true;
     });
-  }, []);
+  })();
 
   const filteredCalculators = useMemo(() => {
     if (!normalizedQuery) return uniqueCalculators;

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 interface Course {
   id: string;
@@ -74,8 +74,50 @@ export default function FivePointZeroGPACalculator() {
     return { message: 'Room for Improvement', color: 'secondary' };
   };
 
+  const calculatorRef = useRef<HTMLDivElement>(null);
+
+  const handlePrint = () => {
+    const printContent = calculatorRef.current;
+    if (!printContent) return;
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) return;
+    printWindow.document.write(`
+      <html>
+        <head>
+          <title>5.0 Scale GPA Calculator Results</title>
+          <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f3f4f6; }
+          </style>
+        </head>
+        <body>
+          <h1>5.0 Scale GPA Calculator Results</h1>
+          ${printContent.innerHTML}
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
+    printWindow.print();
+  };
+
+  const handleDownloadPDF = async () => {
+    const canvas = await import('html2canvas').then((mod) => mod.default);
+    const jsPDFModule = await import('jspdf');
+    const jsPDF = jsPDFModule.default;
+    if (!calculatorRef.current) return;
+    const canvasEl = await canvas(calculatorRef.current, { useCORS: true });
+    const imgData = canvasEl.toDataURL('image/png');
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (canvasEl.height * pdfWidth) / canvasEl.width;
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('5-0-scale-gpa-calculator.pdf');
+  };
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" ref={calculatorRef}>
       {/* Calculator Form */}
       <div className="bg-white rounded-xl p-6 shadow-soft border border-secondary-200">
         <h2 className="text-2xl font-bold text-secondary-900 mb-6">5.0 Scale GPA Calculator</h2>
@@ -180,6 +222,20 @@ export default function FivePointZeroGPACalculator() {
             className="flex-1 px-6 py-2 bg-accent-600 text-white rounded-md hover:bg-accent-700 transition-colors font-semibold"
           >
             Calculate 5.0 Scale GPA
+          </button>
+
+          <button
+            onClick={handlePrint}
+            className="flex items-center justify-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
+          >
+            Print
+          </button>
+
+          <button
+            onClick={handleDownloadPDF}
+            className="flex items-center justify-center px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors"
+          >
+            Download as PDF
           </button>
         </div>
 

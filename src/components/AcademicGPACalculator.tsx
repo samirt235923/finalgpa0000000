@@ -31,15 +31,15 @@ const gradeScale: Record<string, number> = {
 
 const courseTypes = ['Regular', 'Honors', 'AP'] as const;
 
-const initialSemester = (): SemesterData => ({
-  name: 'Semester 1',
-  courses: [
-    { id: `${Date.now()}-s0`, name: '', semester: 'Semester 1', grade: 'A', creditHours: 3, type: 'Regular' },
-  ],
+const createSemester = (name: string, courseId: string): SemesterData => ({
+  name,
+  courses: [{ id: courseId, name: '', semester: name, grade: 'A', creditHours: 3, type: 'Regular' }],
 });
 
+const INITIAL_SEMESTER: SemesterData = createSemester('Semester 1', 'semester-1-course-1');
+
 export default function AcademicGPACalculator() {
-  const [semesters, setSemesters] = useState<SemesterData[]>([initialSemester()]);
+  const [semesters, setSemesters] = useState<SemesterData[]>([INITIAL_SEMESTER]);
   const [previousGPA, setPreviousGPA] = useState(0);
   const [previousCredits, setPreviousCredits] = useState(0);
 
@@ -97,7 +97,11 @@ export default function AcademicGPACalculator() {
     };
   }, [semesters, previousCredits, previousGPA]);
 
-  const addSemester = () => setSemesters((prev) => [...prev, { ...initialSemester(), name: `Semester ${prev.length + 1}` }]);
+  const addSemester = () =>
+    setSemesters((prev) => [
+      ...prev,
+      createSemester(`Semester ${prev.length + 1}`, `semester-${prev.length + 1}-course-1-${Date.now()}`),
+    ]);
 
   const removeSemester = (name: string) => {
     if (semesters.length === 1) return;
@@ -141,7 +145,7 @@ export default function AcademicGPACalculator() {
   };
 
   const resetAll = () => {
-    setSemesters([initialSemester()]);
+    setSemesters([INITIAL_SEMESTER]);
     setPreviousCredits(0);
     setPreviousGPA(0);
   };

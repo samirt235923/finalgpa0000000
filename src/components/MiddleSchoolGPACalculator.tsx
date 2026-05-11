@@ -36,16 +36,18 @@ const courseWeight: Record<CourseType, number> = {
   Advanced: 1.0,
 };
 
-const emptySubject = (): Subject => ({
-  id: `${Date.now()}-${Math.random()}`,
+const emptySubject = (id: string): Subject => ({
+  id,
   name: '',
   grade: 'A',
   percentage: '',
   courseType: 'Regular',
 });
 
+const INITIAL_SUBJECT: Subject = emptySubject('subject-1');
+
 export default function MiddleSchoolGPACalculator() {
-  const [subjects, setSubjects] = useState<Subject[]>([emptySubject()]);
+  const [subjects, setSubjects] = useState<Subject[]>([INITIAL_SUBJECT]);
   const [gradeMode, setGradeMode] = useState<GradeMode>('letter');
   const [calcMode, setCalcMode] = useState<CalculationMode>('no-credits');
 
@@ -101,8 +103,10 @@ export default function MiddleSchoolGPACalculator() {
   }, [subjects, gradeMode, calcMode]);
 
   const addSubject = () => {
-    if (subjects.length >= 20) return;
-    setSubjects((prev) => [...prev, emptySubject()]);
+    setSubjects((prev) => {
+      if (prev.length >= 20) return prev;
+      return [...prev, emptySubject(`subject-${prev.length + 1}-${Date.now()}`)];
+    });
   };
 
   const removeSubject = (id: string) => {
@@ -110,7 +114,7 @@ export default function MiddleSchoolGPACalculator() {
     setSubjects((prev) => prev.filter((s) => s.id !== id));
   };
 
-  const resetAll = () => setSubjects([emptySubject()]);
+  const resetAll = () => setSubjects([INITIAL_SUBJECT]);
 
   const updateSubject = (id: string, field: keyof Subject, value: string) => {
     setSubjects((prev) =>

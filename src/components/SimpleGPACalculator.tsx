@@ -37,10 +37,11 @@ const gradeScale4PlusMinus: Record<string, number> = {
   F: 0.0,
 };
 
-const emptyCourse = () => ({ id: `${Date.now()}-${Math.random()}`, name: '', grade: 'A', creditHours: 3 });
+const emptyCourse = (id: string): Course => ({ id, name: '', grade: 'A', creditHours: 3 });
+const INITIAL_COURSE: Course = emptyCourse('course-1');
 
 export default function SimpleGPACalculator() {
-  const [courses, setCourses] = useState<Course[]>([emptyCourse()]);
+  const [courses, setCourses] = useState<Course[]>([INITIAL_COURSE]);
   const [usePlusMinus, setUsePlusMinus] = useState(false);
 
   const gradeOptions = usePlusMinus
@@ -73,14 +74,14 @@ export default function SimpleGPACalculator() {
     };
   }, [courses, scale]);
 
-  const addCourse = () => setCourses((prev) => [...prev, emptyCourse()]);
+  const addCourse = () => setCourses((prev) => [...prev, emptyCourse(`course-${prev.length + 1}-${Date.now()}`)]);
 
   const removeCourse = (id: string) => {
     if (courses.length === 1) return;
     setCourses((prev) => prev.filter((course) => course.id !== id));
   };
 
-  const resetCourses = () => setCourses([emptyCourse()]);
+  const resetCourses = () => setCourses([INITIAL_COURSE]);
 
   const updateCourse = (id: string, key: keyof Course, value: string | number) => {
     setCourses((prev) =>
