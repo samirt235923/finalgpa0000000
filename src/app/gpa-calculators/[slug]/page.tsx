@@ -9,8 +9,9 @@ import ColumbiaGPACalculator from '@/components/ColumbiaGPACalculator';
 import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
-import { FAQSchema } from '@/components/SchemaMarkup';
+import { FAQSchema, CalculatorSchema, WebPageSchema } from '@/components/SchemaMarkup';
 import { calculatorData } from '@/data/calculators';
+import { schoolGpaPageContent } from '@/data/schoolGpaPageContent';
 import { jsonLdStringify } from '@/lib/jsonLd';
 
 interface Props {
@@ -164,7 +165,7 @@ export default async function CalculatorPage({ params }: Props) {
     '@type': 'EducationalApplication',
     name: calculator.title,
     description: calculator.metaDescription,
-    url: `https://gpacalculator.com/gpa-calculators/${calculator.id}`,
+    url: `https://topgpacalculator.com/gpa-calculators/${calculator.id}`,
     applicationCategory: 'EducationalApplication',
     offers: {
       '@type': 'Offer',
@@ -172,6 +173,10 @@ export default async function CalculatorPage({ params }: Props) {
       priceCurrency: 'USD',
     },
   });
+
+  const pageContent = schoolGpaPageContent[calculator.id];
+  const faqs = pageContent?.faqs ?? sampleFAQs;
+  const pageUrl = `https://topgpacalculator.com/gpa-calculators/${calculator.id}`;
 
   return (
     <>
@@ -193,7 +198,9 @@ export default async function CalculatorPage({ params }: Props) {
         />
       )}
 
-      <FAQSchema faqs={sampleFAQs} />
+      <CalculatorSchema title={calculator.title} description={calculator.metaDescription} url={pageUrl} />
+      <WebPageSchema title={calculator.title} description={calculator.metaDescription} url={pageUrl} />
+      <FAQSchema faqs={faqs} url={pageUrl} />
 
       <div className="bg-white">
         {/* Breadcrumb */}
@@ -233,113 +240,152 @@ export default async function CalculatorPage({ params }: Props) {
 
               {/* Content */}
               <article className="prose prose-lg max-w-none">
-                <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Table of Contents</h2>
-                  <ul className="list-decimal list-inside space-y-2 text-gray-700">
-                    <li><a href="#what-is-gpa-calculator" className="text-blue-600 hover:underline">What Is a GPA Calculator</a></li>
-                    <li><a href="#how-to-use" className="text-blue-600 hover:underline">How to Use the GPA Calculator</a></li>
-                    <li><a href="#gpa-formula" className="text-blue-600 hover:underline">GPA Calculation Formula Explained</a></li>
-                    <li><a href="#weighted-vs-unweighted" className="text-blue-600 hover:underline">Weighted vs Unweighted GPA</a></li>
-                    <li><a href="#example-calculation" className="text-blue-600 hover:underline">Example Calculation</a></li>
-                    <li><a href="#tips-improve" className="text-blue-600 hover:underline">Tips to Improve Your GPA</a></li>
-                    <li><a href="#grade-scale" className="text-blue-600 hover:underline">Grade Scale (4.0)</a></li>
-                    <li><a href="#related-calculators" className="text-blue-600 hover:underline">Related GPA Calculators</a></li>
-                  </ul>
-                </div>
+                {pageContent ? (
+                  <>
+                    <div className="mb-8">
+                      <h2 className="text-2xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                      <ul className="list-decimal list-inside space-y-2 text-gray-700">
+                        {pageContent.toc.map((item) => (
+                          <li key={item.id}>
+                            <a href={`#${item.id}`} className="text-blue-600 hover:underline">
+                              {item.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {pageContent.sections.map((section) => (
+                      <section key={section.id} className="mb-10">
+                        <h2 id={section.id} className="text-3xl font-bold text-gray-800 mb-4">
+                          {section.title}
+                        </h2>
+                        <div
+                          className="text-gray-700 leading-relaxed"
+                          dangerouslySetInnerHTML={{ __html: section.content }}
+                        />
+                      </section>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    <div className="mb-8">
+                      <h2 className="text-2xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                      <ul className="list-decimal list-inside space-y-2 text-gray-700">
+                        <li><a href="#what-is-gpa-calculator" className="text-blue-600 hover:underline">What Is a GPA Calculator</a></li>
+                        <li><a href="#how-to-use" className="text-blue-600 hover:underline">How to Use the GPA Calculator</a></li>
+                        <li><a href="#gpa-formula" className="text-blue-600 hover:underline">GPA Calculation Formula Explained</a></li>
+                        <li><a href="#weighted-vs-unweighted" className="text-blue-600 hover:underline">Weighted vs Unweighted GPA</a></li>
+                        <li><a href="#example-calculation" className="text-blue-600 hover:underline">Example Calculation</a></li>
+                        <li><a href="#tips-improve" className="text-blue-600 hover:underline">Tips to Improve Your GPA</a></li>
+                        <li><a href="#grade-scale" className="text-blue-600 hover:underline">Grade Scale (4.0)</a></li>
+                        <li><a href="#related-calculators" className="text-blue-600 hover:underline">Related GPA Calculators</a></li>
+                      </ul>
+                    </div>
 
-                <h2 id="what-is" className="text-3xl font-bold text-gray-800 mb-4">What Is {calculator.name}</h2>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  {calculator.description} This calculator simplifies GPA tracking by letting you enter courses, grades and credit hours quickly. It provides instant answers for <strong>{calculator.name.toLowerCase()}</strong> and related GPA queries while ensuring accurate computation based on the standard 4.0 scale.
-                </p>
+                    <h2 id="what-is" className="text-3xl font-bold text-gray-800 mb-4">What Is {calculator.name}</h2>
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      {calculator.description} This calculator simplifies GPA tracking by letting you enter courses, grades and credit hours quickly. It provides instant answers for <strong>{calculator.name.toLowerCase()}</strong> and related GPA queries while ensuring accurate computation based on the standard 4.0 scale.
+                    </p>
 
-                <h2 id="how-to-use" className="text-3xl font-bold text-gray-800 mb-4">How to Use {calculator.name}</h2>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  Use the calculator panel above to add course rows and enter required details. Choose a grade and credit hours, and optionally select course type (Regular/Honors/AP/Advanced). The calculator updates GPA automatically and displays totals instantly.
-                </p>
-                <ol className="list-decimal list-inside space-y-2 text-gray-700 mb-6">
-                  <li>Enter course name (optional).</li>
-                  <li>Select letter grade (A through F).</li>
-                  <li>Choose course type (Regular/Honors/AP/Advanced) for weighted GPA.</li>
-                  <li>Set credit hours (1–12).</li>
-                  <li>Add or remove courses to reflect your schedule.</li>
-                  <li>Results display automatically; press Calculate if you prefer manual update.</li>
-                </ol>
+                    <h2 id="how-to-use" className="text-3xl font-bold text-gray-800 mb-4">How to Use {calculator.name}</h2>
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      Use the calculator panel above to add course rows and enter required details. Choose a grade and credit hours, and optionally select course type (Regular/Honors/AP/Advanced). The calculator updates GPA automatically and displays totals instantly.
+                    </p>
+                    <ol className="list-decimal list-inside space-y-2 text-gray-700 mb-6">
+                      <li>Enter course name (optional).</li>
+                      <li>Select letter grade (A through F).</li>
+                      <li>Choose course type (Regular/Honors/AP/Advanced) for weighted GPA.</li>
+                      <li>Set credit hours (1–12).</li>
+                      <li>Add or remove courses to reflect your schedule.</li>
+                      <li>Results display automatically; press Calculate if you prefer manual update.</li>
+                    </ol>
 
-                <h2 id="gpa-formula" className="text-3xl font-bold text-gray-800 mb-4">GPA Calculation Formula Explained</h2>
-                <p className="text-gray-700 mb-6">
-                  The formula is simple and accurate:
-                </p>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
-                  <p className="font-bold text-gray-800">GPA = Total Grade Points ÷ Total Credit Hours</p>
-                  <p className="text-gray-700 mt-2">Where Grade Points = Grade Value × Credit Hours.</p>
-                </div>
+                    <h2 id="gpa-formula" className="text-3xl font-bold text-gray-800 mb-4">GPA Calculation Formula Explained</h2>
+                    <p className="text-gray-700 mb-6">The formula is simple and accurate:</p>
+                    <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+                      <p className="font-bold text-gray-800">GPA = Total Grade Points ÷ Total Credit Hours</p>
+                      <p className="text-gray-700 mt-2">Where Grade Points = Grade Value × Credit Hours.</p>
+                    </div>
 
-                <h2 id="weighted-vs-unweighted" className="text-3xl font-bold text-gray-800 mb-4">Weighted vs Unweighted GPA</h2>
-                <p className="text-gray-700 mb-4">Unweighted GPA follows a standard 4.0 scale, ignoring course difficulty. Weighted GPA adds 0.5 for Honors and 1.0 for AP/Advanced courses, so top performers can exceed 4.0 in some systems.</p>
-                <p className="text-gray-700 mb-6">Our calculator shares both values and clearly shows how performance impacts GPA with optional weighting.</p>
+                    <h2 id="weighted-vs-unweighted" className="text-3xl font-bold text-gray-800 mb-4">Weighted vs Unweighted GPA</h2>
+                    <p className="text-gray-700 mb-4">Unweighted GPA follows a standard 4.0 scale, ignoring course difficulty. Weighted GPA adds 0.5 for Honors and 1.0 for AP/Advanced courses, so top performers can exceed 4.0 in some systems.</p>
+                    <p className="text-gray-700 mb-6">Our calculator shares both values and clearly shows how performance impacts GPA with optional weighting.</p>
 
-                <h2 id="grade-scale" className="text-3xl font-bold text-gray-800 mb-4">Grade Scale (Standard 4.0)</h2>
-                <p className="text-gray-700 mb-4">Use this table to map letter grades to grade points for the formula.</p>
-                <table className="w-full border-collapse mb-6">
-                  <thead>
-                    <tr className="bg-gray-200">
-                      <th className="border border-gray-300 px-4 py-2 text-left">Letter Grade</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">GPA Value</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr><td className="border border-gray-300 px-4 py-2">A</td><td className="border border-gray-300 px-4 py-2">4.0</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">A-</td><td className="border border-gray-300 px-4 py-2">3.7</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">B+</td><td className="border border-gray-300 px-4 py-2">3.3</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">B</td><td className="border border-gray-300 px-4 py-2">3.0</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">B-</td><td className="border border-gray-300 px-4 py-2">2.7</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">C+</td><td className="border border-gray-300 px-4 py-2">2.3</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">C</td><td className="border border-gray-300 px-4 py-2">2.0</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">C-</td><td className="border border-gray-300 px-4 py-2">1.7</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">D</td><td className="border border-gray-300 px-4 py-2">1.0</td></tr>
-                    <tr><td className="border border-gray-300 px-4 py-2">F</td><td className="border border-gray-300 px-4 py-2">0.0</td></tr>
-                  </tbody>
-                </table>
+                    <h2 id="grade-scale" className="text-3xl font-bold text-gray-800 mb-4">Grade Scale (Standard 4.0)</h2>
+                    <p className="text-gray-700 mb-4">Use this table to map letter grades to grade points for the formula.</p>
+                    <table className="w-full border-collapse mb-6">
+                      <thead>
+                        <tr className="bg-gray-200">
+                          <th className="border border-gray-300 px-4 py-2 text-left">Letter Grade</th>
+                          <th className="border border-gray-300 px-4 py-2 text-left">GPA Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-gray-300 px-4 py-2">A</td><td className="border border-gray-300 px-4 py-2">4.0</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">A-</td><td className="border border-gray-300 px-4 py-2">3.7</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">B+</td><td className="border border-gray-300 px-4 py-2">3.3</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">B</td><td className="border border-gray-300 px-4 py-2">3.0</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">B-</td><td className="border border-gray-300 px-4 py-2">2.7</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">C+</td><td className="border border-gray-300 px-4 py-2">2.3</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">C</td><td className="border border-gray-300 px-4 py-2">2.0</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">C-</td><td className="border border-gray-300 px-4 py-2">1.7</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">D</td><td className="border border-gray-300 px-4 py-2">1.0</td></tr>
+                        <tr><td className="border border-gray-300 px-4 py-2">F</td><td className="border border-gray-300 px-4 py-2">0.0</td></tr>
+                      </tbody>
+                    </table>
 
-                <p className="text-gray-700 mb-6">Optional weighted calculations: Honors +0.5, AP +1.0 (max 5.0 per class). Use the course type selector in the calculator to automatically store this data in your result.</p>
+                    <h2 id="example-calculation" className="text-3xl font-bold text-gray-800 mb-4">Example Calculation</h2>
+                    <p className="text-gray-700 leading-relaxed mb-4">Use this weighted example to confirm your calculator usage:</p>
+                    <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
+                      <li>Math (AP): A, 4 credits → Grade Points = 5.0 × 4 = 20</li>
+                      <li>English (Honors): B+, 3 credits → Grade Points = 3.8 × 3 = 11.4</li>
+                      <li>History (Regular): A-, 3 credits → Grade Points = 3.7 × 3 = 11.1</li>
+                    </ul>
+                    <p className="text-gray-700 mb-2">Total Grade Points = 42.5</p>
+                    <p className="text-gray-700 mb-2">Total Credits = 10</p>
+                    <p className="font-semibold text-gray-800 mb-6">GPA (Weighted) = 42.5 ÷ 10 = 4.25</p>
 
-                <h2 id="example-calculation" className="text-3xl font-bold text-gray-800 mb-4">Example Calculation</h2>
-                <p className="text-gray-700 leading-relaxed mb-4">Use this weighted example to confirm your calculator usage:</p>
-                <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700">
-                  <li>Math (AP): A, 4 credits → Grade Points = 5.0 × 4 = 20</li>
-                  <li>English (Honors): B+, 3 credits → Grade Points = 3.8 × 3 = 11.4</li>
-                  <li>History (Regular): A-, 3 credits → Grade Points = 3.7 × 3 = 11.1</li>
-                </ul>
-                <p className="text-gray-700 mb-2">Total Grade Points = 42.5</p>
-                <p className="text-gray-700 mb-2">Total Credits = 10</p>
-                <p className="font-semibold text-gray-800 mb-6">GPA (Weighted) = 42.5 ÷ 10 = 4.25</p>
+                    <h2 id="tips-improve" className="text-3xl font-bold text-gray-800 mb-4">Tips to Improve Your GPA</h2>
+                    <p className="text-gray-700 mb-6 leading-relaxed">A strong GPA helps open doors for academic and career growth:</p>
+                    <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                      <li><strong>Internships:</strong> Many internships require minimum GPA thresholds (often 3.0+).</li>
+                      <li><strong>Scholarships:</strong> Higher GPA increases eligibility for merit-based aid.</li>
+                      <li><strong>Career opportunities:</strong> Employers may review GPA as a performance indicator.</li>
+                      <li><strong>Graduate school:</strong> Admissions rely heavily on cumulative GPA and consistency.</li>
+                    </ul>
 
-                <h2 id="tips-improve" className="text-3xl font-bold text-gray-800 mb-4">Tips to Improve Your GPA</h2>
-                <p className="text-gray-700 mb-6 leading-relaxed">A strong GPA helps open doors for academic and career growth:</p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><strong>Internships:</strong> Many internships require minimum GPA thresholds (often 3.0+).</li>
-                  <li><strong>Scholarships:</strong> Higher GPA increases eligibility for merit-based aid.</li>
-                  <li><strong>Career opportunities:</strong> Employers may review GPA as a performance indicator.</li>
-                  <li><strong>Graduate school:</strong> Admissions rely heavily on cumulative GPA and consistency.</li>
-                </ul>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4" id="related-calculators">Related GPA Calculators</h2>
+                    <p className="text-gray-700 mb-4">Explore these tools for comprehensive GPA planning:</p>
+                    <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                      <li><a href="/junior-gpa-calculator" className="text-blue-600 hover:underline">Junior GPA Calculator</a></li>
+                      <li><a href="/gpa-calculators/gpa-goal-calculator" className="text-blue-600 hover:underline">GPA Goal Calculator</a></li>
+                    </ul>
 
-                <h2 className="text-3xl font-bold text-gray-800 mb-4" id="related-calculators">Related GPA Calculators</h2>
-                <p className="text-gray-700 mb-4">Explore these tools for comprehensive GPA planning:</p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><a href="/junior-gpa-calculator" className="text-blue-600 hover:underline">Junior GPA Calculator</a></li>
-                  <li><a href="/gpa-calculators/gpa-goal-calculator" className="text-blue-600 hover:underline">GPA Goal Calculator</a></li>
-                </ul>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted Planning Resources</h2>
+                    <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                      <li><a href="https://www.collegeboard.org" className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">College Board</a></li>
+                      <li><a href="https://nces.ed.gov" className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">National Center for Education Statistics (NCES)</a></li>
+                      <li><a href="https://www.ed.gov" className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">U.S. Department of Education</a></li>
+                    </ul>
 
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted Planning Resources</h2>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                  <li><a href="https://www.collegeboard.org" className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">College Board</a></li>
-                  <li><a href="https://nces.ed.gov" className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">National Center for Education Statistics (NCES)</a></li>
-                  <li><a href="https://www.ed.gov" className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">U.S. Department of Education</a></li>
-                </ul>
-
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">How to Get the Most Out of This Page</h2>
-                <p className="text-gray-700 leading-relaxed">Bookmark and revisit after each semester. Use it for trend analysis; compare first year and second year to figure out GPA targets for junior year. This page is designed to be fast, lightweight, and mobile-friendly for students on the go.</p>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">How to Get the Most Out of This Page</h2>
+                    <p className="text-gray-700 leading-relaxed">Bookmark and revisit after each semester. Use it for trend analysis; compare first year and second year to figure out GPA targets for junior year. This page is designed to be fast, lightweight, and mobile-friendly for students on the go.</p>
+                  </>
+                )}
               </article>
+
+              {pageContent?.cta && (
+                <div className="mt-10 rounded-3xl border border-blue-200 bg-blue-50 p-8 shadow-sm">
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">{pageContent.cta.heading}</h3>
+                  <p className="text-gray-700 mb-6">{pageContent.cta.text}</p>
+                  <a
+                    href={pageContent.cta.buttonHref}
+                    className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-white font-semibold transition hover:bg-blue-700"
+                  >
+                    {pageContent.cta.buttonText}
+                  </a>
+                </div>
+              )}
 
               {/* AdSense Block */}
               <div className="my-12 p-8 bg-gray-100 border-2 border-gray-300 rounded-lg text-center">
@@ -370,7 +416,7 @@ export default async function CalculatorPage({ params }: Props) {
         </section>
 
         {/* FAQ Section */}
-        <FAQ items={sampleFAQs} />
+        <FAQ items={faqs} />
 
         {/* Related Calculators */}
         <RelatedCalculators relatedIds={calculator.relatedCalculators} />
