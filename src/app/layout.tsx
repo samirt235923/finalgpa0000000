@@ -101,6 +101,8 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5159148916272403"
+     crossorigin="anonymous"></script>
         <style dangerouslySetInnerHTML={{ __html: `
           /* Critical above-the-fold CSS */
           *{margin:0;padding:0;box-sizing:border-box}
