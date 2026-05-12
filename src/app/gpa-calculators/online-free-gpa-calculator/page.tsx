@@ -3,6 +3,7 @@ import Link from 'next/link';
 import OnlineFreeGPACalculator from '@/components/OnlineFreeGPACalculator';
 import FAQ from '@/components/FAQ';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 const faqItems = [
   { question: 'Is this GPA calculator really free?', answer: 'Yes! Our Online Free GPA Calculator is 100% free to use with no hidden fees, no registration required, and no limits on the number of courses you can add.' },
@@ -87,6 +88,8 @@ export default function OnlineFreeGPACalculatorPage() {
         <section id="calculator" className="mb-8">
           <OnlineFreeGPACalculator />
         </section>
+
+        <AdUnit />
 
         <section id="what-is" className="bg-white rounded-2xl p-6 mb-8 border border-gray-200 shadow-sm">
           <h2 className="text-2xl font-bold mb-4">What Is a Free Online GPA Calculator</h2>

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import AcademicGPACalculator from '@/components/AcademicGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Academic GPA Calculator – Calculate Semester & Cumulative GPA | Top GPACalculator',
@@ -205,6 +206,8 @@ export default function AcademicGPACalculatorPage() {
             </div>
           </div>
           <AcademicGPACalculator />
+          
+          <AdUnit />
           
           {/* Calculator Tips */}
           <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">

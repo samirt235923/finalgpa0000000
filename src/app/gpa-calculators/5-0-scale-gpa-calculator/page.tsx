@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import FivePointZeroGPACalculator from '@/components/FivePointZeroGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
   title: '5.0 Scale GPA Calculator (Weighted GPA) – Free & Accurate Tool',
@@ -118,6 +119,8 @@ export default function FivePointZeroScaleGPACalculatorPage() {
         <section id="calculator" className="mb-12 scroll-mt-6">
           <FivePointZeroGPACalculator />
         </section>
+
+        <AdUnit />
 
         {/* Example Quick Glance */}
         <div className="bg-primary-50 rounded-xl p-6 mb-10 border border-primary-200 shadow-sm">

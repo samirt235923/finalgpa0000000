@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import HighSchoolGPACalculator from '@/components/HighSchoolGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
   title: 'High School GPA Calculator (Free & Accurate) – Calculate Your GPA',
@@ -98,6 +99,8 @@ export default function HighSchoolGPACalculatorPage() {
           <div className="bg-white rounded-2xl p-8 mb-12 shadow-large border border-secondary-200">
             <HighSchoolGPACalculator />
           </div>
+
+          <AdUnit />
 
           {/* Example Calculation */}
           <div className="bg-primary-50 rounded-xl p-6 mb-8 border border-primary-200">

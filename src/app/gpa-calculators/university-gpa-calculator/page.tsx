@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import UniversityGPACalculator from '@/components/UniversityGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
   title: 'University GPA Calculator – Calculate College GPA Easily',
@@ -61,6 +62,8 @@ export default function UniversityGPACalculatorPage() {
           <h2 className="text-2xl font-semibold mb-4">Calculator</h2>
           <UniversityGPACalculator />
         </section>
+
+        <AdUnit />
 
         <section className="bg-white p-6 rounded-2xl shadow-sm mb-8" id="table-of-contents">
           <h2 className="text-2xl font-semibold mb-4">Table of Contents</h2>

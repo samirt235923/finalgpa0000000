@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import WeightedGPACalculator from '@/components/WeightedGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Weighted GPA Calculator – Free & Accurate GPA Tool',
@@ -99,6 +100,8 @@ export default function WeightedGPACalculatorPage() {
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 mb-12">
             <WeightedGPACalculator />
           </div>
+
+          <AdUnit />
 
           {/* Content Sections */}
           <div className="space-y-12">

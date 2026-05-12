@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import QuickGPACalculator from '@/components/QuickGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Quick GPA Calculator – Fast & Easy GPA Calculation Tool',
@@ -75,6 +76,8 @@ export default function QuickGPACalculatorPage() {
           <h2 className="text-2xl font-bold mb-4">Calculator</h2>
           <QuickGPACalculator />
         </section>
+
+        <AdUnit />
 
         <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8" id="table-of-contents">
           <h2 className="text-2xl font-bold mb-4">Table of Contents</h2>

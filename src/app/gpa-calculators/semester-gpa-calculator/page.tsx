@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 import { jsonLdStringify } from '@/lib/jsonLd';
 
 interface Course {
@@ -400,6 +401,8 @@ export default function SemesterGPACalculatorPage() {
                 Display GPA: <span className="font-semibold text-slate-900">{displayGPA.toFixed(2)}</span>
               </div>
             </section>
+
+            <AdUnit />
 
             <section id="what-is-semester-gpa" className="space-y-4">
               <h2 className="text-3xl font-bold text-slate-900">What Is a Semester GPA</h2>

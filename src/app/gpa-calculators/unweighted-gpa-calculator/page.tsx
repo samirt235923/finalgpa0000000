@@ -4,6 +4,7 @@ import RelatedCalculators from '@/components/RelatedCalculators';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 import { calculatorData } from '@/data/calculators';
 import { jsonLdStringify } from '@/lib/jsonLd';
 
@@ -123,6 +124,8 @@ export default function UnweightedGPACalculatorPage() {
               <div className="mb-12">
                 <UnweightedGPACalculator />
               </div>
+
+              <AdUnit />
 
               {/* Content */}
               <article className="prose prose-lg max-w-none">

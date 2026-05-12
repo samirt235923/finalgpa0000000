@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import FourPointZeroGPACalculator from '@/components/FourPointZeroGPACalculator';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 import { jsonLdStringify } from '@/lib/jsonLd';
 
 export const metadata: Metadata = {
@@ -135,6 +136,8 @@ export default function FourPointZeroGpaPage() {
           <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 mb-12">
             <FourPointZeroGPACalculator />
           </div>
+
+          <AdUnit />
 
           <div className="space-y-12">
             <section id="what-is-4-0-scale">

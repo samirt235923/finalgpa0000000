@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import type { ReactNode } from 'react';
 import { FAQSchema } from '@/components/SchemaMarkup';
+import AdUnit from '@/components/AdUnit';
 
 interface Course {
   id: string;
@@ -291,6 +292,8 @@ export default function CollegeGPACalculator() {
                 </div>
               )}
             </div>
+
+            <AdUnit />
 
             {/* Information Sections */}
             <article className="space-y-8">
