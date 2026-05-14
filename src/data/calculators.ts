@@ -265,6 +265,17 @@ export const calculatorData = [
     relatedCalculators: ['unweighted-gpa-calculator', 'gpa-average-calculator', 'college-gpa-calculator', 'semester-gpa-calculator'],
   },
   {
+    id: 'midterm-grade-calculator',
+    name: 'Midterm Grade Calculator',
+    title: 'Midterm Grade Calculator – Calculate Your Midterm Exam Grade',
+    metaDescription: 'Use our Midterm Grade Calculator to calculate the grade you need on your midterm exam. Fast, accurate, and easy-to-use tool.',
+    h1: 'Midterm Grade Calculator',
+    h2: 'Online Midterm Grade Calculator',
+    description: 'Calculate the grade you need on your midterm exam to reach your desired final grade. Ideal for college and high school students.',
+    targetAudience: 'College and High School Students',
+    relatedCalculators: ['gpa-goal-calculator', 'semester-gpa-calculator', 'grade-point-calculator', 'college-gpa-calculator'],
+  },
+  {
     id: 'gpa-goal-calculator',
     name: 'GPA Goal Calculator',
     title: 'GPA Goal Calculator – Plan & Achieve Your Target GPA',

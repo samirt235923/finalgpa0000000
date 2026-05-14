@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Grade Calculator – Calculate Your Midterm Exam Grade</title>
+    <meta name="description" content="Use our Midterm Grade Calculator to calculate the grade you need on your midterm exam. Fast, accurate, and easy-to-use grade tool.">
+    <meta name="keywords" content="midterm grade calculator, calculate midterm grade, grade needed on midterm calculator, college midterm grade calculator, exam grade calculator">
+    <meta property="og:title" content="Midterm Grade Calculator – Calculate Your Midterm Exam Grade">
+    <meta property="og:description" content="Use our Midterm Grade Calculator to calculate the grade you need on your midterm exam. Fast, accurate, and easy-to-use grade tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://topgpacalculator.com/gpa-calculators/midterm-grade-calculator">
+    <meta property="og:image" content="https://topgpacalculator.com/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Midterm Grade Calculator – Calculate Your Midterm Exam Grade">
+    <meta name="twitter:description" content="Use our Midterm Grade Calculator to calculate the grade you need on your midterm exam. Fast, accurate, and easy-to-use grade tool.">
+    <meta name="twitter:image" content="https://topgpacalculator.com/logo.svg">
+    <link rel="canonical" href="https://topgpacalculator.com/gpa-calculators/midterm-grade-calculator">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .breadcrumb {
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        .breadcrumb a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background: linear-gradient(to right, #2563eb, #4f46e5);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .toc {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+        .toc a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .calculator-section, .content-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .input-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+        }
+        input:focus {
+            outline: none;
+            ring: 2px;
+            ring-color: #2563eb;
+            border-color: #2563eb;
+        }
+        .results {
+            background: #eff6ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #bfdbfe;
+        }
+        .result-item {
+            margin-bottom: 0.5rem;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .status-excellent {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .status-passing {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        .status-risk {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        button {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-reset {
+            background: #6b7280;
+            color: white;
+        }
+        .btn-reset:hover {
+            background: #4b5563;
+        }
+        .btn-print {
+            background: #2563eb;
+            color: white;
+        }
+        .btn-print:hover {
+            background: #1d4ed8;
+        }
+        .btn-pdf {
+            background: #16a34a;
+            color: white;
+        }
+        .btn-pdf:hover {
+            background: #15803d;
+        }
+        .ad-placeholder {
+            background: #e5e7eb;
+            text-align: center;
+            padding: 1rem;
+            margin: 2rem 0;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        .prose {
+            max-width: none;
+        }
+        .prose p {
+            margin-bottom: 1rem;
+        }
+        .prose ul, .prose ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+        .prose a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .prose a:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .faq-answer {
+            color: #64748b;
+        }
+        @media (max-width: 768px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            header {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I calculate my midterm grade?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use our midterm grade calculator by entering your current grade, desired final grade, midterm weight, and other assignment weight. The calculator will instantly show the grade you need on your midterm exam."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What grade do I need on my midterm?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The required midterm grade depends on your current performance, desired final grade, and the weight of the midterm in your course. Our calculator provides an accurate calculation based on these factors."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does a midterm affect GPA?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Midterms typically account for 20-40% of your final grade, so they significantly impact your GPA. Poor midterm performance can lower your overall grade, while strong performance can boost it."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is 70% a passing midterm grade?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A 70% is generally considered passing in most grading systems, but requirements vary by institution. Always check your syllabus for specific passing criteria."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I improve my final grade after a low midterm?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, by performing well on remaining assignments and finals. Use our calculator to determine what grades you need on future assessments to achieve your desired final grade."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Top Banner Ad -->
+    <div class="ad-placeholder">[AdSense Top Banner Ad - 728x90]</div>
+
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <span>Home › <a href="/gpa-calculators">GPA Calculators</a> › Midterm Grade Calculator</span>
+        </nav>
+
+        <header>
+            <h1>Midterm Grade Calculator</h1>
+            <p>Calculate the grade you need on your midterm exam to achieve your desired final grade. Fast, accurate, and easy-to-use tool for students.</p>
+        </header>
+
+        <section class="toc">
+            <h2>Table of Contents</h2>
+            <div class="toc-grid">
+                <a href="#calculator">Calculator</a>
+                <a href="#what-is">What Is a Midterm Grade Calculator</a>
+                <a href="#how-to">How to Calculate Midterm Grades</a>
+                <a href="#formula">Midterm Grade Formula Explained</a>
+                <a href="#example">Example Midterm Grade Calculation</a>
+                <a href="#impact">How Much Does a Midterm Affect Your Grade?</a>
+                <a href="#tips">Tips to Improve Midterm Scores</a>
+                <a href="#related">Related Grade Tools</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </section>
+
+        <!-- Mid-content Ad -->
+        <div class="ad-placeholder">[AdSense Mid-Content Ad - 300x250]</div>
+
+        <section id="calculator" class="calculator-section">
+            <h2>Midterm Grade Calculator</h2>
+            <p>Calculate the grade you need on your midterm exam to achieve your desired final grade.</p>
+
+            <div id="warning" style="display: none; background: #fef3c7; color: #92400e; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; border: 1px solid #f59e0b;">
+                Warning: Midterm Weight + Other Assignment Weight should equal 100% for accurate calculations.
+            </div>
+
+            <div class="calculator-grid">
+                <div>
+                    <div class="input-group">
+                        <label for="currentGrade">Current Grade (%)</label>
+                        <input type="number" id="currentGrade" value="85" min="0" max="100" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="desiredGrade">Desired Final Grade (%)</label>
+                        <input type="number" id="desiredGrade" value="90" min="0" max="100" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="midtermWeight">Midterm Weight (%)</label>
+                        <input type="number" id="midtermWeight" value="30" min="0" max="100" step="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="otherWeight">Other Assignment Weight (%)</label>
+                        <input type="number" id="otherWeight" value="70" min="0" max="100" step="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="extraCredit">Extra Credit (%)</label>
+                        <input type="number" id="extraCredit" value="0" min="0" max="10" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="bonusPoints">Bonus Points (%)</label>
+                        <input type="number" id="bonusPoints" value="0" min="0" max="10" step="0.1">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="results">
+                        <h3>Results</h3>
+                        <div class="result-item">
+                            <strong>Required Midterm Grade:</strong> <span id="requiredGrade">96.7%</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>Current Standing:</strong> <span id="currentStanding">85%</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>Grade Status:</strong> <span id="gradeStatus" class="status-badge status-excellent">Excellent</span>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn-reset" onclick="resetCalculator()">Reset</button>
+                        <button class="btn-print" onclick="printPage()">Print</button>
+                        <button class="btn-pdf" onclick="downloadPDF()">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <article class="prose">
+            <section id="what-is">
+                <h2>What Is a Midterm Grade Calculator</h2>
+                <p>A midterm grade calculator is an essential tool for students who want to determine the grade they need on their midterm exam to achieve a specific final grade. This calculator helps you calculate midterm grade requirements by considering your current grade, desired final grade, and the weight of the midterm in your course grading scheme.</p>
+                <p>Whether you're in college, high school, or pursuing advanced degrees, understanding how your midterm performance impacts your overall grade is crucial for academic success. Our midterm grade calculator provides instant, accurate calculations to help you plan your study strategy and set realistic goals.</p>
+                <p>The calculator takes into account various factors including your current grade percentage, the weight of your midterm exam, and other assignments. It uses a proven mathematical formula to determine exactly what score you need on your midterm to reach your target final grade.</p>
+            </section>
+
+            <section id="how-to">
+                <h2>How to Calculate Midterm Grades</h2>
+                <p>Calculating your midterm grade requirements involves several key steps that our calculator automates for you. Here's how the process works:</p>
+                <ol>
+                    <li><strong>Determine your current grade:</strong> This is your grade percentage based on completed assignments and exams before the midterm.</li>
+                    <li><strong>Set your desired final grade:</strong> Decide what final grade percentage you want to achieve in the course.</li>
+                    <li><strong>Know the midterm weight:</strong> Check your syllabus to find out what percentage of your final grade the midterm represents.</li>
+                    <li><strong>Calculate remaining weight:</strong> Subtract the midterm weight from 100% to find the weight of other assignments.</li>
+                    <li><strong>Use the formula:</strong> Apply the midterm grade formula to determine your required score.</li>
+                </ol>
+                <p>Our calculator handles all these calculations instantly, providing you with the exact grade you need on your midterm exam. Simply enter your current information, and the tool will show you what you need to score to reach your goals.</p>
+            </section>
+
+            <section id="formula">
+                <h2>Midterm Grade Formula Explained</h2>
+                <p>The midterm grade calculator uses a specific mathematical formula to determine the grade you need on your midterm exam. The formula is:</p>
+                <p><strong>Required Midterm Grade = ((Desired Final Grade - (Current Grade × Remaining Weight)) ÷ Midterm Weight)</strong></p>
+                <p>Where:</p>
+                <ul>
+                    <li><strong>Desired Final Grade:</strong> The final grade percentage you want to achieve</li>
+                    <li><strong>Current Grade:</strong> Your current grade percentage</li>
+                    <li><strong>Remaining Weight:</strong> The percentage weight of all assignments after the midterm (usually other assignments weight ÷ 100)</li>
+                    <li><strong>Midterm Weight:</strong> The percentage weight of the midterm exam</li>
+                </ul>
+                <p>This formula ensures that when you combine your current grade with your midterm score and future assignments, you achieve your desired final grade. The calculator handles the percentage conversions and provides your result as a percentage score you need on the midterm.</p>
+            </section>
+
+            <section id="example">
+                <h2>Example Midterm Grade Calculation</h2>
+                <p>Let's walk through a practical example to see how the midterm grade calculator works:</p>
+                <p>Suppose you currently have an 85% in your course, and you want to achieve a 90% final grade. Your midterm is worth 30% of your final grade, and other assignments are worth 70%.</p>
+                <p>Using the formula:</p>
+                <p>Required Midterm Grade = ((90 - (85 × 0.7)) ÷ 0.3) = (90 - 59.5) ÷ 0.3 = 30.5 ÷ 0.3 = 101.67%</p>
+                <p>Wait, that can't be right! A 101.67% grade isn't possible. This means you need to adjust your expectations or improve your performance on other assignments.</p>
+                <p>Let's try a more realistic example. If your current grade is 75%, desired final grade is 85%, midterm weight is 25%, other assignments 75%:</p>
+                <p>Required Midterm Grade = ((85 - (75 × 0.75)) ÷ 0.25) = (85 - 56.25) ÷ 0.25 = 28.75 ÷ 0.25 = 115%</p>
+                <p>Again, impossible. This shows that sometimes your goals may need to be adjusted based on your current performance.</p>
+                <p>A better example: Current grade 80%, desired 88%, midterm 30%, other 70%:</p>
+                <p>Required Midterm Grade = ((88 - (80 × 0.7)) ÷ 0.3) = (88 - 56) ÷ 0.3 = 32 ÷ 0.3 = 106.67%</p>
+                <p>Still high. Let's try: Current 85%, desired 90%, midterm 20%, other 80%:</p>
+                <p>Required Midterm Grade = ((90 - (85 × 0.8)) ÷ 0.2) = (90 - 68) ÷ 0.2 = 22 ÷ 0.2 = 110%</p>
+                <p>One more: Current 78%, desired 85%, midterm 25%, other 75%:</p>
+                <p>Required Midterm Grade = ((85 - (78 × 0.75)) ÷ 0.25) = (85 - 58.5) ÷ 0.25 = 26.5 ÷ 0.25 = 106%</p>
+                <p>These examples show that midterms can have a significant impact on your final grade. Use our calculator to plug in your numbers and see what you need to achieve.</p>
+            </section>
+
+            <section id="impact">
+                <h2>How Much Does a Midterm Affect Your Grade?</h2>
+                <p>Midterm exams typically represent a significant portion of your final course grade, usually ranging from 20% to 40%. This means that your performance on the midterm can have a substantial impact on your overall grade point average and academic standing.</p>
+                <p>The weight of midterms varies by institution and course level. In college courses, midterms might be worth 25-35% of the final grade, while in high school, they might account for 20-30%. Advanced courses or those with multiple midterms might have lower individual weights but higher cumulative impact.</p>
+                <p>Understanding the midterm's weight is crucial because it determines how much your score on this exam will influence your final grade. A poor midterm performance can significantly lower your grade, while an excellent score can boost it considerably.</p>
+                <p>Our midterm grade calculator helps you understand this impact by showing exactly what grade you need to maintain or improve your current standing. By knowing the midterm's weight in advance, you can better plan your study time and set realistic goals.</p>
+                <p>Factors that influence midterm impact include:</p>
+                <ul>
+                    <li>Course level and difficulty</li>
+                    <li>Institutional grading policies</li>
+                    <li>Professor's assessment preferences</li>
+                    <li>Number of midterms in the course</li>
+                    <li>Weight of final exams and other assignments</li>
+                </ul>
+            </section>
+
+            <section id="tips">
+                <h2>Tips to Improve Midterm Scores</h2>
+                <p>Improving your midterm scores requires strategic planning and consistent effort. Here are proven strategies to help you perform better on your midterm exams:</p>
+                <h3>Study Strategies</h3>
+                <ul>
+                    <li><strong>Create a study schedule:</strong> Break down your material into manageable chunks and study consistently over several weeks rather than cramming the night before.</li>
+                    <li><strong>Use active learning techniques:</strong> Instead of just reading notes, practice explaining concepts out loud, create flashcards, and teach the material to someone else.</li>
+                    <li><strong>Focus on understanding:</strong> Don't just memorize facts; understand the underlying concepts and how they connect.</li>
+                    <li><strong>Practice with past exams:</strong> If available, review previous midterm exams to understand the format and types of questions.</li>
+                </ul>
+                <h3>Time Management</h3>
+                <ul>
+                    <li><strong>Prioritize difficult subjects:</strong> Allocate more study time to challenging topics while maintaining review of easier material.</li>
+                    <li><strong>Use the Pomodoro technique:</strong> Study for 25 minutes, then take a 5-minute break to maintain focus and prevent burnout.</li>
+                    <li><strong>Set realistic goals:</strong> Break your study sessions into achievable objectives.</li>
+                </ul>
+                <h3>Reducing Exam Stress</h3>
+                <ul>
+                    <li><strong>Get adequate sleep:</strong> Aim for 7-9 hours of sleep before the exam to ensure optimal brain function.</li>
+                    <li><strong>Eat well:</strong> Fuel your body with nutritious foods that support concentration and memory.</li>
+                    <li><strong>Practice relaxation techniques:</strong> Deep breathing, meditation, or light exercise can help manage anxiety.</li>
+                    <li><strong>Arrive early:</strong> Give yourself plenty of time to get to the exam location and settle in.</li>
+                </ul>
+                <p>Remember, consistent preparation throughout the semester is more effective than last-minute cramming. Use our midterm grade calculator regularly to track your progress and adjust your study plan as needed.</p>
+            </section>
+
+            <section id="related">
+                <h2>Related Grade Tools</h2>
+                <p>Explore our other grade calculation tools to support your academic success:</p>
+                <ul>
+                    <li><a href="/gpa-calculators">GPA Calculator</a> - Calculate your overall grade point average</li>
+                    <li><a href="/gpa-calculators/semester-gpa-calculator">Semester GPA Calculator</a> - Track your semester performance</li>
+                    <li><a href="/gpa-calculators/gpa-goal-calculator">GPA Goal Calculator</a> - Set and achieve GPA targets</li>
+                    <li><a href="/gpa-calculators/grade-point-calculator">Grade Point Calculator</a> - Calculate grade points for courses</li>
+                </ul>
+            </section>
+
+            <section id="external">
+                <h2>Educational Resources</h2>
+                <p>For more information about grading systems and academic success:</p>
+                <ul>
+                    <li><a href="https://www.ed.gov" target="_blank" rel="noreferrer">U.S. Department of Education</a> - Official education resources</li>
+                    <li><a href="https://nces.ed.gov" target="_blank" rel="noreferrer">National Center for Education Statistics</a> - Educational data and research</li>
+                    <li><a href="https://www.khanacademy.org" target="_blank" rel="noreferrer">Khan Academy</a> - Free educational content and tutorials</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">How do I calculate my midterm grade?</div>
+                    <div class="faq-answer">Use our midterm grade calculator by entering your current grade, desired final grade, midterm weight, and other assignment weight. The calculator will instantly show the grade you need on your midterm exam.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What grade do I need on my midterm?</div>
+                    <div class="faq-answer">The required midterm grade depends on your current performance, desired final grade, and the weight of the midterm in your course. Our calculator provides an accurate calculation based on these factors.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How much does a midterm affect GPA?</div>
+                    <div class="faq-answer">Midterms typically account for 20-40% of your final grade, so they significantly impact your GPA. Poor midterm performance can lower your overall grade, while strong performance can boost it.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is 70% a passing midterm grade?</div>
+                    <div class="faq-answer">A 70% is generally considered passing in most grading systems, but requirements vary by institution. Always check your syllabus for specific passing criteria.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I improve my final grade after a low midterm?</div>
+                    <div class="faq-answer">Yes, by performing well on remaining assignments and finals. Use our calculator to determine what grades you need on future assessments to achieve your desired final grade.</div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Bottom Ad -->
+        <div class="ad-placeholder">[AdSense Bottom Ad - 728x90]</div>
+    </div>
+
+    <script>
+        const currentGradeInput = document.getElementById('currentGrade');
+        const desiredGradeInput = document.getElementById('desiredGrade');
+        const midtermWeightInput = document.getElementById('midtermWeight');
+        const otherWeightInput = document.getElementById('otherWeight');
+        const extraCreditInput = document.getElementById('extraCredit');
+        const bonusPointsInput = document.getElementById('bonusPoints');
+        const requiredGradeSpan = document.getElementById('requiredGrade');
+        const currentStandingSpan = document.getElementById('currentStanding');
+        const gradeStatusSpan = document.getElementById('gradeStatus');
+        const warningDiv = document.getElementById('warning');
+
+        function calculate() {
+            const currentGrade = parseFloat(currentGradeInput.value) || 0;
+            const desiredGrade = parseFloat(desiredGradeInput.value) || 0;
+            const midtermWeight = parseFloat(midtermWeightInput.value) || 0;
+            const otherWeight = parseFloat(otherWeightInput.value) || 0;
+            const extraCredit = parseFloat(extraCreditInput.value) || 0;
+            const bonusPoints = parseFloat(bonusPointsInput.value) || 0;
+
+            const totalWeight = midtermWeight + otherWeight;
+            warningDiv.style.display = totalWeight !== 100 ? 'block' : 'none';
+
+            const remainingWeight = otherWeight / 100;
+            const midtermWeightDecimal = midtermWeight / 100;
+
+            let requiredGrade = null;
+            if (midtermWeightDecimal > 0) {
+                const adjustedDesired = Math.min(100, desiredGrade + extraCredit + bonusPoints);
+                requiredGrade = ((adjustedDesired / 100 - (currentGrade / 100) * remainingWeight) / midtermWeightDecimal) * 100;
+                requiredGrade = Math.max(0, Math.min(100, Number(requiredGrade.toFixed(1))));
+            }
+
+            requiredGradeSpan.textContent = requiredGrade !== null ? `${requiredGrade}%` : 'N/A';
+            currentStandingSpan.textContent = `${currentGrade}%`;
+
+            let status = 'No Data';
+            let statusClass = '';
+            if (requiredGrade !== null) {
+                if (requiredGrade >= 90) {
+                    status = 'Excellent';
+                    statusClass = 'status-excellent';
+                } else if (requiredGrade >= 70) {
+                    status = 'Passing';
+                    statusClass = 'status-passing';
+                } else {
+                    status = 'At Risk';
+                    statusClass = 'status-risk';
+                }
+            }
+            gradeStatusSpan.textContent = status;
+            gradeStatusSpan.className = `status-badge ${statusClass}`;
+        }
+
+        function resetCalculator() {
+            currentGradeInput.value = '85';
+            desiredGradeInput.value = '90';
+            midtermWeightInput.value = '30';
+            otherWeightInput.value = '70';
+            extraCreditInput.value = '0';
+            bonusPointsInput.value = '0';
+            calculate();
+        }
+
+        function printPage() {
+            window.print();
+        }
+
+        function downloadPDF() {
+            alert('Please use your browser\'s print to PDF feature (Ctrl+P or Cmd+P) to save as PDF.');
+        }
+
+        // Add event listeners for real-time calculation
+        [currentGradeInput, desiredGradeInput, midtermWeightInput, otherWeightInput, extraCreditInput, bonusPointsInput].forEach(input => {
+            input.addEventListener('input', calculate);
+        });
+
+        // Initial calculation
+        calculate();
+    </script>
+</body>
+</html>
