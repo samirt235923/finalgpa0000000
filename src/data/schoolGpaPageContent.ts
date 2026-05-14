@@ -565,6 +565,244 @@ const manualSchoolGpaPageContent: Record<string, SchoolGpaPageContent> = {
       buttonHref: '/gpa-calculators/johns-hopkins-gpa-calculator',
     },
   },
+  'texas-am-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'texas-am-expectations', label: 'Texas A&M GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The Texas A&M GPA Calculator is specifically designed for students at Texas A&M University who need a reliable tool for tracking academic performance. As one of the largest and most prestigious public research universities in the United States, Texas A&M offers over 130 undergraduate degree programs across its College Station campus and multiple locations statewide. Ranked consistently among the top 50 public universities by U.S. News & World Report, Texas A&M maintains rigorous academic standards that require precise GPA monitoring for graduation, scholarships, and professional school preparation.</p>
+        <p>This calculator follows the standard 4.0 grading scale used by Texas A&M and most American universities. Whether you are a freshman navigating your first semester, a transfer student integrating previous coursework, or a senior preparing for graduate school applications, accurate GPA calculation is essential for academic success at Texas A&M. The Aggie tradition of academic excellence demands tools that provide transparency and reliability in performance tracking.</p>
+        <p>Texas A&M University, founded in 1876 as the Agricultural and Mechanical College of Texas, has evolved into a comprehensive research institution with a student body exceeding 70,000 across its campuses. The university's commitment to academic rigor is reflected in its intensive engineering programs, business school excellence, agricultural research initiatives, and strong liberal arts offerings. Students pursuing degrees through the College of Engineering, Mays Business School, College of Agriculture and Life Sciences, or any of the other esteemed colleges will find this GPA calculator invaluable for planning their academic trajectory.</p>
+        <p>Our calculator provides instant results while maintaining accuracy across different course types, credit values, and grading scenarios. Understanding your GPA at Texas A&M is particularly important given the university's competitive programs and the requirements for honors distinctions, Dean's List recognition, and graduate school admission. Use the calculator above to enter your course information, then explore the detailed sections below for comprehensive guidance on Texas A&M GPA policies and improvement strategies.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The Texas A&M GPA Calculator operates on the standard formula used by virtually all American colleges and universities. Each letter grade you enter is converted to a numerical value on the 4.0 scale, then multiplied by the course credit hours. These weighted values are summed and divided by the total number of credit hours attempted, producing your cumulative GPA.</p>
+        <p>Texas A&M uses the following grade-to-point conversion: A equals 4.0 points, A-minus equals 3.7 points, B-plus equals 3.3 points, B equals 3.0 points, B-minus equals 2.7 points, C-plus equals 2.3 points, C equals 2.0 points, C-minus equals 1.7 points, D equals 1.0 points, and F equals 0.0 points. This is the standard scale applied uniformly across all undergraduate programs at the university.</p>
+        <p>For students taking honors or advanced courses, Texas A&M may apply plus/minus grading that affects the final grade point calculation. The calculator accounts for these variations automatically, ensuring your projected GPA matches official university calculations. Whether you are enrolled in a 1-credit physical education course or a 4-credit engineering laboratory, each course contributes proportionally to your overall academic standing.</p>
+        <p>We also recommend using our <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term academic planning and the <a href="/gpa-calculators/weighted-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Weighted GPA Calculator</a> if you have participated in AP, dual credit, or honors courses that may affect your admissions profile.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The formula for calculating Texas A&M GPA is straightforward but powerful in its ability to reflect your academic performance accurately. The calculation is:</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Credit Hours</p>
+          <p class="mt-2">Grade Points = Grade Value × Credit Hours</p>
+        </div>
+        <p>To illustrate, a 3-credit course with a B grade (3.0) earns 9.0 grade points, while a 4-credit course with an A grade (4.0) earns 16.0 grade points. Your semester GPA is calculated by dividing the sum of all grade points by the sum of all credit hours attempted that semester. Cumulative GPA follows the same principle but includes all coursework attempted at Texas A&M.</p>
+        <p>This formula ensures that courses with higher credit values have proportionally greater impact on your GPA. For example, earning an A in a 4-credit engineering course improves your GPA more significantly than earning an A in a 1-credit seminar. This weight-based system fairly represents the academic effort required across different course types.</p>
+        <p>Texas A&M's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes. Additionally, courses taken on a pass/fail basis may or may not impact your GPA depending on university regulations, so always verify with your academic advisor.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, focus on high-credit courses where strong performance yields maximum improvement.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical Texas A&M student taking a balanced course load across multiple colleges. Here is a practical example for a student in their second semester:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>ENGR 101: A, 4 credits → 16.0 grade points</li>
+          <li>PHYS 201: B+, 4 credits → 13.2 grade points</li>
+          <li>MATH 152: A-, 4 credits → 14.8 grade points</li>
+          <li>CHEM 107: B, 3 credits → 9.0 grade points</li>
+          <li>ENGL 101: A, 3 credits → 12.0 grade points</li>
+        </ul>
+        <p>Now sum the grade points and credits:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>Total Grade Points = 65.0</li>
+          <li>Total Credit Hours = 18</li>
+        </ul>
+        <p class="font-semibold">GPA = 65.0 ÷ 18 = 3.61</p>
+        <p>This 3.61 GPA would place the student on the Dean's List at Texas A&M, which typically requires a minimum GPA of 3.5 with at least 12 credit hours attempted. This example demonstrates how strong performance in core engineering and mathematics courses, combined with excellence in general education requirements, produces a competitive academic standing at Texas A&M.</p>
+        <p>For transfer students entering Texas A&M, the same formula applies when converting previous institutional grades. The university evaluates transfer coursework using established equivalency tables and applies the 4.0 scale consistently. Working through this example with your actual grades will help you understand your current standing and projected outcomes.</p>`,
+      },
+      {
+        id: 'texas-am-expectations',
+        title: 'Texas A&M GPA Expectations',
+        content: `<p>Texas A&M University maintains high academic standards while providing multiple pathways to success. For undergraduate students, good academic standing requires maintaining a cumulative GPA of 2.0 or higher. Students falling below this threshold enter academic probation and must work with advisors to develop an improvement plan. The Competitive Scholars Program and honors distinctions typically require GPAs above 3.5, with top-tier programs often expecting 3.7 or higher.</p>
+        <p>The prestigious Mays Business School maintains an even higher standard, with business majors expected to achieve a minimum 2.5 GPA in core business courses and a cumulative 2.5 GPA overall. Engineering programs require a 2.0 GPA in major-specific coursework, with many departments recommending higher standards for competitive specializations. Agricultural programs, liberal arts, and science majors each have unique requirements that the Texas A&M academic advising network can clarify.</p>
+        <p>Graduate and professional programs at Texas A&M have varying GPA expectations. The Texas A&M School of Law typically seeks applicants with GPAs above 3.0, while the medical school favors candidates with undergraduate GPAs above 3.5. Veterinary medicine, engineering graduate programs, and business graduate schools evaluate candidates holistically but consistently consider GPA among the most important factors.</p>
+        <p>For official Texas A&M policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.tamu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">official Texas A&M website</a> and the <a href="https://registrar.tamu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and degree audit procedures.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your Texas A&M GPA requires strategic planning and consistent effort. Start by analyzing your current academic performance using this calculator to identify courses with the greatest potential for impact. High-credit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Create a Study Schedule:</strong> Texas A&M offers academic coaching and peer tutoring through the Academic Success Center. Schedule regular study sessions for challenging courses.</li>
+          <li><strong>Use Campus Resources:</strong> The Writing Center, math clinics, and subject-specific tutoring labs provide free support for Aggie students. Take advantage of professor office hours to clarify assignments and exam expectations.</li>
+          <li><strong>Focus on High-Credit Courses:</strong> Since GPA is credit-weighted, strong performance in 4-credit engineering or science courses produces greater improvement than equivalent effort in 1-credit courses.</li>
+          <li><strong>Monitor Progress Weekly:</strong> Update this calculator after each exam or assignment grade to track your projected GPA and adjust study strategies as needed.</li>
+          <li><strong>Consider Course Load Balance:</strong> Balance challenging major courses with subjects that align with your strengths to maintain overall academic momentum.</li>
+        </ul>
+        <p>The Student Counseling Service provides additional support for stress management and academic planning. Texas A&M's commitment to student success means multiple resources exist to help you achieve your academic goals, from freshman year through graduation.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this Texas A&M GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.tamu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://advisors.tamu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">University Advising</a> network provides major-specific guidance for all undergraduate colleges.</p>
+        <p>For comparative data about Texas A&M's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set semester targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the Aggie tradition of excellence.</p>
+        <p>Bookmark this page and return after each grading period to track your progress. Consistent monitoring of your Texas A&M GPA ensures you stay on course for graduation, honors recognition, and future opportunities.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at Texas A&M?',
+        answer: 'A GPA above 3.0 is generally considered good at Texas A&M, while GPAs above 3.5 qualify students for Dean\'s List recognition. Competitive programs and honors distinctions often require GPAs above 3.7.',
+      },
+      {
+        question: 'Does Texas A&M use plus/minus grading?',
+        answer: 'Yes, Texas A&M uses plus/minus grading for most undergraduate courses. A-plus, A, A-minus, B-plus, and so on are all reflected in the GPA calculation using standard values like 4.0, 3.7, 3.3, etc.',
+      },
+      {
+        question: 'How often should I calculate my Texas A&M GPA?',
+        answer: 'Update your GPA calculation after each grading period or when you receive new grades. Frequent monitoring helps you track progress toward goals and identify courses where your effort can have the greatest impact.',
+      },
+      {
+        question: 'Can transfer credits affect my Texas A&M GPA?',
+        answer: 'Transfer credits appear on your Texas A&M transcript but do not factor into your Texas A&M cumulative GPA. Only grades earned in courses taken at Texas A&M count toward your university GPA, though transfer grades affect admission decisions.',
+      },
+      {
+        question: 'Is this calculator accurate for Texas A&M graduate students?',
+        answer: 'This calculator uses the standard 4.0 scale applicable to undergraduate programs. Graduate programs at Texas A&M may use different grading scales, so consult your department for specific policies.',
+      },
+    ],
+cta: {
+      heading: 'Track Your Texas A&M Academic Progress',
+      text: 'Use the calculator above to model different grade scenarios, set GPA goals, and keep your Aggie academic record on track for graduation and success.',
+      buttonText: 'Calculate Texas A&M GPA',
+      buttonHref: '/gpa-calculators/texas-am-gpa-calculator',
+    },
+  },
+  'virginia-tech-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'virginia-tech-expectations', label: 'Virginia Tech GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The Virginia Tech GPA Calculator is designed specifically for students at Virginia Tech, one of the premier public research universities in the United States. Located in Blacksburg, Virginia, Virginia Tech offers exceptional opportunities for engineering, technology, agriculture, and business education. With over 110 undergraduate majors and a student body exceeding 29,000, understanding your GPA is crucial for academic success, scholarship eligibility, and career preparation.</p>
+        <p>This calculator follows the standard 4.0 grading scale used by Virginia Tech and provides accurate GPA calculations for semester, cumulative, and transfer coursework. Whether you are in your first year exploring major options, a transfer student from Virginia community colleges, or preparing for graduate programs, this tool helps you track academic progress effectively.</p>
+        <p>Virginia Tech, founded in 1872 as Virginia Agricultural and Mechanical College, has evolved into a world-class research institution with strengths in engineering, agriculture, business, and the life sciences. The university's commitment to hands-on learning through its "Hands-On, Minds-On" philosophy means that practical experience complements academic achievement. Students in the College of Engineering, Pamplin College of Business, or College of Agriculture and Life Sciences will find GPA tracking essential for maintaining competitive standing.</p>
+        <p>Our Virginia Tech GPA Calculator provides instant results while ensuring accuracy across different course types, credit values, and grading scenarios. Understanding your GPA at Virginia Tech is particularly important given the university's honors programs, Dean's List requirements, and graduate school preparation. Use the calculator above to enter your course information, then review the sections below for comprehensive guidance on Virginia Tech GPA policies.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The Virginia Tech GPA Calculator uses the standard formula employed by virtually all American colleges and universities. Each letter grade entered is converted to a numerical value on the 4.0 scale, then multiplied by the course credit hours. These weighted values are summed and divided by the total number of credit hours attempted, producing your cumulative GPA.</p>
+        <p>Virginia Tech uses the following grade-to-point conversion: A equals 4.0 points, A-minus equals 3.7 points, B-plus equals 3.3 points, B equals 3.0 points, B-minus equals 2.7 points, C-plus equals 2.3 points, C equals 2.0 points, C-minus equals 1.7 points, D equals 1.0 points, and F equals 0.0 points. This scale is applied uniformly across all undergraduate programs at the university.</p>
+        <p>For students taking honors or advanced courses, Virginia Tech applies standard plus/minus grading that affects the final grade point calculation. The calculator accounts for these variations automatically, ensuring your projected GPA matches official university calculations. Whether you are enrolled in a 1-credit physical education course or a 4-credit engineering laboratory, each course contributes proportionally to your overall academic standing.</p>
+        <p>We also recommend using our <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term academic planning and the <a href="/gpa-calculators/weighted-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Weighted GPA Calculator</a> if you have participated in AP, dual credit, or honors courses affected by Virginia Tech's competitive admissions profile.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The formula for calculating Virginia Tech GPA is straightforward yet powerful in reflecting academic performance accurately. The calculation is:</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Credit Hours</p>
+          <p class="mt-2">Grade Points = Grade Value × Credit Hours</p>
+        </div>
+        <p>To illustrate, a 3-credit course with a B grade (3.0) earns 9.0 grade points, while a 4-credit course with an A grade (4.0) earns 16.0 grade points. Your semester GPA is calculated by dividing the sum of all grade points by the sum of all credit hours attempted that semester. Cumulative GPA follows the same principle but includes all coursework attempted at Virginia Tech.</p>
+        <p>This formula ensures that courses with higher credit values have proportionally greater impact on your GPA. For example, earning an A in a 4-credit engineering course improves your GPA more significantly than earning an A in a 1-credit seminar. This weight-based system fairly represents the academic effort required across different course types at Virginia Tech.</p>
+        <p>Virginia Tech's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes. Additionally, courses taken on a pass/fail basis may or may not impact your GPA depending on university regulations, so always verify with your academic advisor.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, focus on high-credit courses where strong performance yields maximum improvement.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical Virginia Tech student taking a balanced course load across multiple colleges. Here is a practical example for a student in their second semester:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>ENGE 1024: A-, 2 credits → 7.4 grade points</li>
+          <li>CHEM 1035: B+, 3 credits → 9.9 grade points</li>
+          <li>MATH 1225: A, 3 credits → 12.0 grade points</li>
+          <li>BIOE 1004: B, 2 credits → 6.0 grade points</li>
+          <li>ENGL 1105: A-, 3 credits → 11.1 grade points</li>
+        </ul>
+        <p>Now sum the grade points and credits:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>Total Grade Points = 46.4</li>
+          <li>Total Credit Hours = 13</li>
+        </ul>
+        <p class="font-semibold">GPA = 46.4 ÷ 13 = 3.57</p>
+        <p>This 3.57 GPA would place the student on the Dean's List at Virginia Tech, which typically requires a minimum GPA of 3.5 with at least 12 credit hours attempted. This example demonstrates how strong performance in core engineering and mathematics courses, combined with excellence in general education requirements, produces a competitive academic standing at Virginia Tech.</p>
+        <p>For transfer students entering Virginia Tech from Virginia community colleges, the same formula applies when converting previous institutional grades. The university evaluates transfer coursework using established equivalency tables and applies the 4.0 scale consistently. Working through this example with your actual grades will help you understand your current standing and projected outcomes.</p>`,
+      },
+      {
+        id: 'virginia-tech-expectations',
+        title: 'Virginia Tech GPA Expectations',
+        content: `<p>Virginia Tech maintains high academic standards while providing multiple pathways to success. For undergraduate students, good academic standing requires maintaining a cumulative GPA of 2.0 or higher. Students falling below this threshold enter academic probation and must work with advisors to develop an improvement plan. The Virginia Tech Honors College and prestigious programs typically require GPAs above 3.5, with top-tier programs often expecting 3.7 or higher.</p>
+        <p>The Pamplin College of Business maintains rigorous standards, with business majors expected to achieve a minimum 2.5 GPA in core business courses and a cumulative 2.5 GPA overall. Engineering programs require a 2.0 GPA in major-specific coursework, with many departments recommending higher standards for competitive specializations. Agricultural programs, liberal arts, and science majors each have unique requirements that the Virginia Tech academic advising network can clarify.</p>
+        <p>Graduate and professional programs at Virginia Tech have varying GPA expectations. The Virginia Tech Carilion School of Medicine typically seeks applicants with GPAs above 3.5, while engineering graduate programs evaluate candidates holistically but consistently consider GPA among the most important factors. Graduate programs in business, agriculture, and computer science all use GPA as a key evaluation criterion.</p>
+        <p>For official Virginia Tech policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.vt.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">official Virginia Tech website</a> and the <a href="https://registrar.vt.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the University Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and degree audit procedures.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your Virginia Tech GPA requires strategic planning and consistent effort. Start by analyzing your current academic performance using this calculator to identify courses with the greatest potential for impact. High-credit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Utilize Campus Resources:</strong> The Virginia Tech Academic Success Center provides academic coaching, peer tutoring, and study skills workshops. Schedule regular study sessions for challenging courses, particularly in the engineering and business sequences.</li>
+          <li><strong>Attend Office Hours:</strong> Professors and teaching assistants hold regular office hours to help students understand material and clarify assignment expectations. Building relationships with faculty can significantly impact performance in challenging courses.</li>
+          <li><strong>Focus on High-Credit Courses:</strong> Since GPA is credit-weighted, strong performance in 4-credit engineering or science courses produces greater improvement than equivalent effort in 1-credit courses.</li>
+          <li><strong>Monitor Progress Weekly:</strong> Update this calculator after each exam or assignment grade to track your projected GPA and adjust study strategies as needed.</li>
+          <li><strong>Balance Your Schedule:</strong> Combine challenging major courses with subjects that align with your strengths to maintain overall academic momentum.</li>
+        </ul>
+        <p>The Cook Counseling Center provides additional support for stress management and academic planning. Virginia Tech's commitment to student success means multiple resources exist to help you achieve your academic goals, from freshman year through graduation.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this Virginia Tech GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.vt.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the University Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://www.vt.edu/academics/advising.html" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">University Academic Advising</a> network provides major-specific guidance for all undergraduate colleges.</p>
+        <p>For comparative data about Virginia Tech's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set semester targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the Virginia Tech tradition of excellence.</p>
+        <p>Bookmark this page and return after each grading period to track your progress. Consistent monitoring of your Virginia Tech GPA ensures you stay on course for graduation, honors recognition, and future opportunities.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at Virginia Tech?',
+        answer: 'A GPA above 3.0 is generally considered good at Virginia Tech, while GPAs above 3.5 qualify students for Dean\'s List recognition. Competitive programs and honors distinctions often require GPAs above 3.7.',
+      },
+      {
+        question: 'Does Virginia Tech use plus/minus grading?',
+        answer: 'Yes, Virginia Tech uses plus/minus grading for most undergraduate courses. A-plus, A, A-minus, B-plus, and so on are all reflected in the GPA calculation using standard values like 4.0, 3.7, 3.3, etc.',
+      },
+      {
+        question: 'How often should I calculate my Virginia Tech GPA?',
+        answer: 'Update your GPA calculation after each grading period or when you receive new grades. Frequent monitoring helps you track progress toward goals and identify courses where your effort can have the greatest impact.',
+      },
+      {
+        question: 'Can transfer credits affect my Virginia Tech GPA?',
+        answer: 'Transfer credits appear on your Virginia Tech transcript but do not factor into your Virginia Tech cumulative GPA. Only grades earned in courses taken at Virginia Tech count toward your university GPA, though transfer grades affect admission decisions.',
+      },
+      {
+        question: 'Is this calculator accurate for Virginia Tech graduate students?',
+        answer: 'This calculator uses the standard 4.0 scale applicable to undergraduate programs. Graduate programs at Virginia Tech may use different grading scales, so consult your department for specific policies.',
+      },
+    ],
+    cta: {
+      heading: 'Track Your Virginia Tech Academic Progress',
+      text: 'Use the calculator above to model different grade scenarios, set GPA goals, and keep your academic record on track for graduation and success.',
+      buttonText: 'Calculate Virginia Tech GPA',
+      buttonHref: '/gpa-calculators/virginia-tech-gpa-calculator',
+    },
+  },
   'northwestern-gpa-calculator': {
     toc: [
       { id: 'overview', label: 'Overview' },
@@ -880,6 +1118,772 @@ const manualSchoolGpaPageContent: Record<string, SchoolGpaPageContent> = {
       text: 'Enter your grades and credits to calculate your GPA, model course outcomes, and stay ahead academically at Caltech.',
       buttonText: 'Calculate Caltech GPA',
       buttonHref: '/gpa-calculators/california-institute-of-technology-gpa-calculator',
+    },
+  },
+  'university-of-maryland-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'umd-expectations', label: 'University of Maryland GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The University of Maryland GPA Calculator is an essential tool designed specifically for students at the University of Maryland, College Park (UMD), one of the nation's premier public research universities. Founded in 1856 and located just outside Washington, D.C., UMD is renowned for its strong programs in engineering, computer science, business, and public policy, making it a magnet for ambitious students from around the world. As a flagship institution of the University System of Maryland, UMD combines rigorous academics with proximity to federal agencies, tech companies, and international organizations, creating unique opportunities for internships and research.</p>
+        <p>This GPA calculator helps UMD students maintain the academic excellence that defines the Terps tradition. Whether you're a freshman navigating your first semester, a transfer student adapting to UMD's competitive environment, or a senior preparing for graduate school applications, accurate GPA tracking is crucial. The calculator uses the standard 4.0 grading scale employed by UMD and most American universities, ensuring your calculations match official transcripts and degree audits.</p>
+        <p>UMD's academic landscape is diverse, with over 90 undergraduate majors and 120 graduate programs. Students often balance challenging coursework in STEM fields with electives in the humanities and social sciences. The university's emphasis on experiential learning means many students participate in research, internships, and study abroad programs alongside their regular classes. This calculator accounts for varying credit hours and course types, helping you understand how each grade contributes to your overall academic standing.</p>
+        <p>Our calculator provides instant, real-time results and is fully optimized for mobile devices, allowing you to check your GPA projections between classes or during study sessions. Understanding your GPA at UMD is particularly important given the university's competitive programs and the requirements for honors designations, scholarships, and graduate school admissions. Use the calculator above to enter your course information, then explore the detailed sections below for comprehensive guidance on UMD GPA policies, expectations, and improvement strategies.</p>
+        <p>As Maryland's flagship university, UMD serves over 41,000 students and is classified as an R1 research institution by the Carnegie Classification. The university's proximity to D.C. provides unparalleled access to government internships, think tanks, and international organizations. Students in programs like the Robert H. Smith School of Business, the A. James Clark School of Engineering, and the Philip Merrill College of Journalism benefit from world-class faculty and cutting-edge research opportunities. Maintaining a strong GPA is essential for accessing these competitive programs and maximizing your UMD experience.</p>
+        <p>The calculator supports both weighted and unweighted GPA calculations, accommodating UMD's honors and advanced placement courses. Whether you're enrolled in a 1-credit seminar or a 4-credit engineering lab, each course contributes proportionally to your cumulative GPA. This tool helps you model different academic scenarios, compare course loads, and make informed decisions about your schedule.</p>
+        <p>UMD's commitment to student success is reflected in its comprehensive support services, including academic coaching, tutoring centers, and advising networks. By using this calculator regularly, you can stay ahead of your academic goals and take advantage of the university's resources when needed. The tool is particularly valuable for students in high-demand majors where GPA requirements can be stringent for internships, research positions, and graduate school applications.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The University of Maryland GPA Calculator operates on the standard formula used by virtually all American colleges and universities, including UMD. Each letter grade you enter is converted to a numerical value on the 4.0 scale, then multiplied by the course credit hours. These weighted values are summed and divided by the total number of credit hours attempted, producing your cumulative GPA.</p>
+        <p>UMD uses the following grade-to-point conversion that aligns with most institutions: A equals 4.0 points, A-minus equals 3.7 points, B-plus equals 3.3 points, B equals 3.0 points, B-minus equals 2.7 points, C-plus equals 2.3 points, C equals 2.0 points, C-minus equals 1.7 points, D equals 1.0 points, and F equals 0.0 points. This standard scale ensures consistency across all undergraduate programs at the university.</p>
+        <p>For students taking honors or advanced courses, UMD's grading system may include plus/minus designations that affect the final grade point calculation. The calculator accounts for these variations automatically, ensuring your projected GPA matches official university calculations. Whether you are enrolled in a 1-credit physical education course or a 4-credit engineering laboratory, each course contributes proportionally to your overall academic standing.</p>
+        <p>The calculator provides both semester and cumulative GPA calculations, allowing you to track your progress throughout your academic career. It also supports weighted GPA calculations for honors and AP courses, which can give you an edge in competitive programs. The real-time updates mean you can experiment with different grade scenarios to see how they impact your overall standing.</p>
+        <p>UMD's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes. Additionally, courses taken on a pass/fail basis may or may not impact your GPA depending on university regulations, so always verify with your academic advisor.</p>
+        <p>This calculator is particularly useful for UMD students because it accounts for the university's specific grading policies and credit hour structures. For example, many engineering and science courses at UMD are 3-4 credits, while some advanced seminars might be 1-2 credits. Understanding how these different course weights affect your GPA is crucial for academic planning.</p>
+        <p>The tool also includes features for calculating what-if scenarios, allowing you to see how improving grades in certain courses could boost your overall GPA. This is especially valuable for students who need to meet specific GPA requirements for scholarships, honors programs, or graduate school applications.</p>
+        <p>We recommend using our related calculators alongside this UMD-specific tool. The <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> helps with long-term academic planning, while the <a href="/gpa-calculators/weighted-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Weighted GPA Calculator</a> accounts for honors and AP courses that may affect your admissions profile.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The GPA formula used by the University of Maryland and this calculator is straightforward but powerful in its ability to reflect your academic performance accurately. The calculation is:</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Credit Hours</p>
+          <p class="mt-2">Grade Points = Grade Value × Credit Hours</p>
+        </div>
+        <p>To illustrate, a 3-credit course with a B grade (3.0) earns 9.0 grade points, while a 4-credit course with an A grade (4.0) earns 16.0 grade points. Your semester GPA is calculated by dividing the sum of all grade points by the sum of all credit hours attempted that semester. Cumulative GPA follows the same principle but includes all coursework attempted at UMD.</p>
+        <p>This formula ensures that courses with higher credit values have proportionally greater impact on your GPA. For example, earning an A in a 4-credit engineering course improves your GPA more significantly than earning an A in a 1-credit seminar. This weight-based system fairly represents the academic effort required across different course types.</p>
+        <p>UMD's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes. Additionally, courses taken on a pass/fail basis may or may not impact your GPA depending on university regulations, so always verify with your academic advisor.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, focus on high-credit courses where strong performance yields maximum improvement.</p>
+        <p>The calculator automatically applies this formula as you enter your grades and credit hours, providing instant feedback on your academic standing. This real-time calculation helps you understand the immediate impact of each grade on your overall GPA.</p>
+        <p>For students in competitive programs at UMD, such as engineering or business, maintaining a high GPA is often crucial. The formula's emphasis on credit-weighted grades means that strategic course selection and consistent performance in high-credit courses can significantly improve your academic profile.</p>
+        <p>It's also important to note that UMD calculates GPA differently for different purposes. For example, your major GPA might only include courses within your declared major, while your overall GPA includes all attempted coursework. This calculator focuses on the standard cumulative GPA used for most academic and admissions purposes.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical University of Maryland student taking a balanced course load across multiple colleges. Here is a practical example for a student in their second semester:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>ENES 100: Introduction to Engineering Design (A, 3 credits) → 12.0 grade points</li>
+          <li>MATH 141: Calculus II (A-, 4 credits) → 14.8 grade points</li>
+          <li>CHEM 131: Principles of Chemistry I (B+, 3 credits) → 9.9 grade points</li>
+          <li>PSYC 100: Introduction to Psychology (A, 3 credits) → 12.0 grade points</li>
+          <li>ENGL 101: Academic Writing (B, 3 credits) → 9.0 grade points</li>
+        </ul>
+        <p>Now sum the grade points and credits:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>Total Grade Points = 57.7</li>
+          <li>Total Credit Hours = 16</li>
+        </ul>
+        <p class="font-semibold">GPA = 57.7 ÷ 16 = 3.61</p>
+        <p>This 3.61 GPA would place the student in good academic standing at UMD and potentially qualify them for Dean's List recognition, which typically requires a minimum GPA of 3.5 with at least 12 credit hours attempted. This example demonstrates how strong performance in core engineering and mathematics courses, combined with solid grades in general education requirements, produces a competitive academic standing at the University of Maryland.</p>
+        <p>For transfer students entering UMD, the same formula applies when converting previous institutional grades. The university evaluates transfer coursework using established equivalency tables and applies the 4.0 scale consistently. Working through this example with your actual grades will help you understand your current standing and projected outcomes.</p>
+        <p>This calculation shows how UMD's credit-weighted system rewards strong performance in challenging, high-credit courses. Students in STEM majors often have heavier course loads, making GPA management particularly important. The calculator allows you to experiment with different grade combinations to see how they affect your overall standing.</p>
+        <p>Remember that this is just one semester example. Your cumulative GPA will include all semesters at UMD, so maintaining consistent performance across multiple terms is crucial for long-term academic success. Use this calculator to track your progress and adjust your study strategies as needed.</p>`,
+      },
+      {
+        id: 'umd-expectations',
+        title: 'University of Maryland GPA Expectations',
+        content: `<p>The University of Maryland maintains rigorous academic standards that reflect its status as a top-tier public research university. For undergraduate students, good academic standing requires maintaining a cumulative GPA of 2.0 or higher. Students falling below this threshold enter academic probation and must work with advisors to develop an improvement plan. The Honors College and competitive scholarships typically require GPAs above 3.5, with top-tier programs often expecting 3.7 or higher.</p>
+        <p>The Robert H. Smith School of Business maintains an even higher standard, with business majors expected to achieve a minimum 2.5 GPA in core business courses and a cumulative 2.5 GPA overall. Engineering programs require a 2.0 GPA in major-specific coursework, with many departments recommending higher standards for competitive specializations. Journalism, public policy, and computer science programs also have stringent GPA requirements for internships and advanced coursework.</p>
+        <p>Graduate and professional programs at UMD have varying GPA expectations. The university's law school typically seeks applicants with GPAs above 3.0, while medical and other health professional programs favor candidates with undergraduate GPAs above 3.5. PhD programs in STEM fields often require GPAs above 3.5 for admission, with some programs expecting 3.7 or higher.</p>
+        <p>UMD's location near Washington, D.C. provides unique opportunities for internships and research positions that often have GPA requirements. Federal agencies, think tanks, and international organizations frequently require minimum GPAs of 3.0-3.5 for undergraduate internships. Maintaining a strong GPA is essential for accessing these competitive opportunities.</p>
+        <p>The university's honors programs, such as the Honors College and departmental honors, typically require GPAs of 3.5 or higher. These programs offer enhanced research opportunities, priority registration, and distinguished recognition on transcripts and diplomas. Students aiming for Phi Beta Kappa membership, the nation's oldest academic honor society, must maintain exceptionally high GPAs throughout their undergraduate career.</p>
+        <p>For official UMD policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.umd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">official University of Maryland website</a> and the <a href="https://registrar.umd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and degree audit procedures.</p>
+        <p>UMD's academic advising centers provide personalized guidance for students struggling to meet GPA expectations. The university offers tutoring services, academic coaching, and study skills workshops to help students improve their performance. Early intervention is key to maintaining good academic standing and accessing competitive opportunities.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your GPA at the University of Maryland requires strategic planning and consistent effort. Start by analyzing your current academic performance using this calculator to identify courses with the greatest potential for impact. High-credit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Utilize UMD Resources:</strong> Take advantage of the university's Academic Achievement Programs, which offer free tutoring, study groups, and academic coaching. The Writing Center and Math Success Center provide specialized support for challenging coursework.</li>
+          <li><strong>Focus on High-Impact Courses:</strong> Since GPA is credit-weighted, strong performance in 3-4 credit STEM courses produces greater improvement than equivalent effort in 1-2 credit electives. Prioritize your major requirements and prerequisites.</li>
+          <li><strong>Develop Effective Study Habits:</strong> UMD's proximity to D.C. can be distracting, so create a structured study schedule that balances coursework with internships and extracurricular activities. Use active learning techniques like practice problems and teaching concepts to others.</li>
+          <li><strong>Seek Academic Advising:</strong> Meet regularly with your academic advisor to discuss course selection, GPA goals, and academic progress. Advisors can help you understand how your GPA affects eligibility for majors, scholarships, and graduate programs.</li>
+          <li><strong>Monitor Progress Weekly:</strong> Update this calculator after each exam or assignment grade to track your projected GPA and adjust study strategies as needed. Early identification of GPA trends allows for timely intervention.</li>
+        </ul>
+        <p>UMD's commitment to student success means multiple resources exist to help you achieve your academic goals. The university's Office of Undergraduate Studies offers workshops on time management, test-taking strategies, and stress reduction. Peer tutoring programs connect you with successful upperclassmen in your major.</p>
+        <p>For students in competitive programs, consider joining study groups or forming accountability partnerships with classmates. Many UMD departments offer supplemental instruction sessions for challenging courses. The university's emphasis on experiential learning means balancing academics with internships, but maintaining GPA priority ensures long-term success.</p>
+        <p>Remember that GPA improvement is a gradual process requiring consistent effort. Small improvements in high-credit courses can significantly boost your overall standing. Use this calculator to set realistic goals and track your progress toward academic excellence at UMD.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this University of Maryland GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.umd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://advising.umd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Undergraduate Academic Advising</a> network provides major-specific guidance for all colleges.</p>
+        <p>For comparative data about UMD's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set semester targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the Terps tradition of excellence.</p>
+        <p>UMD students should also explore the university's academic success resources, including the Center for Academic Success and the Office of the Dean for Undergraduate Studies. These offices provide comprehensive support for academic planning, career development, and personal growth.</p>
+        <p>Bookmark this page and return after each grading period to track your progress. Consistent monitoring of your University of Maryland GPA ensures you stay on course for graduation, honors recognition, and future opportunities. With UMD's proximity to D.C. and strong alumni network, maintaining a competitive GPA opens doors to internships, research positions, and prestigious graduate programs.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at the University of Maryland?',
+        answer: 'A GPA above 3.0 is generally considered good at UMD, while GPAs above 3.5 qualify students for Dean\'s List recognition and many honors programs. Competitive programs and scholarships often require GPAs above 3.7.',
+      },
+      {
+        question: 'Does the University of Maryland use plus/minus grading?',
+        answer: 'Yes, UMD uses plus/minus grading for most undergraduate courses. A-plus, A, A-minus, B-plus, and so on are all reflected in the GPA calculation using standard values like 4.0, 3.7, 3.3, etc.',
+      },
+      {
+        question: 'How often should I calculate my University of Maryland GPA?',
+        answer: 'Update your GPA calculation after each grading period or when you receive new grades. Frequent monitoring helps you track progress toward goals like scholarships, honors programs, and graduate school admissions.',
+      },
+      {
+        question: 'Can transfer credits affect my University of Maryland GPA?',
+        answer: 'Transfer credits appear on your UMD transcript but do not factor into your University of Maryland cumulative GPA. Only grades earned in courses taken at UMD count toward your university GPA, though transfer grades affect admission decisions.',
+      },
+      {
+        question: 'Is this calculator accurate for University of Maryland graduate students?',
+        answer: 'This calculator uses the standard 4.0 scale applicable to undergraduate programs. Graduate programs at UMD may use different grading scales, so consult your department for specific policies.',
+      },
+      {
+        question: 'How does UMD\'s location in D.C. affect GPA requirements?',
+        answer: 'UMD\'s proximity to Washington, D.C. creates unique internship and research opportunities that often require minimum GPAs of 3.0-3.5. Maintaining a strong GPA is essential for accessing federal internships and competitive positions.',
+      },
+    ],
+    cta: {
+      heading: 'Track Your University of Maryland Academic Progress',
+      text: 'Use the calculator above to model grades, set GPA goals, and keep your Terps academic record on track for graduation, honors, and future opportunities.',
+      buttonText: 'Calculate University of Maryland GPA',
+      buttonHref: '/gpa-calculators/university-of-maryland-gpa-calculator',
+    },
+  },
+  'university-of-minnesota-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'umn-expectations', label: 'University of Minnesota GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The University of Minnesota GPA Calculator is an essential academic planning tool for students navigating one of the Midwest's premier public research universities. Located in the Twin Cities of Minneapolis and St. Paul, the University of Minnesota Twin Cities campus serves over 51,000 students across seven schools and colleges, offering world-class programs in engineering, medicine, business, agriculture, and countless other disciplines. With a reputation for research excellence, innovation, and community engagement, UMN combines rigorous academics with real-world opportunities that prepare students for successful careers across all industries.</p>
+        <p>Whether you're a first-year student managing your initial semester, a junior planning for graduate school, or a senior preparing for professional transitions, tracking your GPA accurately is crucial for unlocking opportunities specific to UMN's competitive environment. This calculator uses the standard 4.0 grading scale employed by the university and most American institutions, ensuring your calculations align with official UMN transcripts and degree audit systems. UMN students benefit from a strong honors system, competitive scholarships, and research opportunities that often depend on maintaining a solid cumulative GPA.</p>
+        <p>The University of Minnesota's academic landscape encompasses diverse disciplines from biotechnology and computer science to fine arts and public affairs. Many UMN students pursue double majors, minors, and interdisciplinary certificates alongside their primary coursework, making accurate GPA tracking essential for managing multiple academic commitments. The university's location in the Twin Cities provides exceptional access to Fortune 500 companies, research institutions, and startups, creating internship and co-op opportunities that are often GPA-dependent.</p>
+        <p>This calculator provides instant, real-time results with full mobile optimization, allowing you to check your GPA projections between classes, during study sessions, or while planning your academic schedule. Understanding your GPA at UMN is particularly important given the university's selective admission standards for majors like engineering, medicine, and business, where internal GPA thresholds can determine access to specialized programs. Use the calculator above to enter your grades and credits, then explore the comprehensive sections below for detailed guidance on UMN-specific policies, expectations, and proven strategies for academic success.</p>
+        <p>As Minnesota's flagship university and a member of the prestigious Big Ten Athletic Conference, UMN is recognized worldwide for research contributions, innovation, and social impact. The university's commitment to research includes participation in major initiatives like the Minnesota Supercomputing Institute, the Medical School's clinical programs, and groundbreaking engineering projects. Students who maintain strong GPAs gain access to honors programs, research assistantships, and competitive internships that define their university experience and launch successful careers.</p>
+        <p>The University of Minnesota's scale and diversity mean that GPA management varies across colleges. A chemistry grade in the College of Science and Engineering has the same numerical weight as a course in the College of Liberal Arts, but career implications may differ depending on your major. This calculator helps you understand how each course contributes to your cumulative GPA and supports strategic decision-making about course load, scheduling, and academic priorities throughout your UMN career.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The University of Minnesota GPA Calculator operates on the standard formula used by UMN and virtually all American colleges and universities. Each letter grade is converted to a numerical value on the 4.0 scale, multiplied by the course's credit hours, and these weighted values are summed and divided by total credit hours attempted. This credit-weighted system ensures that a rigorous 4-credit engineering course contributes more to your GPA than a smaller 1-credit seminar, fairly representing your academic effort across different course types.</p>
+        <p>UMN uses the following standard grade-to-point conversion for most undergraduate courses: A equals 4.0 points, A-minus equals 3.7 points, B-plus equals 3.3 points, B equals 3.0 points, B-minus equals 2.7 points, C-plus equals 2.3 points, C equals 2.0 points, C-minus equals 1.7 points, D equals 1.0 point, and F equals 0.0 points. This transparent scale is consistent across all UMN colleges and allows for easy verification of calculations with official transcripts and degree audits.</p>
+        <p>For students taking honors or advanced courses, UMN's grading system includes plus/minus designations that are automatically factored into the final grade point calculation. Some honors courses may carry additional weight in specific contexts, but this calculator uses the standard institutional formula to provide accurate GPA estimates. Whether you're enrolled in a 1-credit physical education course or a 4-credit organic chemistry laboratory, each course contributes proportionally to your overall academic standing at UMN.</p>
+        <p>The calculator supports both semester and cumulative GPA calculations, allowing you to track your progress throughout your academic career at the University of Minnesota. This dual-calculation approach is particularly valuable for students in semester-based academic planning, as semester GPA often influences registration priority, scholarship eligibility, and mid-year academic standing reviews. The real-time updates mean you can experiment with different grade scenarios to see how they impact your overall standing at UMN.</p>
+        <p>UMN's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes, which can affect your standing. Courses taken on a pass/fail basis may or may not impact your GPA depending on university regulations and college-specific policies, so always verify with your academic advisor in your specific college.</p>
+        <p>This calculator is particularly useful for UMN students because it accounts for the university's specific grading policies and credit hour structures. Many engineering and science courses at UMN are 3-4 credits, while some advanced seminars, research courses, and electives might be 1-2 credits. Understanding how these different course weights affect your cumulative GPA is crucial for academic planning, especially when you're trying to maintain eligibility for competitive programs or scholarships.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The University of Minnesota GPA formula is transparent, widely used across American higher education, and straightforward to verify manually. Understanding this formula empowers you to take control of your academic destiny and make informed decisions about course selection and study strategies.</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Credit Hours</p>
+          <p class="mt-2">Grade Points = Grade Value × Credit Hours</p>
+        </div>
+        <p>To illustrate with a UMN example: a 3-credit course with a B grade (3.0 value) earns 9.0 grade points, while a 4-credit course with an A grade (4.0 value) earns 16.0 grade points. Your semester GPA is calculated by dividing the sum of all grade points by the sum of all credit hours attempted that semester. Your cumulative GPA follows the same principle but includes all coursework attempted at UMN across all semesters.</p>
+        <p>This formula ensures that courses with higher credit values have proportionally greater impact on your GPA. For example, earning an A in a 4-credit physics course improves your GPA more significantly than earning an A in a 1-credit lab or seminar. This weight-based system fairly represents the academic effort required across different course types and helps identify where strategic study focus will yield maximum GPA improvement.</p>
+        <p>UMN's academic policies specify that only courses taken at the University of Minnesota Twin Cities count toward your institutional GPA. Study abroad courses, community college transfer credits, and courses from other UMN campuses may appear on your transcript but don't directly factor into your Twin Cities GPA calculation. This is an important distinction when planning how to manage your academic record at UMN.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, you can use the formula to calculate exactly which courses and grade improvements would yield maximum benefit. This strategic approach, combined with the calculator above, makes GPA management achievable and transparent.</p>
+        <p>For students in competitive programs at UMN, such as engineering or the Carlson School of Management, the formula's emphasis on credit-weighted grades means that strategic course selection and consistent performance in high-credit courses can significantly improve your academic profile. Focusing study efforts on high-credit core courses yields better GPA outcomes than equivalent effort distributed across multiple low-credit electives.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical University of Minnesota student taking a balanced course load across the university's diverse academic programs. Here is a practical example for a student in their second semester:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>CHEM 1021: General Chemistry II (A, 4 credits) → 16.0 grade points</li>
+          <li>MATH 1071: Calculus II (A-, 4 credits) → 14.8 grade points</li>
+          <li>PHYS 1002: Physics II (B+, 4 credits) → 13.2 grade points</li>
+          <li>ENG 1011: English Composition (A-, 3 credits) → 11.1 grade points</li>
+          <li>HIST 1001: Historical Analysis (B, 3 credits) → 9.0 grade points</li>
+        </ul>
+        <p>Calculating total grade points: 16.0 + 14.8 + 13.2 + 11.1 + 9.0 = 64.1 grade points</p>
+        <p>Total credit hours: 4 + 4 + 4 + 3 + 3 = 18 credits</p>
+        <p class="font-semibold">GPA = 64.1 ÷ 18 = 3.56</p>
+        <p>This example demonstrates how a mix of strong grades across STEM and humanities courses produces a solid GPA that meets UMN standards for good academic standing and many scholarships. The student's performance in high-credit courses (CHEM, MATH, PHYS) had the greatest positive impact on the overall GPA. Use this calculator to adjust grades and explore how different academic scenarios would affect your projected GPA at UMN.</p>`,
+      },
+      {
+        id: 'umn-expectations',
+        title: 'University of Minnesota GPA Expectations',
+        content: `<p>The University of Minnesota maintains high academic standards with varying GPA expectations depending on the student's current status, intended major, and career goals. For general undergraduate admission to UMN Twin Cities, the middle 50% of admitted students have GPAs around 3.6-3.9, reflecting the university's selective nature and commitment to academic excellence.</p>
+        <p>Once enrolled at UMN, maintaining a cumulative GPA of 2.0 or higher is required to remain in good academic standing and make progress toward a degree. However, most students aim significantly higher, as many scholarships, honors programs, and career opportunities require GPAs well above the minimum threshold. The University of Minnesota's Dean's List recognizes students who achieve a semester GPA of 3.66 or higher, a distinction that appears on transcripts and supports graduate school and job applications.</p>
+        <p>For students pursuing competitive majors within UMN's colleges, GPA requirements are often more stringent. The College of Engineering and Physical Sciences, the Carlson School of Management, and the College of Biological Sciences frequently require GPAs above 3.0-3.5 for major admission and continued enrollment in major courses. Pre-health students aiming for medical, dental, or veterinary school typically need cumulative GPAs above 3.5, with science GPAs (GPA in chemistry, biology, physics, and organic chemistry) above 3.6.</p>
+        <p>The University of Minnesota's honors programs and research opportunities often require GPAs above 3.5 and demonstrate strong commitment to academic excellence. The Honors Program, departmental honors tracks, and undergraduate research assistantships prioritize students with demonstrated academic achievement and sustained success. Graduate and professional school programs increasingly expect strong GPAs, with highly competitive fields like medicine requiring GPAs above 3.7.</p>
+        <p>UMN's scholarship landscape reflects the importance of maintaining a strong GPA. Merit-based scholarships, both from UMN and external organizations, typically require minimum cumulative GPAs of 3.0-3.7 depending on the award level. Many students lose or fail to qualify for scholarships due to GPA drops, making consistent academic performance throughout your UMN career financially important.</p>
+        <p>For official UMN policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.umn.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">University of Minnesota official website</a> and the <a href="https://registrar.umn.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and college-specific GPA requirements.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your GPA at the University of Minnesota requires strategic planning, consistent effort, and effective use of campus resources. Start by analyzing your current academic performance using this calculator to identify courses and semesters where your performance fell short of your goals. High-credit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Utilize UMN Academic Support:</strong> The University of Minnesota offers comprehensive academic support through the Learning Center, which provides free tutoring, study groups, and academic coaching. The Writing Center offers specialized help with writing assignments, and the Math Help Center supports students struggling with quantitative courses.</li>
+          <li><strong>Focus on High-Impact Courses:</strong> Since GPA is credit-weighted, strong performance in 3-4 credit STEM and core courses produces greater improvement than equivalent effort in 1-2 credit electives. Prioritize your major requirements and prerequisites where grades most significantly impact your GPA.</li>
+          <li><strong>Develop Effective Study Habits:</strong> Create a structured study schedule that balances coursework with internships, research, and extracurricular activities. Use active learning techniques like practice problems, teaching concepts to others, and forming study groups with classmates.</li>
+          <li><strong>Seek Academic Advising:</strong> Meet regularly with your academic advisor to discuss course selection, GPA goals, and academic progress. Advisors can help you understand how your GPA affects eligibility for majors, scholarships, and graduate programs.</li>
+          <li><strong>Monitor Progress Weekly:</strong> Update this calculator after each exam or assignment grade to track your projected GPA and adjust study strategies as needed. Early identification of GPA trends allows for timely intervention and course corrections.</li>
+        </ul>
+        <p>UMN's commitment to student success is reflected in its comprehensive support services, including academic coaching, tutoring centers, and advising networks. The university's Student Success programs offer workshops on time management, test-taking strategies, and stress reduction throughout the academic year. Peer tutoring programs connect you with successful UMN students in your major.</p>
+        <p>For students in engineering or other demanding STEM programs, supplemental instruction sessions and departmental tutoring services are critical resources. Many UMN departments offer exam review sessions and problem-solving workshops designed specifically for their courses. The College of Biological Sciences and College of Engineering provide additional support for students in high-enrollment introductory courses where GPA management can be especially challenging.</p>
+        <p>Remember that GPA improvement is a gradual process requiring consistent effort. Small improvements in high-credit courses can significantly boost your overall standing. Use this calculator to set realistic goals and track your progress toward academic excellence at UMN.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this University of Minnesota GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.umn.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://onestop.umn.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">One Stop Student Services</a> provides centralized access to academic advising, registration, financial aid, and student account services.</p>
+        <p>For comparative data about UMN's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer Big Ten institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set semester targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the UMN tradition of excellence in research and innovation.</p>
+        <p>UMN students should also explore the university's academic success resources, including college-specific advising centers, honors programs, and research opportunities. The Office of Undergraduate Education, departmental advisors, and the Graduate School provide comprehensive support for academic planning, professional development, and career readiness.</p>
+        <p>Bookmark this page and return after each grading period to track your progress. Consistent monitoring of your University of Minnesota GPA ensures you stay on course for graduation, honors recognition, and future opportunities. With UMN's strong alumni network and extensive connections to Minnesota's business and research communities, maintaining a competitive GPA opens doors to internships, research positions, and prestigious graduate programs that launch successful careers.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at the University of Minnesota?',
+        answer: 'A GPA above 3.0 is generally considered good at UMN, while GPAs above 3.5 qualify students for Dean\'s List recognition and many honors programs. Competitive programs and scholarships often require GPAs above 3.6-3.7.',
+      },
+      {
+        question: 'Does the University of Minnesota use plus/minus grading?',
+        answer: 'Yes, UMN uses plus/minus grading for most undergraduate courses. Letter grades with plus and minus designations are reflected in the GPA calculation using standard values like 4.0, 3.7, 3.3, etc.',
+      },
+      {
+        question: 'How often should I calculate my UMN GPA?',
+        answer: 'Update your GPA calculation after each grading period or when you receive new grades. Frequent monitoring helps you track progress toward goals like scholarships, honors programs, and graduate school admissions.',
+      },
+      {
+        question: 'Can transfer credits affect my UMN GPA?',
+        answer: 'Transfer credits appear on your UMN transcript but do not factor into your University of Minnesota cumulative GPA. Only grades earned in courses taken at UMN Twin Cities count toward your institutional GPA.',
+      },
+      {
+        question: 'Is this calculator accurate for UMN graduate students?',
+        answer: 'This calculator uses the standard 4.0 scale applicable to undergraduate programs. Graduate programs at UMN may use different grading scales, so consult your department for specific policies.',
+      },
+    ],
+    cta: {
+      heading: 'Track Your University of Minnesota Academic Progress',
+      text: 'Use the calculator above to model grades, set GPA goals, and keep your academic record on track for graduation, honors, and future opportunities in Minnesota\'s thriving business and research communities.',
+      buttonText: 'Calculate University of Minnesota GPA',
+      buttonHref: '/gpa-calculators/university-of-minnesota-gpa-calculator',
+    },
+  },
+  'university-of-wisconsin-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'uw-expectations', label: 'UW GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The University of Wisconsin GPA Calculator is a comprehensive academic planning tool designed for students navigating Wisconsin's premier public research institution. Located in Madison, the University of Wisconsin serves over 45,000 students across its flagship campus and contributes significantly to Wisconsin's reputation for research excellence, innovation, and agricultural leadership. With renowned programs in engineering, life sciences, business, education, and countless other disciplines, UW-Madison combines world-class academics with a vibrant campus culture that attracts students from across the nation and around the world.</p>
+        <p>Whether you're a first-generation student managing your initial semester, a junior planning for graduate school applications, or a senior preparing for professional transitions, accurately tracking your GPA is crucial for unlocking opportunities specific to UW's competitive academic environment. This calculator uses the standard 4.0 grading scale employed by UW and most American institutions, ensuring your calculations align with official UW transcripts and degree audit systems. UW students benefit from a strong honors system, competitive scholarships, and research opportunities that often depend on maintaining a solid cumulative GPA.</p>
+        <p>The University of Wisconsin's academic landscape encompasses diverse disciplines from biotechnology and computer science to engineering and public policy. Many UW students pursue double majors, minors, and interdisciplinary certificates alongside their primary coursework, making accurate GPA tracking essential for managing multiple academic commitments. The university's location in Madison provides exceptional access to research institutions, nonprofit organizations, and tech companies, creating internship and co-op opportunities that are often GPA-dependent.</p>
+        <p>This calculator provides instant, real-time results with full mobile optimization, allowing you to check your GPA projections between classes, during study sessions, or while planning your academic schedule. Understanding your GPA at UW is particularly important given the university's selective admission standards for majors like engineering, computer science, and business, where internal GPA thresholds can determine access to specialized programs. Use the calculator above to enter your grades and credits, then explore the comprehensive sections below for detailed guidance on UW-specific policies, expectations, and proven strategies for academic success.</p>
+        <p>As Wisconsin's flagship university and a member of the Big Ten Athletic Conference and Association of American Universities, UW is recognized worldwide for research contributions, innovation, and commitment to the Wisconsin Idea—the concept that university research and knowledge should benefit the entire state. The university's commitment to research includes participation in major initiatives like the Materials Research Laboratory, the Wisconsin Energy Institute, and groundbreaking medical school research programs. Students who maintain strong GPAs gain access to honors programs, research assistantships, and competitive internships that define their university experience.</p>
+        <p>The University of Wisconsin's scale and diversity mean that GPA management varies across colleges and schools. An engineering course has the same numerical weight as a course in the College of Letters and Science, but career implications may differ depending on your major and career goals. This calculator helps you understand how each course contributes to your cumulative GPA and supports strategic decision-making about course load, scheduling, and academic priorities throughout your UW career.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The University of Wisconsin GPA Calculator operates on the standard formula used by UW and virtually all American colleges and universities. Each letter grade is converted to a numerical value on the 4.0 scale, multiplied by the course's credit hours, and these weighted values are summed and divided by total credit hours attempted. This credit-weighted system ensures that a rigorous 4-credit engineering course contributes more to your GPA than a smaller 1-credit seminar, fairly representing your academic effort across different course types.</p>
+        <p>UW uses the following standard grade-to-point conversion for most undergraduate courses: A equals 4.0 points, AB equals 3.5 points, B equals 3.0 points, BC equals 2.5 points, C equals 2.0 points, D equals 1.0 point, and F equals 0.0 points. Note that UW's grading scale is slightly different from some other universities in that it includes AB and BC grades. This transparent scale is consistent across all UW colleges and allows for easy verification of calculations with official transcripts and degree audits.</p>
+        <p>For students taking honors or advanced courses, UW's grading system maintains the same scale across all course types. Some honors courses may carry additional weight in specific contexts for honors program requirements, but this calculator uses the standard institutional formula to provide accurate GPA estimates. Whether you're enrolled in a 1-credit seminar or a 4-credit organic chemistry laboratory, each course contributes proportionally to your overall academic standing at UW.</p>
+        <p>The calculator supports both semester and cumulative GPA calculations, allowing you to track your progress throughout your academic career at the University of Wisconsin. This dual-calculation approach is particularly valuable for students in semester-based academic planning, as semester GPA often influences registration priority, scholarship eligibility, and mid-year academic standing reviews. The real-time updates mean you can experiment with different grade scenarios to see how they impact your overall standing at UW.</p>
+        <p>UW's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes, which can affect your academic standing. Courses taken on a pass/no-pass basis do not impact your GPA if completed before the university's conversion deadline, so always verify with your academic advisor about specific policies for your major.</p>
+        <p>This calculator is particularly useful for UW students because it accounts for the university's specific grading policies and credit hour structures. Many engineering and science courses at UW are 3-4 credits, while some advanced seminars and research courses might be 1-2 credits or variable credit. Understanding how these different course weights affect your cumulative GPA is crucial for academic planning, especially when you're trying to maintain eligibility for competitive programs or scholarships.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The University of Wisconsin GPA formula is transparent, widely used across American higher education, and straightforward to verify manually. Understanding this formula empowers you to take control of your academic destiny and make informed decisions about course selection and study strategies.</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Credit Hours</p>
+          <p class="mt-2">Grade Points = Grade Value × Credit Hours</p>
+        </div>
+        <p>To illustrate with a UW example: a 3-credit course with a B grade (3.0 value) earns 9.0 grade points, while a 4-credit course with an A grade (4.0 value) earns 16.0 grade points. Your semester GPA is calculated by dividing the sum of all grade points by the sum of all credit hours attempted that semester. Your cumulative GPA follows the same principle but includes all coursework attempted at UW across all semesters in your degree program.</p>
+        <p>This formula ensures that courses with higher credit values have proportionally greater impact on your GPA. For example, earning an A in a 4-credit chemistry course improves your GPA more significantly than earning an A in a 1-credit discussion section or lab. This weight-based system fairly represents the academic effort required across different course types and helps identify where strategic study focus will yield maximum GPA improvement.</p>
+        <p>UW's academic policies specify that only courses taken at the University of Wisconsin-Madison count toward your institutional GPA. Courses from UW System schools, study abroad programs, and transferred credits from other institutions may appear on your transcript but don't directly factor into your UW cumulative GPA calculation. This is an important distinction when planning how to manage your academic record at UW.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, you can use the formula to calculate exactly which courses and grade improvements would yield maximum benefit. This strategic approach, combined with the calculator above, makes GPA management achievable and transparent.</p>
+        <p>For students in competitive programs at UW, such as engineering or the Wisconsin School of Business, the formula's emphasis on credit-weighted grades means that strategic course selection and consistent performance in high-credit courses can significantly improve your academic profile. Focusing study efforts on high-credit core courses yields better GPA outcomes than equivalent effort distributed across multiple low-credit electives.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical University of Wisconsin student taking a balanced course load across UW's diverse academic programs. Here is a practical example for a student in their first year:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>CHEM 103: General Chemistry (A, 3 credits) → 12.0 grade points</li>
+          <li>MATH 221: Calculus and Analytic Geometry I (AB, 4 credits) → 14.0 grade points</li>
+          <li>PHYSICS 201: College Physics (B, 4 credits) → 12.0 grade points</li>
+          <li>ENGLISH 100: Freshman Composition (A, 3 credits) → 12.0 grade points</li>
+          <li>COMM 110: Fundamentals of Communication (B, 3 credits) → 9.0 grade points</li>
+        </ul>
+        <p>Calculating total grade points: 12.0 + 14.0 + 12.0 + 12.0 + 9.0 = 59.0 grade points</p>
+        <p>Total credit hours: 3 + 4 + 4 + 3 + 3 = 17 credits</p>
+        <p class="font-semibold">GPA = 59.0 ÷ 17 = 3.47</p>
+        <p>This example demonstrates how a mix of strong grades across STEM and humanities courses produces a solid GPA that meets UW standards for good academic standing and many scholarships. The student's performance in higher-credit courses (MATH and PHYSICS) had significant impact on the overall GPA. Use this calculator to adjust grades and explore how different academic scenarios would affect your projected GPA at UW.</p>`,
+      },
+      {
+        id: 'uw-expectations',
+        title: 'UW GPA Expectations',
+        content: `<p>The University of Wisconsin maintains rigorous academic standards with varying GPA expectations depending on the student's current status, intended major, and career goals. For general undergraduate admission to UW-Madison, the middle 50% of admitted students have GPAs around 3.6-3.9, reflecting the university's selective nature and commitment to academic excellence. Admitted students typically present strong academic records and demonstrate potential for success in UW's demanding environment.</p>
+        <p>Once enrolled at UW, maintaining a cumulative GPA of 2.0 or higher is required to remain in good academic standing and make progress toward a degree. However, most students aim significantly higher, as many scholarships, honors programs, and career opportunities require GPAs well above the minimum threshold. The University of Wisconsin's Dean's List recognizes students who achieve a semester GPA of 3.5 or higher, a distinction that appears on transcripts and supports graduate school and job applications.</p>
+        <p>For students pursuing competitive majors within UW's colleges, GPA requirements are often more stringent. The College of Engineering, the Wisconsin School of Business, and the College of Agricultural and Life Sciences frequently require GPAs above 3.0-3.5 for major admission and continued enrollment in major courses. Pre-health students aiming for medical, dental, or veterinary school typically need cumulative GPAs above 3.5, with science GPAs above 3.6.</p>
+        <p>The University of Wisconsin's honors programs and research opportunities often require GPAs above 3.5 and demonstrate strong commitment to academic excellence. The Honors Program, departmental honors tracks, and undergraduate research assistantships prioritize students with demonstrated academic achievement and sustained success. Graduate and professional school programs increasingly expect strong GPAs, with highly competitive fields like medicine requiring GPAs above 3.7.</p>
+        <p>UW's scholarship landscape reflects the importance of maintaining a strong GPA. Merit-based scholarships, both from UW and external organizations, typically require minimum cumulative GPAs of 3.0-3.7 depending on the award level. Many students lose or fail to qualify for scholarships due to GPA drops, making consistent academic performance throughout your UW career financially important.</p>
+        <p>For official UW policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.wisc.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">University of Wisconsin official website</a> and the <a href="https://registrar.wisc.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and college-specific GPA requirements.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your GPA at the University of Wisconsin requires strategic planning, consistent effort, and effective use of campus resources. Start by analyzing your current academic performance using this calculator to identify courses and semesters where your performance fell short of your goals. High-credit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Utilize UW Academic Support:</strong> The University of Wisconsin offers comprehensive academic support through the Academic Success Program, which provides free tutoring, study groups, and academic coaching. The Writing Center offers specialized help with writing assignments, and departmental tutoring supports students in challenging courses.</li>
+          <li><strong>Focus on High-Impact Courses:</strong> Since GPA is credit-weighted, strong performance in 3-4 credit STEM and core courses produces greater improvement than equivalent effort in 1-2 credit electives. Prioritize your major requirements and prerequisites where grades most significantly impact your GPA.</li>
+          <li><strong>Develop Effective Study Habits:</strong> Create a structured study schedule that balances coursework with research, internships, and extracurricular activities. Use active learning techniques like practice problems, teaching concepts to others, and forming study groups with classmates.</li>
+          <li><strong>Seek Academic Advising:</strong> Meet regularly with your academic advisor to discuss course selection, GPA goals, and academic progress. Advisors can help you understand how your GPA affects eligibility for majors, scholarships, and graduate programs.</li>
+          <li><strong>Monitor Progress Weekly:</strong> Update this calculator after each exam or assignment grade to track your projected GPA and adjust study strategies as needed. Early identification of GPA trends allows for timely intervention and course corrections.</li>
+        </ul>
+        <p>UW's commitment to student success is reflected in its comprehensive support services, including academic coaching, tutoring centers, and advising networks. The university's Student Academic Services offers workshops on time management, test-taking strategies, and stress reduction throughout the academic year. Peer tutoring programs connect you with successful UW students in your major and provide subject-specific support.</p>
+        <p>For students in engineering or other demanding STEM programs, supplemental instruction sessions and departmental tutoring services are critical resources. Many UW colleges offer exam review sessions and problem-solving workshops designed specifically for their courses. The College of Engineering provides additional support for students in high-enrollment introductory courses where GPA management can be especially challenging.</p>
+        <p>Remember that GPA improvement is a gradual process requiring consistent effort. Small improvements in high-credit courses can significantly boost your overall standing. Use this calculator to set realistic goals and track your progress toward academic excellence at UW.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this University of Wisconsin GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.wisc.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://studentacademic.wisc.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Student Academic Services</a> provides centralized access to academic advising, tutoring, and support programs.</p>
+        <p>For comparative data about UW's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer Big Ten institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set semester targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the UW tradition of excellence in research and innovation.</p>
+        <p>UW students should also explore the university's academic success resources, including college-specific advising centers, honors programs, and research opportunities. The Office of the Dean of Students, departmental advisors, and the Graduate School provide comprehensive support for academic planning, professional development, and career readiness.</p>
+        <p>Bookmark this page and return after each grading period to track your progress. Consistent monitoring of your University of Wisconsin GPA ensures you stay on course for graduation, honors recognition, and future opportunities. With UW's strong reputation for research and extensive connections to Wisconsin's business and innovation communities, maintaining a competitive GPA opens doors to internships, research positions, and prestigious graduate programs that launch successful careers.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at the University of Wisconsin?',
+        answer: 'A GPA above 3.0 is generally considered good at UW, while GPAs above 3.5 qualify students for Dean\'s List recognition and many honors programs. Competitive programs and scholarships often require GPAs above 3.5-3.7.',
+      },
+      {
+        question: 'Does the University of Wisconsin use plus/minus grading?',
+        answer: 'No, UW uses A, AB, B, BC, C, D, and F grades without plus/minus designations. The AB and BC grades are worth 3.5 and 2.5 points respectively on the 4.0 scale.',
+      },
+      {
+        question: 'How often should I calculate my UW GPA?',
+        answer: 'Update your GPA calculation after each grading period or when you receive new grades. Frequent monitoring helps you track progress toward goals like scholarships, honors programs, and graduate school admissions.',
+      },
+      {
+        question: 'Can transfer credits affect my UW GPA?',
+        answer: 'Transfer credits appear on your UW transcript but do not factor into your University of Wisconsin cumulative GPA. Only grades earned in courses taken at UW-Madison count toward your institutional GPA.',
+      },
+      {
+        question: 'Is this calculator accurate for UW graduate students?',
+        answer: 'This calculator uses the standard grading scale applicable to undergraduate programs. Graduate programs at UW may use different grading scales, so consult your department for specific policies.',
+      },
+    ],
+    cta: {
+      heading: 'Track Your University of Wisconsin Academic Progress',
+      text: 'Use the calculator above to model grades, set GPA goals, and keep your academic record on track for graduation, honors, and future opportunities.',
+      buttonText: 'Calculate University of Wisconsin GPA',
+      buttonHref: '/gpa-calculators/university-of-wisconsin-gpa-calculator',
+    },
+  },
+  'indiana-university-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'iu-expectations', label: 'Indiana University GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The Indiana University GPA Calculator is a comprehensive academic planning tool designed for students navigating one of America's most prestigious public research universities. Located in Bloomington, Indiana, the Indiana University Bloomington campus serves nearly 45,000 students and is recognized worldwide for exceptional programs in business, music, public affairs, education, engineering, and liberal arts. IU combines rigorous academics with a vibrant campus culture and rich traditions that attract accomplished students from across the nation and around the globe.</p>
+        <p>Whether you're a first-year student adjusting to college-level academics, a junior planning for graduate school applications, or a senior preparing for professional transitions, accurately tracking your GPA is crucial for unlocking opportunities specific to Indiana University's competitive academic environment. This calculator uses the standard 4.0 grading scale employed by IU and most American institutions, ensuring your calculations align with official IU transcripts and degree audit systems. IU students benefit from a strong honors system, competitive scholarships, and research opportunities that often depend on maintaining a solid cumulative GPA.</p>
+        <p>Indiana University's academic landscape encompasses diverse disciplines from business and music to engineering and public health. Many IU students pursue double majors, minors, and certificates alongside their primary coursework, making accurate GPA tracking essential for managing multiple academic commitments. The university's location in Bloomington provides access to research opportunities, consulting projects, and professional internships that are often GPA-dependent or highly competitive.</p>
+        <p>This calculator provides instant, real-time results with full mobile optimization, allowing you to check your GPA projections between classes, during study sessions, or while planning your academic schedule. Understanding your GPA at IU is particularly important given the university's selective admission standards for specialized programs, where internal GPA thresholds can determine access to prestigious schools like the Kelley School of Business. Use the calculator above to enter your grades and credits, then explore the comprehensive sections below for detailed guidance on IU-specific policies, expectations, and proven strategies for academic success.</p>
+        <p>As Indiana's flagship university and a member of the Big Ten Conference and Association of American Universities, IU is recognized worldwide for research contributions, innovation, and commitment to student success. The university's commitment to research spans music therapy, business innovation, public policy, and technical disciplines. Students who maintain strong GPAs gain access to honors programs, research opportunities, and competitive internships that define their university experience and launch successful careers.</p>
+        <p>Indiana University's scale and diversity mean that GPA management varies across schools and colleges. A course in the Kelley School of Business has the same numerical weight as a course in the College of Arts and Sciences, but career implications may differ depending on your major and professional goals. This calculator helps you understand how each course contributes to your cumulative GPA and supports strategic decision-making about course load, scheduling, and academic priorities throughout your IU career.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The Indiana University GPA Calculator operates on the standard formula used by IU and virtually all American colleges and universities. Each letter grade is converted to a numerical value on the 4.0 scale, multiplied by the course's credit hours, and these weighted values are summed and divided by total credit hours attempted. This credit-weighted system ensures that a rigorous 4-credit business or engineering course contributes more to your GPA than a smaller 1-credit seminar, fairly representing your academic effort across different course types.</p>
+        <p>Indiana University uses the following standard grade-to-point conversion for most undergraduate courses: A equals 4.0 points, A-minus equals 3.7 points, B-plus equals 3.3 points, B equals 3.0 points, B-minus equals 2.7 points, C-plus equals 2.3 points, C equals 2.0 points, C-minus equals 1.7 points, D equals 1.0 point, and F equals 0.0 points. This transparent scale is consistent across all IU schools and colleges and allows for easy verification of calculations with official transcripts and degree audits.</p>
+        <p>For students taking honors or advanced courses, IU's grading system includes plus/minus designations that are automatically factored into the final grade point calculation. Some honors courses may carry additional weight in specific contexts for honors program requirements, but this calculator uses the standard institutional formula to provide accurate GPA estimates. Whether you're enrolled in a 1-credit music lesson or a 4-credit organic chemistry laboratory, each course contributes proportionally to your overall academic standing at IU.</p>
+        <p>The calculator supports both semester and cumulative GPA calculations, allowing you to track your progress throughout your academic career at Indiana University. This dual-calculation approach is particularly valuable for students in semester-based academic planning, as semester GPA often influences registration priority, scholarship eligibility, and mid-year academic standing reviews. The real-time updates mean you can experiment with different grade scenarios to see how they impact your overall standing at IU.</p>
+        <p>IU's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes, which can affect your academic standing. Courses taken on a pass/no-pass basis do not impact your GPA if completed under that grading option, so always verify with your academic advisor about specific policies for your major and school.</p>
+        <p>This calculator is particularly useful for IU students because it accounts for the university's specific grading policies and credit hour structures. Many business and engineering courses at IU are 3-4 credits, while some music lessons, seminars, and research courses might be 1-2 credits. Understanding how these different course weights affect your cumulative GPA is crucial for academic planning, especially when you're trying to maintain eligibility for competitive programs or scholarships.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The Indiana University GPA formula is transparent, widely used across American higher education, and straightforward to verify manually. Understanding this formula empowers you to take control of your academic destiny and make informed decisions about course selection and study strategies.</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Credit Hours</p>
+          <p class="mt-2">Grade Points = Grade Value × Credit Hours</p>
+        </div>
+        <p>To illustrate with an IU example: a 3-credit course with a B grade (3.0 value) earns 9.0 grade points, while a 4-credit course with an A grade (4.0 value) earns 16.0 grade points. Your semester GPA is calculated by dividing the sum of all grade points by the sum of all credit hours attempted that semester. Your cumulative GPA follows the same principle but includes all coursework attempted at IU across all semesters in your degree program.</p>
+        <p>This formula ensures that courses with higher credit values have proportionally greater impact on your GPA. For example, earning an A in a 4-credit business core course improves your GPA more significantly than earning an A in a 1-credit discussion section. This weight-based system fairly represents the academic effort required across different course types and helps identify where strategic study focus will yield maximum GPA improvement.</p>
+        <p>IU's academic policies specify that only courses taken at Indiana University Bloomington count toward your institutional GPA. Courses from IU's other campuses, study abroad programs, and transferred credits from other institutions may appear on your transcript but don't directly factor into your IU Bloomington cumulative GPA calculation. This is an important distinction when planning how to manage your academic record at IU.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, you can use the formula to calculate exactly which courses and grade improvements would yield maximum benefit. This strategic approach, combined with the calculator above, makes GPA management achievable and transparent.</p>
+        <p>For students in competitive programs at IU, such as the Kelley School of Business, music performance, or public affairs programs, the formula's emphasis on credit-weighted grades means that strategic course selection and consistent performance in high-credit courses can significantly improve your academic profile. Focusing study efforts on high-credit core courses yields better GPA outcomes than equivalent effort distributed across multiple low-credit electives.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical Indiana University student taking a balanced course load across IU's diverse academic programs. Here is a practical example for a student in their first year:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>ECON E201: Elem Microeconomics (A, 3 credits) → 12.0 grade points</li>
+          <li>BUS A100: Business Foundations (A-, 3 credits) → 11.1 grade points</li>
+          <li>MATH M119: Calculus I (B+, 4 credits) → 13.2 grade points</li>
+          <li>ENG W131: English Composition (A, 3 credits) → 12.0 grade points</li>
+          <li>GEOL G100: Physical Geology (B, 4 credits) → 12.0 grade points</li>
+        </ul>
+        <p>Calculating total grade points: 12.0 + 11.1 + 13.2 + 12.0 + 12.0 = 60.3 grade points</p>
+        <p>Total credit hours: 3 + 3 + 4 + 3 + 4 = 17 credits</p>
+        <p class="font-semibold">GPA = 60.3 ÷ 17 = 3.55</p>
+        <p>This example demonstrates how a mix of strong grades across business and STEM courses produces a solid GPA that meets IU standards for good academic standing and many scholarships. The student's performance in higher-credit courses (MATH and GEOL) had significant impact on the overall GPA. Use this calculator to adjust grades and explore how different academic scenarios would affect your projected GPA at IU.</p>`,
+      },
+      {
+        id: 'iu-expectations',
+        title: 'Indiana University GPA Expectations',
+        content: `<p>Indiana University maintains rigorous academic standards with varying GPA expectations depending on the student's current status, intended school/college, and career goals. For general undergraduate admission to IU Bloomington, admitted students typically present strong academic records, with middle 50% of admitted students having GPAs around 3.5-3.8, reflecting the university's selective nature and commitment to academic excellence.</p>
+        <p>Once enrolled at IU, maintaining a cumulative GPA of 2.0 or higher is required to remain in good academic standing and make progress toward a degree. However, most students aim significantly higher, as many scholarships, honors programs, and career opportunities require GPAs well above the minimum threshold. Indiana University's Chancellor's List recognizes students who achieve a semester GPA of 4.0, while Dean's List honors include students with semester GPAs of 3.5 or higher.</p>
+        <p>For students pursuing competitive schools within IU, GPA requirements are often more stringent. The Kelley School of Business, the School of Music, and the School of Public and Environmental Affairs frequently require GPAs above 3.0-3.5 for direct admission or continued enrollment. Pre-health students aiming for medical, dental, or veterinary school typically need cumulative GPAs above 3.5, with science GPAs above 3.6.</p>
+        <p>Indiana University's honors programs and research opportunities often require GPAs above 3.5 and demonstrate strong commitment to academic excellence. The Hutton Honors College and departmental honors tracks prioritize students with demonstrated academic achievement and sustained success. Graduate and professional school programs increasingly expect strong GPAs, with highly competitive fields like medicine requiring GPAs above 3.7.</p>
+        <p>IU's scholarship landscape reflects the importance of maintaining a strong GPA. Merit-based scholarships, both from IU and external organizations, typically require minimum cumulative GPAs of 3.0-3.7 depending on the award level. Many students lose or fail to qualify for scholarships due to GPA drops, making consistent academic performance throughout your IU career financially important.</p>
+        <p>For official IU policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.iu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Indiana University official website</a> and the <a href="https://registrar.iu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and school-specific GPA requirements.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your GPA at Indiana University requires strategic planning, consistent effort, and effective use of campus resources. Start by analyzing your current academic performance using this calculator to identify courses and semesters where your performance fell short of your goals. High-credit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Utilize IU Academic Support:</strong> Indiana University offers comprehensive academic support through the Academic Success Program, which provides free tutoring, study groups, and academic coaching. The Writing Tutorial Center offers specialized help with writing assignments, and department-specific tutoring supports students in challenging courses.</li>
+          <li><strong>Focus on High-Impact Courses:</strong> Since GPA is credit-weighted, strong performance in 3-4 credit core courses produces greater improvement than equivalent effort in 1-2 credit electives. Prioritize your major requirements and prerequisites where grades most significantly impact your GPA.</li>
+          <li><strong>Develop Effective Study Habits:</strong> Create a structured study schedule that balances coursework with internships, research, and extracurricular activities. Use active learning techniques like practice problems, teaching concepts to others, and forming study groups with classmates.</li>
+          <li><strong>Seek Academic Advising:</strong> Meet regularly with your academic advisor to discuss course selection, GPA goals, and academic progress. Advisors can help you understand how your GPA affects eligibility for majors, scholarships, and graduate programs.</li>
+          <li><strong>Monitor Progress Weekly:</strong> Update this calculator after each exam or assignment grade to track your projected GPA and adjust study strategies as needed. Early identification of GPA trends allows for timely intervention and course corrections.</li>
+        </ul>
+        <p>IU's commitment to student success is reflected in its comprehensive support services, including academic coaching, tutoring centers, and advising networks. The university's Student Academic Services offers workshops on time management, test-taking strategies, and stress reduction throughout the academic year. Peer tutoring programs connect you with successful IU students in your major and provide subject-specific support.</p>
+        <p>For students in business or engineering programs, supplemental instruction sessions and school-specific tutoring services are critical resources. Many IU schools offer exam review sessions and problem-solving workshops designed specifically for their courses. The Kelley School of Business and School of Engineering provide additional support for students in high-enrollment introductory courses where GPA management can be especially challenging.</p>
+        <p>Remember that GPA improvement is a gradual process requiring consistent effort. Small improvements in high-credit courses can significantly boost your overall standing. Use this calculator to set realistic goals and track your progress toward academic excellence at IU.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this Indiana University GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.iu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://studentacademics.iu.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Student Academic Services</a> provides centralized access to academic advising, tutoring, and support programs.</p>
+        <p>For comparative data about IU's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer Big Ten institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set semester targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the IU tradition of academic and professional excellence.</p>
+        <p>IU students should also explore the university's academic success resources, including school-specific advising centers, honors programs, and research opportunities. The Office of Academic Affairs, departmental advisors, and the Graduate School provide comprehensive support for academic planning, professional development, and career readiness.</p>
+        <p>Bookmark this page and return after each grading period to track your progress. Consistent monitoring of your Indiana University GPA ensures you stay on course for graduation, honors recognition, and future opportunities. With IU's strong reputation in business, music, public affairs, and research, maintaining a competitive GPA opens doors to internships, research positions, and prestigious graduate programs that launch successful careers.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at Indiana University?',
+        answer: 'A GPA above 3.0 is generally considered good at IU, while GPAs above 3.5 qualify students for Dean\'s List recognition and many honors programs. Competitive programs and scholarships often require GPAs above 3.5-3.7.',
+      },
+      {
+        question: 'Does Indiana University use plus/minus grading?',
+        answer: 'Yes, IU uses plus/minus grading for most undergraduate courses. Letter grades with plus and minus designations are reflected in the GPA calculation using standard values like 4.0, 3.7, 3.3, etc.',
+      },
+      {
+        question: 'How often should I calculate my IU GPA?',
+        answer: 'Update your GPA calculation after each grading period or when you receive new grades. Frequent monitoring helps you track progress toward goals like scholarships, honors programs, and graduate school admissions.',
+      },
+      {
+        question: 'Can transfer credits affect my IU GPA?',
+        answer: 'Transfer credits appear on your IU transcript but do not factor into your Indiana University cumulative GPA. Only grades earned in courses taken at IU Bloomington count toward your institutional GPA.',
+      },
+      {
+        question: 'Is this calculator accurate for IU graduate students?',
+        answer: 'This calculator uses the standard 4.0 scale applicable to undergraduate programs. Graduate programs at IU may use different grading scales, so consult your department for specific policies.',
+      },
+    ],
+    cta: {
+      heading: 'Track Your Indiana University Academic Progress',
+      text: 'Use the calculator above to model grades, set GPA goals, and keep your academic record on track for graduation, honors, and future opportunities.',
+      buttonText: 'Calculate Indiana University GPA',
+      buttonHref: '/gpa-calculators/indiana-university-gpa-calculator',
+    },
+  },
+  'university-of-colorado-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'cu-expectations', label: 'University of Colorado GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The University of Colorado GPA Calculator is a comprehensive academic planning tool designed for students navigating CU Boulder, one of America's premier public research universities. Located at the base of the Flatiron Mountains in Boulder, Colorado, CU Boulder serves over 36,000 students and combines rigorous academics with an outdoor-focused campus culture that attracts accomplished students from across the nation and worldwide. Recognized for exceptional programs in engineering, environmental science, business, physics, and countless other disciplines, CU Boulder pairs world-class research with a commitment to student success and innovation.</p>
+        <p>Whether you're a first-year student adjusting to college academics, a junior planning for graduate school applications, or a senior preparing for professional transitions, accurately tracking your GPA is crucial for unlocking opportunities specific to CU Boulder's competitive academic environment. This calculator uses the standard 4.0 grading scale employed by CU and most American institutions, ensuring your calculations align with official CU transcripts and degree audit systems. CU students benefit from a strong honors system, competitive scholarships, and research opportunities that often depend on maintaining a solid cumulative GPA.</p>
+        <p>The University of Colorado's academic landscape encompasses diverse disciplines from aerospace engineering and physics to environmental science and business. Many CU students pursue double majors, minors, and certificates alongside their primary coursework, making accurate GPA tracking essential for managing multiple academic commitments. The university's location in Boulder provides exceptional access to research institutions, tech companies, and environmental organizations, creating internship and co-op opportunities that are often GPA-dependent or highly competitive.</p>
+        <p>This calculator provides instant, real-time results with full mobile optimization, allowing you to check your GPA projections between classes, during study sessions, or while planning your academic schedule. Understanding your GPA at CU is particularly important given the university's selective admission standards for majors, where internal GPA thresholds can determine access to specialized programs. Use the calculator above to enter your grades and credits, then explore the comprehensive sections below for detailed guidance on CU-specific policies, expectations, and proven strategies for academic success.</p>
+        <p>As Colorado's flagship university and a member of the Pac-12 Conference and Association of American Universities, CU Boulder is recognized worldwide for research contributions, innovation, and commitment to environmental sustainability. The university's commitment to research spans aerospace engineering, quantum physics, environmental science, and technology innovation. Students who maintain strong GPAs gain access to honors programs, research assistantships, and competitive internships that define their university experience and launch successful careers.</p>
+        <p>University of Colorado's scale and diversity mean that GPA management varies across schools and colleges. An engineering course has the same numerical weight as a course in the College of Arts and Sciences, but career implications may differ depending on your major and professional goals. This calculator helps you understand how each course contributes to your cumulative GPA and supports strategic decision-making about course load, scheduling, and academic priorities throughout your CU career.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The University of Colorado GPA Calculator operates on the standard formula used by CU and virtually all American colleges and universities. Each letter grade is converted to a numerical value on the 4.0 scale, multiplied by the course's credit hours, and these weighted values are summed and divided by total credit hours attempted. This credit-weighted system ensures that a rigorous 4-credit engineering or physics course contributes more to your GPA than a smaller 1-credit seminar, fairly representing your academic effort across different course types.</p>
+        <p>CU Boulder uses the following standard grade-to-point conversion for most undergraduate courses: A equals 4.0 points, A-minus equals 3.7 points, B-plus equals 3.3 points, B equals 3.0 points, B-minus equals 2.7 points, C-plus equals 2.3 points, C equals 2.0 points, C-minus equals 1.7 points, D equals 1.0 point, and F equals 0.0 points. This transparent scale is consistent across all CU schools and colleges and allows for easy verification of calculations with official transcripts and degree audits.</p>
+        <p>For students taking honors or advanced courses, CU's grading system includes plus/minus designations that are automatically factored into the final grade point calculation. Some honors courses may carry additional weight in specific contexts for honors program requirements, but this calculator uses the standard institutional formula to provide accurate GPA estimates. Whether you're enrolled in a 1-credit seminar or a 4-credit engineering laboratory, each course contributes proportionally to your overall academic standing at CU.</p>
+        <p>The calculator supports both semester and cumulative GPA calculations, allowing you to track your progress throughout your academic career at the University of Colorado. This dual-calculation approach is particularly valuable for students in semester-based academic planning, as semester GPA often influences registration priority, scholarship eligibility, and mid-year academic standing reviews. The real-time updates mean you can experiment with different grade scenarios to see how they impact your overall standing at CU.</p>
+        <p>CU's academic policies specify that courses with passing grades (A through D) earn grade points and count toward credit hours. Grades of F earn zero grade points but still count toward attempted credit hours for GPA calculation purposes, which can affect your academic standing. Courses taken on a pass/no-pass basis do not impact your GPA if completed under that grading option, so always verify with your academic advisor about specific policies for your major.</p>
+        <p>This calculator is particularly useful for CU students because it accounts for the university's specific grading policies and credit hour structures. Many engineering and science courses at CU are 3-4 credits, while some seminars and research courses might be 1-2 credits. Understanding how these different course weights affect your cumulative GPA is crucial for academic planning, especially when you're trying to maintain eligibility for competitive programs or scholarships.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The University of Colorado GPA formula is transparent, widely used across American higher education, and straightforward to verify manually. Understanding this formula empowers you to take control of your academic destiny and make informed decisions about course selection and study strategies.</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Credit Hours</p>
+          <p class="mt-2">Grade Points = Grade Value × Credit Hours</p>
+        </div>
+        <p>To illustrate with a CU example: a 3-credit course with a B grade (3.0 value) earns 9.0 grade points, while a 4-credit course with an A grade (4.0 value) earns 16.0 grade points. Your semester GPA is calculated by dividing the sum of all grade points by the sum of all credit hours attempted that semester. Your cumulative GPA follows the same principle but includes all coursework attempted at CU Boulder across all semesters in your degree program.</p>
+        <p>This formula ensures that courses with higher credit values have proportionally greater impact on your GPA. For example, earning an A in a 4-credit engineering course improves your GPA more significantly than earning an A in a 1-credit discussion section. This weight-based system fairly represents the academic effort required across different course types and helps identify where strategic study focus will yield maximum GPA improvement.</p>
+        <p>CU's academic policies specify that only courses taken at the University of Colorado Boulder count toward your institutional GPA. Courses from other CU campuses, study abroad programs, and transferred credits from other institutions may appear on your transcript but don't directly factor into your CU Boulder cumulative GPA calculation. This is an important distinction when planning how to manage your academic record at CU.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, you can use the formula to calculate exactly which courses and grade improvements would yield maximum benefit. This strategic approach, combined with the calculator above, makes GPA management achievable and transparent.</p>
+        <p>For students in competitive programs at CU Boulder, such as engineering or business programs, the formula's emphasis on credit-weighted grades means that strategic course selection and consistent performance in high-credit courses can significantly improve your academic profile. Focusing study efforts on high-credit core courses yields better GPA outcomes than equivalent effort distributed across multiple low-credit electives.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical University of Colorado student taking a balanced course load across CU's diverse academic programs. Here is a practical example for a student in their second year:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>PHYS 2010: Physics I (A, 4 credits) → 16.0 grade points</li>
+          <li>CSCI 1300: Computer Science (A-, 4 credits) → 14.8 grade points</li>
+          <li>MATH 2410: Calculus III (B+, 4 credits) → 13.2 grade points</li>
+          <li>WRTC 2004: Writing in Technology (A-, 3 credits) → 11.1 grade points</li>
+          <li>ETEC 1000: Engineering Practice (B, 2 credits) → 6.0 grade points</li>
+        </ul>
+        <p>Calculating total grade points: 16.0 + 14.8 + 13.2 + 11.1 + 6.0 = 61.1 grade points</p>
+        <p>Total credit hours: 4 + 4 + 4 + 3 + 2 = 17 credits</p>
+        <p class="font-semibold">GPA = 61.1 ÷ 17 = 3.59</p>
+        <p>This example demonstrates how a mix of strong grades across STEM and humanities courses produces a solid GPA that meets CU standards for good academic standing and many scholarships. The student's performance in higher-credit courses (PHYS, CSCI, MATH) had significant impact on the overall GPA. Use this calculator to adjust grades and explore how different academic scenarios would affect your projected GPA at CU.</p>`,
+      },
+      {
+        id: 'cu-expectations',
+        title: 'University of Colorado GPA Expectations',
+        content: `<p>The University of Colorado maintains rigorous academic standards with varying GPA expectations depending on the student's current status, intended major, and career goals. For general undergraduate admission to CU Boulder, the middle 50% of admitted students have GPAs around 3.6-3.9, reflecting the university's selective nature and commitment to academic excellence. Admitted students typically present strong academic records and demonstrate potential for success in CU's challenging environment.</p>
+        <p>Once enrolled at CU, maintaining a cumulative GPA of 2.0 or higher is required to remain in good academic standing and make progress toward a degree. However, most students aim significantly higher, as many scholarships, honors programs, and career opportunities require GPAs well above the minimum threshold. The University of Colorado's Dean's List recognizes students who achieve a semester GPA of 3.5 or higher, a distinction that appears on transcripts and supports graduate school and job applications.</p>
+        <p>For students pursuing competitive majors within CU's schools and colleges, GPA requirements are often more stringent. The College of Engineering, the Leeds School of Business, and the College of Natural Sciences frequently require GPAs above 3.0-3.5 for major admission and continued enrollment. Pre-health students aiming for medical, dental, or veterinary school typically need cumulative GPAs above 3.5, with science GPAs above 3.6.</p>
+        <p>The University of Colorado's honors programs and research opportunities often require GPAs above 3.5 and demonstrate strong commitment to academic excellence. The Honors Program and departmental honors tracks prioritize students with demonstrated academic achievement and sustained success. Graduate and professional school programs increasingly expect strong GPAs, with highly competitive fields like medicine requiring GPAs above 3.7.</p>
+        <p>CU's scholarship landscape reflects the importance of maintaining a strong GPA. Merit-based scholarships, both from CU and external organizations, typically require minimum cumulative GPAs of 3.0-3.7 depending on the award level. Many students lose or fail to qualify for scholarships due to GPA drops, making consistent academic performance throughout your CU career financially important.</p>
+        <p>For official CU policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.colorado.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">University of Colorado official website</a> and the <a href="https://registrar.colorado.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and college-specific GPA requirements.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your GPA at the University of Colorado requires strategic planning, consistent effort, and effective use of campus resources. Start by analyzing your current academic performance using this calculator to identify courses and semesters where your performance fell short of your goals. High-credit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Utilize CU Academic Support:</strong> The University of Colorado offers comprehensive academic support through the Academic Success Program, which provides free tutoring, study groups, and academic coaching. The Writing Center offers specialized help with writing assignments, and departmental tutoring supports students in challenging courses.</li>
+          <li><strong>Focus on High-Impact Courses:</strong> Since GPA is credit-weighted, strong performance in 3-4 credit STEM and core courses produces greater improvement than equivalent effort in 1-2 credit electives. Prioritize your major requirements and prerequisites where grades most significantly impact your GPA.</li>
+          <li><strong>Develop Effective Study Habits:</strong> Create a structured study schedule that balances coursework with research, internships, and outdoor activities. Use active learning techniques like practice problems, teaching concepts to others, and forming study groups with classmates.</li>
+          <li><strong>Seek Academic Advising:</strong> Meet regularly with your academic advisor to discuss course selection, GPA goals, and academic progress. Advisors can help you understand how your GPA affects eligibility for majors, scholarships, and graduate programs.</li>
+          <li><strong>Monitor Progress Weekly:</strong> Update this calculator after each exam or assignment grade to track your projected GPA and adjust study strategies as needed. Early identification of GPA trends allows for timely intervention and course corrections.</li>
+        </ul>
+        <p>CU's commitment to student success is reflected in its comprehensive support services, including academic coaching, tutoring centers, and advising networks. The university's Student Academic Services offers workshops on time management, test-taking strategies, and stress reduction throughout the academic year. Peer tutoring programs connect you with successful CU students in your major and provide subject-specific support.</p>
+        <p>For students in engineering or other demanding STEM programs, supplemental instruction sessions and departmental tutoring services are critical resources. Many CU schools offer exam review sessions and problem-solving workshops designed specifically for their courses. The College of Engineering provides additional support for students in high-enrollment introductory courses where GPA management can be especially challenging.</p>
+        <p>Remember that GPA improvement is a gradual process requiring consistent effort. Small improvements in high-credit courses can significantly boost your overall standing. Use this calculator to set realistic goals and track your progress toward academic excellence at CU.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this University of Colorado GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.colorado.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://www.colorado.edu/student-services/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Student Services</a> provides centralized access to academic advising, registration, and support programs.</p>
+        <p>For comparative data about CU's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer Pac-12 institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set semester targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the CU tradition of excellence in research and innovation.</p>
+        <p>CU students should also explore the university's academic success resources, including college-specific advising centers, honors programs, and research opportunities. The Office of Academic Affairs, departmental advisors, and the Graduate School provide comprehensive support for academic planning, professional development, and career readiness.</p>
+        <p>Bookmark this page and return after each grading period to track your progress. Consistent monitoring of your University of Colorado GPA ensures you stay on course for graduation, honors recognition, and future opportunities. With CU's strong reputation for research and extensive connections to Colorado's tech and environmental innovation communities, maintaining a competitive GPA opens doors to internships, research positions, and prestigious graduate programs that launch successful careers.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at the University of Colorado?',
+        answer: 'A GPA above 3.0 is generally considered good at CU, while GPAs above 3.5 qualify students for Dean\'s List recognition and many honors programs. Competitive programs and scholarships often require GPAs above 3.5-3.7.',
+      },
+      {
+        question: 'Does the University of Colorado use plus/minus grading?',
+        answer: 'Yes, CU uses plus/minus grading for most undergraduate courses. Letter grades with plus and minus designations are reflected in the GPA calculation using standard values like 4.0, 3.7, 3.3, etc.',
+      },
+      {
+        question: 'How often should I calculate my CU GPA?',
+        answer: 'Update your GPA calculation after each grading period or when you receive new grades. Frequent monitoring helps you track progress toward goals like scholarships, honors programs, and graduate school admissions.',
+      },
+      {
+        question: 'Can transfer credits affect my CU GPA?',
+        answer: 'Transfer credits appear on your CU transcript but do not factor into your University of Colorado cumulative GPA. Only grades earned in courses taken at CU Boulder count toward your institutional GPA.',
+      },
+      {
+        question: 'Is this calculator accurate for CU graduate students?',
+        answer: 'This calculator uses the standard 4.0 scale applicable to undergraduate programs. Graduate programs at CU may use different grading scales, so consult your department for specific policies.',
+      },
+    ],
+    cta: {
+      heading: 'Track Your University of Colorado Academic Progress',
+      text: 'Use the calculator above to model grades, set GPA goals, and keep your academic record on track for graduation, honors, and future opportunities.',
+      buttonText: 'Calculate University of Colorado GPA',
+      buttonHref: '/gpa-calculators/university-of-colorado-gpa-calculator',
+    },
+  },
+  'university-of-california-san-diego-gpa-calculator': {
+    toc: [
+      { id: 'overview', label: 'Overview' },
+      { id: 'how-it-works', label: 'How It Works' },
+      { id: 'gpa-formula', label: 'GPA Formula Explained' },
+      { id: 'example-calculation', label: 'Example Calculation' },
+      { id: 'ucsd-expectations', label: 'UC San Diego GPA Expectations' },
+      { id: 'improve-gpa', label: 'How to Improve Your GPA' },
+      { id: 'resources', label: 'Resources & Next Steps' },
+    ],
+    sections: [
+      {
+        id: 'overview',
+        title: 'Overview',
+        content: `<p>The UC San Diego GPA Calculator is a comprehensive academic planning tool designed for students navigating one of America's leading public research universities. Located in the vibrant La Jolla area of San Diego, California, UC San Diego serves over 47,000 students and is recognized worldwide for exceptional programs in science, engineering, medicine, and oceanography. With the second-largest research budget of any public university in the United States, UC San Diego combines cutting-edge academics with unprecedented research opportunities that attract accomplished students from across the nation and around the globe.</p>
+        <p>Whether you're a first-year student adjusting to UC San Diego's rigorous academic standards, a junior planning for graduate school applications, or a senior preparing for professional transitions, accurately tracking your GPA is crucial for unlocking opportunities specific to UC San Diego's elite academic environment. This calculator uses the standard 4.0 grading scale employed by UC San Diego and most American institutions, ensuring your calculations align with official UCSD transcripts and degree audit systems. UC San Diego students benefit from world-class research programs, prestigious scholarships, and opportunities that often depend on maintaining a strong cumulative GPA.</p>
+        <p>UC San Diego's academic landscape encompasses diverse disciplines from bioengineering and computer science to oceanography and environmental science. Many UCSD students engage in undergraduate research alongside their primary coursework, making accurate GPA tracking essential for managing competing academic commitments. The university's location in San Diego provides exceptional access to research institutions, biotech companies, and aerospace firms, creating internship and co-op opportunities that are often GPA-dependent or highly competitive for admission.</p>
+        <p>This calculator provides instant, real-time results with full mobile optimization, allowing you to check your GPA projections between classes, during study sessions, or while planning your academic schedule. Understanding your GPA at UC San Diego is particularly important given the university's selective admission standards and reputation for academic rigor, where maintaining a strong GPA is essential for access to specialized programs and research opportunities. Use the calculator above to enter your grades and credits, then explore the comprehensive sections below for detailed guidance on UCSD-specific policies, expectations, and proven strategies for academic success.</p>
+        <p>As one of the University of California system's flagship research institutions and a member of the Association of American Universities, UC San Diego is recognized worldwide for research contributions, innovation, and commitment to academic excellence. The university's commitment to research spans medical breakthroughs, quantum computing, oceanographic discovery, and renewable energy solutions. Students who maintain strong GPAs gain access to honors programs, research assistantships, and prestigious internships that define their UC San Diego experience and launch internationally competitive careers.</p>
+        <p>UC San Diego's scale and diversity mean that GPA management varies across schools and colleges. A bioengineering course has the same numerical weight as a course in the School of Global Policy & Strategy, but career implications may differ depending on your major and professional goals. This calculator helps you understand how each course contributes to your cumulative GPA and supports strategic decision-making about course load, scheduling, and academic priorities throughout your UC San Diego career.</p>`,
+      },
+      {
+        id: 'how-it-works',
+        title: 'How It Works',
+        content: `<p>The UC San Diego GPA Calculator operates on the standard formula used by UCSD and virtually all American colleges and universities. Each letter grade is converted to a numerical value on the 4.0 scale, multiplied by the course's unit hours, and these weighted values are summed and divided by total units attempted. This credit-weighted system ensures that a rigorous 4-unit engineering course contributes more to your GPA than a smaller 1-unit seminar, fairly representing your academic effort across different course types and disciplines.</p>
+        <p>UC San Diego uses the following standard grade-to-point conversion for most undergraduate courses: A (excellent) equals 4.0 points, B (good) equals 3.0 points, C (satisfactory) equals 2.0 points, D (passing) equals 1.0 point, and F (failing) equals 0.0 points. Note that UC San Diego's grading scale differs from traditional plus/minus grading used at other institutions. This transparent scale is consistent across all UC San Diego schools and colleges and allows for easy verification of calculations with official transcripts and degree audits.</p>
+        <p>For students taking honors or upper-division courses, UC San Diego's grading system maintains the same scale across all course types. Some honors courses or graduate-level seminars may carry additional weight in specific contexts for honors program requirements, but this calculator uses the standard institutional formula to provide accurate GPA estimates. Whether you're enrolled in a 1-unit discussion section or a 4-unit laboratory course, each course contributes proportionally to your overall academic standing at UC San Diego.</p>
+        <p>The calculator supports both term and cumulative GPA calculations, allowing you to track your progress throughout your academic career at UC San Diego. This dual-calculation approach is particularly valuable for students in quarter-based academic planning, as term GPA often influences registration priority, scholarship eligibility, and mid-year academic standing reviews. The real-time updates mean you can experiment with different grade scenarios to see how they impact your overall standing at UCSD.</p>
+        <p>UC San Diego's academic policies specify that courses with passing grades (A through D) earn grade points and count toward units. Grades of F earn zero grade points but still count toward attempted units for GPA calculation purposes, which can affect your academic standing. Courses taken on a pass/no pass basis do not impact your GPA if completed under that grading option, so always verify with your academic advisor about specific policies for your major and program.</p>
+        <p>This calculator is particularly useful for UC San Diego students because it accounts for the university's specific grading policies and unit hour structures. Many engineering and science courses at UCSD are 3-4 units, while some seminars and research courses might be 1-2 units. Understanding how these different course weights affect your cumulative GPA is crucial for academic planning, especially when you're trying to maintain eligibility for competitive programs or scholarships.</p>`,
+      },
+      {
+        id: 'gpa-formula',
+        title: 'GPA Formula Explained',
+        content: `<p>The UC San Diego GPA formula is transparent, widely used across American higher education, and straightforward to verify manually. Understanding this formula empowers you to take control of your academic destiny and make informed decisions about course selection and study strategies.</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4">
+          <p class="font-semibold">GPA = Total Grade Points ÷ Total Units</p>
+          <p class="mt-2">Grade Points = Grade Value × Units</p>
+        </div>
+        <p>To illustrate with a UC San Diego example: a 3-unit course with a B grade (3.0 value) earns 9.0 grade points, while a 4-unit course with an A grade (4.0 value) earns 16.0 grade points. Your term GPA is calculated by dividing the sum of all grade points by the sum of all units attempted that term. Your cumulative GPA follows the same principle but includes all coursework attempted at UC San Diego across all terms in your degree program.</p>
+        <p>This formula ensures that courses with higher unit values have proportionally greater impact on your GPA. For example, earning an A in a 4-unit bioengineering course improves your GPA more significantly than earning an A in a 1-unit discussion section. This weight-based system fairly represents the academic effort required across different course types and helps identify where strategic study focus will yield maximum GPA improvement.</p>
+        <p>UC San Diego's academic policies specify that only courses taken at the UC San Diego campus count toward your institutional GPA. Courses transferred from community colleges, other UC campuses, study abroad programs, and other institutions may appear on your transcript but don't directly factor into your UCSD cumulative GPA calculation. This is an important distinction when planning how to manage your academic record at UC San Diego.</p>
+        <p>Understanding this formula allows you to model different academic scenarios and make informed decisions about course selection. If you need to raise your GPA to qualify for a specific program or maintain good academic standing, you can use the formula to calculate exactly which courses and grade improvements would yield maximum benefit. This strategic approach, combined with the calculator above, makes GPA management achievable and transparent.</p>
+        <p>For students in competitive programs at UC San Diego, such as bioengineering or computer science majors, the formula's emphasis on unit-weighted grades means that strategic course selection and consistent performance in high-unit courses can significantly improve your academic profile. Focusing study efforts on high-unit core courses yields better GPA outcomes than equivalent effort distributed across multiple low-unit electives.</p>`,
+      },
+      {
+        id: 'example-calculation',
+        title: 'Example Calculation',
+        content: `<p>Consider a typical UC San Diego student taking a balanced course load across the university's diverse academic programs. Here is a practical example for a student in their first year on the quarter system:</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>PHYS 2A: Physics (Mechanics) (A, 4 units) → 16.0 grade points</li>
+          <li>CHEM 6A: Organic Chemistry (A, 4 units) → 16.0 grade points</li>
+          <li>MATH 20A: Calculus I (B, 4 units) → 12.0 grade points</li>
+          <li>CAT 1: CREATE & TRANSFORM (A, 3 units) → 12.0 grade points</li>
+          <li>BILD 1: Introductory Biology (B, 3 units) → 9.0 grade points</li>
+        </ul>
+        <p>Calculating total grade points: 16.0 + 16.0 + 12.0 + 12.0 + 9.0 = 65.0 grade points</p>
+        <p>Total units: 4 + 4 + 4 + 3 + 3 = 18 units</p>
+        <p class="font-semibold">GPA = 65.0 ÷ 18 = 3.61</p>
+        <p>This example demonstrates how a mix of strong grades across STEM and general education courses produces a solid GPA that meets UC San Diego standards for good academic standing and prestigious scholarships. The student's performance in higher-unit courses (PHYS, CHEM, MATH) had significant impact on the overall GPA. Use this calculator to adjust grades and explore how different academic scenarios would affect your projected GPA at UCSD.</p>`,
+      },
+      {
+        id: 'ucsd-expectations',
+        title: 'UC San Diego GPA Expectations',
+        content: `<p>UC San Diego maintains exceptionally rigorous academic standards with varying GPA expectations depending on the student's current status, intended major, and career goals. For general undergraduate admission to UC San Diego, the middle 50% of admitted students have GPAs around 3.9-4.0, reflecting the university's highly selective nature and commitment to academic excellence. Admitted students typically present outstanding academic records and demonstrate exceptional potential for success in UCSD's demanding environment.</p>
+        <p>Once enrolled at UC San Diego, maintaining a cumulative GPA of 2.0 or higher is required to remain in good academic standing and make progress toward a degree. However, most students aim significantly higher, as many scholarships, honors programs, and research opportunities require GPAs well above the minimum threshold. UC San Diego's Dean's List recognizes students who achieve a term GPA of 3.5 or higher, a distinction that appears on transcripts and supports graduate school and job applications.</p>
+        <p>For students pursuing competitive majors within UC San Diego's schools, GPA requirements are often more stringent. The Jacobs School of Engineering, the School of Biological Sciences, and the School of Physical Sciences frequently require GPAs above 3.0-3.5 for major admission and continued enrollment. Pre-health students aiming for medical, dental, or veterinary school typically need cumulative GPAs above 3.5, with science GPAs above 3.7, given the highly competitive nature of professional school admissions.</p>
+        <p>UC San Diego's honors programs and research opportunities often require GPAs above 3.5 and demonstrate strong commitment to academic excellence. The Honors Program and departmental honors tracks prioritize students with demonstrated academic achievement and sustained success. Graduate and professional school programs increasingly expect strong GPAs, with highly competitive fields like medicine or biomedical research requiring GPAs above 3.8.</p>
+        <p>UC San Diego's scholarship landscape reflects the importance of maintaining a strong GPA. Merit-based scholarships, both from UCSD and external organizations, typically require minimum cumulative GPAs of 3.0-3.9 depending on the award level and competitiveness. Many students lose or fail to qualify for scholarships due to GPA drops, making consistent academic performance throughout your UC San Diego career financially important.</p>
+        <p>For official UC San Diego policies regarding academic standing, GPA calculation, and degree requirements, consult the <a href="https://www.ucsd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">UC San Diego official website</a> and the <a href="https://registrar.ucsd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a>. These authoritative sources provide the most current information about grading policies, academic progress standards, and school-specific GPA requirements.</p>`,
+      },
+      {
+        id: 'improve-gpa',
+        title: 'How to Improve Your GPA',
+        content: `<p>Improving your GPA at UC San Diego requires strategic planning, consistent effort, and effective use of campus resources. Start by analyzing your current academic performance using this calculator to identify courses and terms where your performance fell short of your goals. High-unit core courses and courses where you earned grades below your target should receive priority attention.</p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li><strong>Utilize UCSD Academic Support:</strong> UC San Diego offers comprehensive academic support through the Academic Integrity & Student Conduct office and subject-specific tutoring services. The Writing Center offers specialized help with writing assignments and research papers, and departmental tutoring supports students in challenging STEM courses.</li>
+          <li><strong>Focus on High-Impact Courses:</strong> Since GPA is unit-weighted, strong performance in 3-4 unit STEM and core courses produces greater improvement than equivalent effort in 1-2 unit electives. Prioritize your major requirements and prerequisites where grades most significantly impact your GPA.</li>
+          <li><strong>Develop Effective Study Habits:</strong> Create a structured study schedule that balances coursework with research, internships, and extracurricular activities. Use active learning techniques like practice problems, discussion groups, and peer teaching to deepen understanding.</li>
+          <li><strong>Seek Academic Advising:</strong> Meet regularly with your academic advisor to discuss course selection, GPA goals, and academic progress. Advisors can help you understand how your GPA affects eligibility for majors, scholarships, and graduate programs.</li>
+          <li><strong>Monitor Progress Regularly:</strong> Update this calculator after each term or whenever new grades are available to track your projected GPA and adjust study strategies as needed. Early identification of GPA trends allows for timely intervention and course corrections.</li>
+        </ul>
+        <p>UC San Diego's commitment to student success is reflected in its comprehensive support services, including academic coaching, tutoring centers, and advising networks. The university's Student Academic Services offers workshops on time management, test-taking strategies, and stress reduction throughout the academic year. Peer tutoring programs connect you with successful UCSD students in your major and provide subject-specific support.</p>
+        <p>For students in bioengineering or other demanding STEM programs, supplemental instruction sessions and departmental tutoring services are critical resources. Many UCSD schools offer exam review sessions and problem-solving workshops designed specifically for their courses. The Jacobs School of Engineering provides additional support for students in high-enrollment introductory courses where GPA management can be especially challenging.</p>
+        <p>Remember that GPA improvement is a gradual process requiring consistent effort. Small improvements in high-unit courses can significantly boost your overall standing. Use this calculator to set realistic goals and track your progress toward academic excellence at UC San Diego.</p>`,
+      },
+      {
+        id: 'resources',
+        title: 'Resources & Next Steps',
+        content: `<p>Beyond this UC San Diego GPA Calculator, several official resources support your academic planning. The <a href="https://registrar.ucsd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Office of the Registrar</a> maintains degree audit tools, academic calendar information, and official GPA calculation policies. The <a href="https://students.ucsd.edu/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">Student Services</a> provides centralized access to academic advising, registration, financial aid, and support programs.</p>
+        <p>For comparative data about UC San Diego's academic profile, rankings, and student outcomes, consult the <a href="https://nces.ed.gov/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">National Center for Education Statistics</a> and the <a href="https://www.collegeboard.org/" target="_blank" rel="noreferrer" class="text-blue-600 hover:underline">College Board</a>. These sources help contextualize your academic achievements relative to national benchmarks and peer institutions.</p>
+        <p>Pair this calculator with our <a href="/gpa-calculators/gpa-goal-calculator" target="_self" class="text-blue-600 hover:underline">GPA Goal Calculator</a> to set term targets and the <a href="/gpa-calculators/cumulative-gpa-calculator" target="_self" class="text-blue-600 hover:underline">Cumulative GPA Calculator</a> for long-term degree planning. Regular use supports consistent academic progress and helps maintain the UCSD tradition of research excellence and academic achievement.</p>
+        <p>UC San Diego students should also explore the university's academic success resources, including school-specific advising centers, research opportunities, and honors programs. The Office of the Dean of Students, departmental advisors, and the Graduate Division provide comprehensive support for academic planning, professional development, and career readiness.</p>
+        <p>Bookmark this page and return after each term to track your progress. Consistent monitoring of your UC San Diego GPA ensures you stay on course for graduation, honors recognition, and future opportunities. With UC San Diego's world-class research programs, extensive connections to San Diego's biotech and tech innovation communities, and strong international reputation, maintaining a competitive GPA opens doors to prestigious research positions, graduate programs, and careers that launch successful futures in science, engineering, medicine, and beyond.</p>`,
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is a good GPA at UC San Diego?',
+        answer: 'A GPA above 3.0 is generally considered good at UC San Diego, while GPAs above 3.5 qualify students for Dean\'s List recognition and many honors programs. Competitive programs and scholarships often require GPAs above 3.7-3.8 given UCSD\'s academic selectivity.',
+      },
+      {
+        question: 'Does UC San Diego use plus/minus grading?',
+        answer: 'No, UC San Diego does not use plus/minus grading. Only A, B, C, D, and F grades are used, with A equaling 4.0, B equaling 3.0, C equaling 2.0, D equaling 1.0, and F equaling 0.0.',
+      },
+      {
+        question: 'How often should I calculate my UC San Diego GPA?',
+        answer: 'Update your GPA calculation after each term or when you receive new grades. Frequent monitoring on the quarterly system helps you track progress toward goals like scholarships, honors programs, and graduate school admissions.',
+      },
+      {
+        question: 'Can transfer credits affect my UC San Diego GPA?',
+        answer: 'Transfer credits appear on your UCSD transcript but do not factor into your UC San Diego cumulative GPA. Only grades earned in courses taken at UC San Diego count toward your institutional GPA.',
+      },
+      {
+        question: 'Is this calculator accurate for UC San Diego graduate students?',
+        answer: 'This calculator uses the standard grading scale applicable to undergraduate programs. Graduate programs at UC San Diego may use different grading scales, so consult your department for specific policies.',
+      },
+    ],
+    cta: {
+      heading: 'Track Your UC San Diego Academic Progress',
+      text: 'Use the calculator above to model grades, set GPA goals, and keep your academic record on track for graduation, honors, and future research and career opportunities.',
+      buttonText: 'Calculate UC San Diego GPA',
+      buttonHref: '/gpa-calculators/university-of-california-san-diego-gpa-calculator',
     },
   },
 };
@@ -1464,6 +2468,6 @@ const generatedSchoolContents: Record<string, SchoolGpaPageContent> = Object.fro
 );
 
 export const schoolGpaPageContent: Record<string, SchoolGpaPageContent> = {
-  ...manualSchoolGpaPageContent,
   ...generatedSchoolContents,
+  ...manualSchoolGpaPageContent,
 };
