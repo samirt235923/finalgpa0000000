@@ -98,6 +98,30 @@ export const blogPosts = [
     dateModified: '2026-04-10',
     readTime: 8,
   },
+  {
+    id: 'gpa-vs-cgpa',
+    slug: 'gpa-vs-cgpa',
+    title: 'GPA vs CGPA: What’s the Difference and Which One Matters?',
+    metaDescription: 'Compare GPA and CGPA clearly: learn how each is calculated, when schools use them, and which one matters most for admissions, scholarships, and academic planning.',
+    excerpt: 'Understand GPA vs CGPA, how schools use each measure, and which one matters most for your academic goals.',
+    content: blogContent['gpa-vs-cgpa'],
+    author: 'GPA Experts',
+    publishedDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    readTime: 14,
+  },
+  {
+    id: 'weighted-vs-unweighted',
+    slug: 'weighted-vs-unweighted-gpa-high-school',
+    title: 'Weighted vs Unweighted GPA Explained for High School Students',
+    metaDescription: 'Understand weighted vs unweighted GPA: how they work, why they matter for college admissions, and how to report your GPA correctly.',
+    excerpt: 'Learn the difference between weighted and unweighted GPA and which matters more for high school students.',
+    content: blogContent['weighted-vs-unweighted'],
+    author: 'GPA Experts',
+    publishedDate: '2026-05-15',
+    dateModified: '2026-05-15',
+    readTime: 12,
+  },
 ];
 
 export default blogPosts;
