@@ -11,7 +11,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 import { FAQSchema, CalculatorSchema, WebPageSchema } from '@/components/SchemaMarkup';
 import { calculatorData } from '@/data/calculators';
-import { schoolGpaPageContent } from '@/data/schoolGpaPageContent';
+import { schoolGpaPageContent, generateSchoolGpaPageContent } from '@/data/schoolGpaPageContent';
 import { jsonLdStringify } from '@/lib/jsonLd';
 
 interface Props {
@@ -174,7 +174,7 @@ export default async function CalculatorPage({ params }: Props) {
     },
   });
 
-  const pageContent = schoolGpaPageContent[calculator.id];
+  const pageContent = schoolGpaPageContent[calculator.id] ?? generateSchoolGpaPageContent(calculator.id, calculator.name);
   const faqs = pageContent?.faqs ?? sampleFAQs;
   const pageUrl = `https://topgpacalculator.com/gpa-calculators/${calculator.id}`;
 

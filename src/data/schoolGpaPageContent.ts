@@ -2463,6 +2463,52 @@ function createSchoolGpaPageContent(school: SchoolTemplate): SchoolGpaPageConten
   };
 }
 
+function getSchoolShortName(schoolName: string): string {
+  const normalized = schoolName.trim();
+  const overrides: Record<string, string> = {
+    'University of California Los Angeles': 'UCLA',
+    'University of California Berkeley': 'UC Berkeley',
+    'University of California San Diego': 'UC San Diego',
+    'University of California Irvine': 'UC Irvine',
+    'University of California Davis': 'UC Davis',
+    'University of California Santa Barbara': 'UC Santa Barbara',
+    'University of California Santa Cruz': 'UC Santa Cruz',
+    'University of California Riverside': 'UC Riverside',
+    'University of California Merced': 'UC Merced',
+    'University of Texas at Austin': 'UT Austin',
+    'University of Texas at Dallas': 'UT Dallas',
+    'University of Texas at Arlington': 'UT Arlington',
+    'Virginia Commonwealth University': 'VCU',
+    'George Washington University': 'GWU',
+    'University of Connecticut': 'UConn',
+    'University of Massachusetts Amherst': 'UMass Amherst',
+    'Michigan Technological University': 'Michigan Tech',
+    'California Institute of Technology': 'Caltech',
+  };
+
+  return overrides[normalized] ?? normalized;
+}
+
+export function generateSchoolGpaPageContent(schoolId: string, schoolName: string): SchoolGpaPageContent {
+  const normalizedName = schoolName.replace(/\s+GPA Calculator$/i, '').trim();
+  const shortName = getSchoolShortName(normalizedName);
+
+  const school: SchoolTemplate = {
+    id: schoolId,
+    schoolName: normalizedName,
+    shortName,
+    location: shortName,
+    strengths: 'strong academic programs, research opportunities, and student success resources',
+    externalLinks: [
+      { label: 'College Board', url: 'https://www.collegeboard.org/' },
+      { label: 'National Center for Education Statistics', url: 'https://nces.ed.gov/' },
+      { label: shortName, url: `https://www.google.com/search?q=${encodeURIComponent(normalizedName)}` },
+    ],
+  };
+
+  return createSchoolGpaPageContent(school);
+}
+
 const generatedSchoolContents: Record<string, SchoolGpaPageContent> = Object.fromEntries(
   newSchoolTemplates.map((school) => [school.id, createSchoolGpaPageContent(school)])
 );
