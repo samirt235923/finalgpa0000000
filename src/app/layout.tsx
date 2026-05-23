@@ -129,6 +129,8 @@ export default function RootLayout({
       <body className="bg-white">
         <script async data-cfasync="false" src="https://pl29533659.effectivecpmnetwork.com/34fac73b787c9672c3352eb5f7c3bebe/invoke.js"></script>
         <div id="container-34fac73b787c9672c3352eb5f7c3bebe"></div>
+        <script dangerouslySetInnerHTML={{ __html: `atOptions = {\n  'key' : 'fb2d15c83f4122ff3eaa67b1375e1063',\n  'format' : 'iframe',\n  'height' : 300,\n  'width' : 160,\n  'params' : {}\n};` }} />
+        <script src="https://www.highperformanceformat.com/fb2d15c83f4122ff3eaa67b1375e1063/invoke.js"></script>
         <Analytics />
         <Header />
         <main className="min-h-screen">
