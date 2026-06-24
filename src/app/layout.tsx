@@ -124,20 +124,14 @@ export default function RootLayout({
           section:first-of-type{padding-top:0}
           @media(max-width:640px){section{padding:3rem 0}}
         `}} />
-        <script src="https://pl29533660.effectivecpmnetwork.com/7a/e9/37/7ae937d19fffc7f32572d9f1425490e1.js"></script>
       </head>
       <body className="bg-white">
-        <script async data-cfasync="false" src="https://pl29533659.effectivecpmnetwork.com/34fac73b787c9672c3352eb5f7c3bebe/invoke.js"></script>
-        <div id="container-34fac73b787c9672c3352eb5f7c3bebe"></div>
-        <script dangerouslySetInnerHTML={{ __html: `atOptions = {\n  'key' : 'fb2d15c83f4122ff3eaa67b1375e1063',\n  'format' : 'iframe',\n  'height' : 300,\n  'width' : 160,\n  'params' : {}\n};` }} />
-        <script src="https://www.highperformanceformat.com/fb2d15c83f4122ff3eaa67b1375e1063/invoke.js"></script>
         <Analytics />
         <Header />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
-        <script src="https://pl29533661.effectivecpmnetwork.com/fb/74/6f/fb746f560dbd24ce86a0a7fdbd501f0c.js"></script>
       </body>
     </html>
   );
